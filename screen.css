@@ -1,9 +1,8 @@
 body {
-  background: linear-gradient(#00C9FF, #FFFFFF);;
+  background: linear-gradient(#00C9FF, #FFFFFF);
 }
 
 .nav {
-    background-color: #333;
     overflow: hidden;
   }
   
@@ -13,6 +12,8 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Mukta', sans-serif;
+    font-weight: bold;
     font-size: 20px;
   }
   
@@ -51,8 +52,16 @@ body {
   }
 
   h1 {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'WindSong', cursive;
     font-size: 200px;
-    color:crimson;
+    color:#005CCE;
     text-align: center;
+    transform: rotate(-15deg);
+    box-shadow: 5px 10px #888888;
+
+  }
+  
+  p {
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
   }
