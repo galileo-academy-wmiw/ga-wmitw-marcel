@@ -1,5 +1,26 @@
+.clouds {
+  width: 100%;
+  position: absolute;
+  animation-name: clouds;
+  animation-iteration-count: infinite;
+  animation-duration: 40s; 
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  z-index: -1;
+}
+
+@keyframes clouds {
+  0%   {left: -2080px; top:0px;}
+  100% {left:0px; top:0px;}
+  z-index: -1;
+}
+
 body {
   background: linear-gradient(#00C9FF, #FFFFFF);
+}
+
+#logo {
+  width: 200px;
 }
 
 .nav {
@@ -10,7 +31,7 @@ body {
     float: left;
     color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 30px;
     text-decoration: none;
     font-family: 'Mukta', sans-serif;
     font-weight: bold;
@@ -32,7 +53,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    font-family: 'Jost';
+    font-family: 'Mukta';
   }
   
   li {
@@ -57,11 +78,11 @@ body {
     color:#005CCE;
     text-align: center;
     transform: rotate(-15deg);
-    box-shadow: 5px 10px #888888;
-
+    text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
+    position: relative;
   }
   
-  p {
+  article p {
     font-family: 'Mukta', sans-serif;
     font-size: 18px;
   }
