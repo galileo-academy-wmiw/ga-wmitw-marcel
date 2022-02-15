@@ -274,26 +274,94 @@ main {
     z-index: 5;  
   }
 
-  .contactformulier {
-    text-align: left;
-    float: left;
+  form {
+    margin-top: 50px;
+    margin-right: 5px;
   }
 
-  input {
-    padding: 10px;
-    margin: 5px 0 10px 0; 
+  input[type="text"] {
+    float: right;
+    padding: 0 10px;
+    width: 480px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.6em;
+    color: #005CCE;
     border: none;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
-    width: 50%;
-    font-family:inherit;
-    font-size: inherit;
   }
 
+  input[type="radio"] {
+    margin-left:10px;
+  } 
+
   label {
+      font-family: 'Mukta', sans-serif;
+      font-size: 1.6em;
+      line-height: 1.8em;
+      text-align: left;
+      padding-bottom: 10px;
+  }
+
+  select {
+    float: right;
+    padding: 0 10px;
+    width: 500px;
     font-family: 'Mukta', sans-serif;
     font-size: 1.6em;
-    line-height: 1.4em;
-    text-align: left;
-    padding-bottom: 10px;
+    color: #005CCE;
+    border: none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
   }
+
+  textarea {
+    float: right;
+    padding: 0 10px;
+    width: 480px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.6em;
+    color: #005CCE;
+    border: none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+
+  }
+
+  input[type="submit"] {
+    padding: 0 5px;
+    width: 200px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.6em;
+    background: #005CCE;
+    color: #FFF;
+    border: solid 2px #FFF;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b3b3b3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b3b3b3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b3b3b3;
+}
+
+select
+{
+  color: #b3b3b3;
+}
+option
+{
+    color: #005CCE;
+}
+option:first-child
+{
+  color: #b3b3b3;
+}
