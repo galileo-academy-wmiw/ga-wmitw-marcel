@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   margin: 0;
-
 }
 
 .clouds {
@@ -67,7 +66,7 @@ main {
   position: relative;
 }
 
-#fixedbar {
+#fixednavbar {
   height: 100px;
   width: 1000px;
   margin: 0 auto;
@@ -96,6 +95,7 @@ main {
   margin-left: 30px;
   float: right;
 }
+
 .hamburger {
   position: relative;
   width: 40px;
@@ -105,12 +105,13 @@ main {
   display: none;
 }
 
-.facebook {
+.hamburger-menu {
   position: relative;
-  width: 40px;
-  top: 12px;
-  margin-left: 5px;
-  display: inline-block;
+  width: 160px;
+  top: 45px;
+  margin-left: 30px;
+  float: right;
+  display: none;
 }
 
 .nav {
@@ -141,7 +142,7 @@ main {
     text-decoration: none;
     color: #fff;
     display: inline;
-    transition: .3s background-color;
+    transition: 0.3s background-color;
   }
     
   .nav a.active {
@@ -153,7 +154,7 @@ main {
     font-family: 'WindSong', cursive;
     font-size: 150px;
     font-weight: 500;
-    color:#005CCE;
+    color: #005CCE;
     text-align: left;
     transform: rotate(-15deg);
     text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
@@ -225,19 +226,6 @@ main {
     z-index: 5;  
   }
 
-  .grafisch img {
-    position: relative;
-    top: -35px;
-    width: 320px;
-    height: 320px;
-    margin: -50px 25px -30px 40px;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: right;
-    border-radius: 50%;
-    z-index: 5;  
-  }
-  
   .foto-3x4-l img {
     position: relative;
     top: -10px;
@@ -279,6 +267,13 @@ main {
     margin-right: 5px;
   }
 
+  .flexformitems {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center
+  }
+
   input[type="text"] {
     float: right;
     padding: 0 10px;
@@ -287,12 +282,12 @@ main {
     font-size: 1.6em;
     color: #005CCE;
     border: none;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
   }
 
   input[type="radio"] {
-    margin-left:10px;
+    margin-left: 10px;
   } 
 
   label {
@@ -300,7 +295,7 @@ main {
       font-size: 1.6em;
       line-height: 1.8em;
       text-align: left;
-      padding-bottom: 10px;
+      padding: 9px 0;
   }
 
   select {
@@ -311,7 +306,7 @@ main {
     font-size: 1.6em;
     color: #005CCE;
     border: none;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
   }
 
@@ -323,7 +318,7 @@ main {
     font-size: 1.6em;
     color: #005CCE;
     border: none;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
 
   }
@@ -336,7 +331,7 @@ main {
     background: #005CCE;
     color: #FFF;
     border: solid 2px #FFF;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
 }
 
@@ -344,24 +339,739 @@ main {
   color: #b3b3b3;
   opacity: 1; /* Firefox */
 }
-
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #b3b3b3;
 }
-
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: #b3b3b3;
 }
 
-select
-{
+select {
   color: #b3b3b3;
 }
-option
-{
-    color: #005CCE;
+select:focus {
+  color: #005CCE;
 }
-option:first-child
-{
+option {
   color: #b3b3b3;
+}
+option:first-of-type {
+  color: #005CCE;
+}
+
+
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  main {
+    max-width: 900px;
+    min-width: 700px;
+    margin: 144px auto 0 auto;
+  }
+
+  #fixednavbar {
+    height: 90px;
+    width: 900px;
+  }
+
+  .logo {
+    width: 90px;
+    left: -18px;
+  }
+
+  .linkedin {
+    width: 36px;
+    top: 41px;
+    margin-left: 27px;
+  }
+
+  .e-mail {
+    width: 36px;
+    top: 41px;
+    margin-left: 27px;
+  }
+
+  .nav {
+    margin-top: 45px;
+  }
+
+  .nav li {
+    font-size: 1.25em;
+    line-height: 36px;
+    height: 36px;
+    width: 108px;
+  }
+
+  header {
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 135px;
+  }
+
+  .kop1 {
+    left: -54px;
+  }
+
+  .kop2 {
+    left: -72px;
+  }
+
+  .kop3 {
+    left: -72px;
+  }
+
+  .kop4 {
+    left: -54px;
+  }
+
+  .pasfoto img {
+    top: -35px;
+    width: 40%;
+    min-width: 200px;
+    height: auto;
+    border: solid 7px #FFF;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: -45px 22px;
+  }
+
+  article p {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.45em;
+    line-height: 1.4em;
+    text-align: left;
+    padding-bottom: 0.7em;
+    padding-right: 54px;
+  }
+
+  .opleiding-werk-1 img {
+    top: -45px;
+    left: 36px;
+    width: 225px;
+    height: 225px;
+    border: solid 7px #FFF;
+  }
+
+  .opleiding-werk-2 img {
+    top: -9px;
+    left: 72px;
+    width: 225px;
+    height: 225px;
+    border: solid 7px #FFF;
+  }
+  
+  .foto-3x4-l img {
+    top: -9px;
+    left: -40px;
+    width: 250px;
+    height: 335px;
+    margin-right: 14px;
+    border: solid 7px #FFF;
+  }
+
+  .foto-3x4-r img {
+    top: -9px;
+    left: -40px;
+    width: 250px;
+    height: 335px;
+    border: solid 7px #FFF;
+  }
+
+  .bottomspacer {
+    left: -36px;
+    height: 99px;
+  }
+
+  form {
+    margin-top: 45px;
+  }
+
+  input[type="text"] {
+    width: 440px;
+    font-size: 1.4em;
+  }
+
+  input[type="radio"] {
+    margin-left: 9px;
+  } 
+
+  label {
+      font-size: 1.4em;
+      line-height: 1.6em;
+  }
+
+  select {
+    width: 458px;
+    font-size: 1.4em;
+  }
+
+  textarea {
+    width: 440px;
+    font-size: 1.4em;
+  }
+
+  input[type="submit"] {
+    width: 180px;
+    font-size: 1.4em;
+  }
+
+  .clouds {
+    width: 90%;
+  }
+  
+  @keyframes clouds {
+    0%   {left: -1872px; top:80px;}
+    100% {left:0px; top:80px;}
+  }
+  
+  .clouds2 {
+    width: 90%;
+  }
+  
+  @keyframes clouds2 {
+    0%   {left: -1872px; top:80px;}
+    100% {left:0px; top:80px;}
+  }
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  main {
+    max-width: 760px;
+    min-width: 500px;
+    margin: 125px auto 0 auto;
+  }
+
+  #fixednavbar {
+    height: 75px;
+    width: 750px;
+  }
+
+  .logo {
+    width: 75px;
+    left: -15px;
+  }
+
+  .linkedin {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .e-mail {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .nav {
+    margin-top: 38px;
+  }
+
+  .nav li {
+    font-size: 1.1em;
+    line-height: 30px;
+    height: 30px;
+    width: 90px;
+  }
+
+  header {
+    height: 75px;
+  }
+
+  h1 {
+    font-size: 113px;
+  }
+
+  .kop1 {
+    left: -45px;
+  }
+
+  .kop2 {
+    left: -60px;
+  }
+
+  .kop3 {
+    left: -60px;
+  }
+
+  .kop4 {
+    left: -45px;
+  }
+
+  .pasfoto img {
+    top: -42px;
+    width: 40%;
+    min-width: 180px;
+    height: auto;
+    border: solid 6px #FFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
+    margin: -38px 19px;
+  }
+
+  article p {
+    font-size: 1.25em;
+    line-height: 1.3em;
+    padding-bottom: 0.7em;
+    padding-right: 45px;
+  }
+
+  .opleiding-werk-1 img {
+    top: -38px;
+    left: 30px;
+    width: 188px;
+    height: 188px;
+    border: solid 6px #FFF;
+  }
+
+  .opleiding-werk-2 img {
+    top: -7px;
+    left: 60px;
+    width: 188px;
+    height: 188px;
+    border: solid 6px #FFF;
+  }
+  
+  .foto-3x4-l img {
+    top: -7px;
+    left: -40px;
+    width: 204px;
+    height: 272px;
+    margin-right: 15px;
+    border: solid 6px #FFF;
+  }
+
+  .foto-3x4-r img {
+    top: -7px;
+    left: -40px;
+    width: 204px;
+    height: 272px;
+    border: solid 6px #FFF;
+  }
+
+  .bottomspacer {
+    left: -36px;
+    height: 99px;
+  }
+
+  form {
+    margin-top: 38px;
+  }
+
+  input[type="text"] {
+    width: 360px;
+    font-size: 1.25em;
+  }
+
+  input[type="radio"] {
+    margin-left: 7px;
+  } 
+
+  label {
+      font-size: 1.25em;
+      line-height: 1.4em;
+  }
+
+  select {
+    width: 375px;
+    font-size: 1.25em;
+  }
+
+  textarea {
+    width: 358px;
+    font-size: 1.25em;
+  }
+
+  input[type="submit"] {
+    width: 150px;
+    font-size: 1.25em;
+  }
+
+  .clouds {
+    width: 75%;
+  }
+  
+  @keyframes clouds {
+    0%   {left: -1560px; top:60px;}
+    100% {left:0px; top:60px;}
+  }
+  
+  .clouds2 {
+    width: 75%;
+  }
+  
+  @keyframes clouds2 {
+    0%   {left: -1560px; top:60px;}
+    100% {left:0px; top:60px;}
+  }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  main {
+    max-width: 600px;
+    min-width: 400px;
+    margin: 120px auto 0 auto;
+  }
+
+  #fixednavbar {
+    height: 60px;
+    width: 600px;
+  }
+
+  .logo {
+    width: 70px;
+    left: -14px;
+  }
+
+  .linkedin {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .e-mail {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .nav {
+    margin-top: 38px;
+  }
+
+  .nav li {
+    font-size: 1.1em;
+    line-height: 30px;
+    height: 30px;
+    width: 85px;
+  }
+
+  header {
+    height: 75px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  .kop1 {
+    left: -36px;
+  }
+
+  .kop2 {
+    left: -48px;
+  }
+
+  .kop3 {
+    left: -48px;
+  }
+
+  .kop4 {
+    left: -36px;
+  }
+
+  .pasfoto img {
+    top: -42px;
+    width: 40%;
+    min-width: 180px;
+    height: auto;
+    border: solid 6px #FFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
+    margin: -38px 19px;
+  }
+
+  article p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding-bottom: 0.7em;
+    padding-right: 45px;
+  }
+
+  .opleiding-werk-1 img {
+    top: -30px;
+    left: 30px;
+    width: 160px;
+    height: 160px;
+    border: solid 5px #FFF;
+  }
+
+  .opleiding-werk-2 img {
+    top: -6px;
+    left: 54px;
+    width: 160px;
+    height: 160px;
+    border: solid 5px #FFF;
+  }
+  
+  .foto-3x4-l img {
+    top: -6px;
+    left: -40px;
+    width: 150px;
+    height: 200px;
+    margin-right: 15px;
+    border: solid 6px #FFF;
+  }
+
+  .foto-3x4-r img {
+    top: -6px;
+    left: -40px;
+    width: 150px;
+    height: 200px;
+    border: solid 6px #FFF;
+  }
+
+  .bottomspacer {
+    left: -24px;
+    height: 66px;
+  }
+
+  form {
+    margin-top: 38px;
+  }
+
+  input[type="text"] {
+    width: 320px;
+    font-size: 1.2em;
+  }
+
+  input[type="radio"] {
+    margin-left: 6px;
+  } 
+
+  label {
+      font-size: 1.2em;
+      line-height: 1.4em;
+  }
+
+  select {
+    width: 341px;
+    font-size: 1.2em;
+  }
+
+  textarea {
+    width: 322px;
+    font-size: 1.2em;
+  }
+
+  input[type="submit"] {
+    width: 150px;
+    font-size: 1.25em;
+  }
+
+  .clouds {
+    width: 60%;
+  }
+  
+  @keyframes clouds {
+    0%   {left: -1248px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
+  
+  .clouds2 {
+    width: 60%;
+  }
+  
+  @keyframes clouds2 {
+    0%   {left: -1248px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  main {
+    max-width: 390px;
+    min-width: 220px;
+    margin: 130px auto 0 auto;
+  }
+
+  #fixednavbar {
+    height: 60px;
+    width: 400px;
+  }
+
+  .logo {
+    width: 70px;
+    left: -14px;
+  }
+
+  .linkedin {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .e-mail {
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 30px;
+    top: 34px;
+    margin-left: 22px;
+    float: right;
+    display: block;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    width: 145px;
+    top: 31px;
+    margin-left: -93px;
+    float: right;
+    display: block;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  .nav {
+    margin-top: 38px;
+    display: none;
+  }
+
+  .nav li {
+    font-size: 1.1em;
+    line-height: 30px;
+    height: 30px;
+    width: 85px;
+  }
+
+  header {
+    height: 75px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .kop1 {
+    left: -24px;
+  }
+
+  .kop2 {
+    left: -36px;
+  }
+
+  .kop3 {
+    left: -36px;
+  }
+
+  .kop4 {
+    left: -24px;
+  }
+
+  .pasfoto img {
+    position: absolute;
+    top: 100px;
+    width: 40%;
+    min-width: 180px;
+    height: auto;
+    border: solid 4px #FFF;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 45% 0 15%;
+  }
+
+  article p {
+    position: relative;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    top: -70px;
+    padding: 240px 0 0.7em 0;
+  }
+
+  .opleiding-werk-1 img {
+    position: absolute;
+    top: 110px;
+    left: 180px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .opleiding-werk-2 img {
+    position: absolute;
+    top: 130px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .foto-3x4-l img {
+    position: relative;
+    top: -6px;
+    width: 85%;
+    height: auto;
+    margin: 0 0 15px 15%;
+    border: solid 4px #FFF;
+  }
+
+  .foto-3x4-r img {
+    position: relative;
+    top: -6px;
+    width: 85%;
+    height: auto;
+    margin: 0 0 15px 15%;
+    border: solid 4px #FFF;
+    float: left;
+  }
+
+  .bottomspacer {
+    left: -24px;
+    height: 66px;
+  }
+
+  form {
+    margin-top: -150px;
+  }
+
+  input[type="text"] {
+    width: 230px;
+    font-size: 1.2em;
+  }
+
+  input[type="radio"] {
+    margin-left: 6px;
+  } 
+
+  label {
+      font-size: 1.2em;
+      line-height: 1.4em;
+  }
+
+  select {
+    width: 251px;
+    font-size: 1.2em;
+  }
+
+  textarea {
+    width: 230px;
+    font-size: 1.2em;
+  }
+
+  input[type="submit"] {
+    width: 120px;
+    font-size: 1.2em;
+  }
+
+  .clouds {
+    width: 40%;
+    animation: clouds 60s alternate infinite linear;
+  }
+  
+  @keyframes clouds {
+    0%   {left: -832px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
+  
+  .clouds2 {
+    width: 40%;
+    animation: clouds2 45s alternate-reverse infinite linear;
+}
+  
+  @keyframes clouds2 {
+    0%   {left: -832px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
 }
