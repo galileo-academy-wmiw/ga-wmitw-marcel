@@ -3,6 +3,13 @@ html, body {
   margin: 0;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 400;
+}
+
 .clouds {
   width: 100%;
   position: fixed;
@@ -66,21 +73,62 @@ main {
   position: relative;
 }
 
-.fixedfooter {
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,201,255,1));
+
+footer {
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
-  height: 20%;
+  height: 180px;
 }
 
 .footercontent {
-  max-width: 50%;
-  min-width: 1000px;
-  left: 0;
   margin: 0 auto;
-  position: relative;
+  min-width: 1000px;
+  width: 50%;
+  height: 100%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.galileo img {
+  width: 230px;
+  object-fit: contain;
+  flex: 0 1 auto;
+}
+
+.copyright {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #FFF;
+  text-align: center;
+  flex: 0 1 auto;
+  display: block;
+}
+
+.copyright2 {
+  display: none;
+}
+
+.privacy {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #FFF;
+  text-align: center;
+  flex: 0 1 auto;
+  display: block;
+}
+
+.privacy2 {
+  display: none;
 }
 
 #fixednavbar {
@@ -131,11 +179,6 @@ main {
   display: none;
 }
 
-.galileo img {
-  max-width: 30%;
-  height: auto;
-}
-
 .nav {
   position: relative;
   float: right;
@@ -160,201 +203,201 @@ main {
   float: left;
   }
   
-  .nav a {
-    text-decoration: none;
-    color: #fff;
-    display: inline;
-    transition: 0.3s background-color;
-  }
-    
-  .nav a.active {
-    box-shadow: 0px 8px 5px -5px #FFF;
-  }
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  transition: 0.3s background-color;
+}
+  
+.nav a.active {
+  box-shadow: 0px 8px 5px -5px #FFF;
+}
 
-  h1 {
-    position: relative;
-    font-family: 'WindSong', cursive;
-    font-size: 150px;
-    font-weight: 500;
-    color: #005CCE;
+h1 {
+  position: relative;
+  font-family: 'WindSong', cursive;
+  font-size: 150px;
+  font-weight: 500;
+  color: #005CCE;
+  text-align: left;
+  transform: rotate(-15deg);
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
+  z-index: 1;
+}
+
+.kop1 {
+  left: -60px;
+}
+
+.kop2 {
+  left: -80px;
+}
+
+.kop3 {
+  left: -80px;
+}
+
+.kop4 {
+  left: -60px;
+}
+
+p {
+  white-space: pre-line;
+}
+
+article p {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  text-align: left;
+  padding-bottom: 0.7em;
+}
+
+.pasfoto img {
+  position: relative;
+  top: -35px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  margin: -50px 25px;
+}
+
+.opleiding-werk-1 img {
+  position: relative;
+  top: -50px;
+  left: 40px;
+  width: 250px;
+  height: 250px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  z-index: 10;
+}
+
+.opleiding-werk-2 img {
+  position: relative;
+  top: -10px;
+  left: 80px;
+  width: 250px;
+  height: 250px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  z-index: 5;  
+}
+
+.foto-3x4-l img {
+  position: relative;
+  top: -10px;
+  left: -40px;
+  width: 279px;
+  height: 372px;
+  margin-right: 17px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: left;
+  z-index: 5;  
+}
+
+.foto-3x4-r img {
+  position: relative;
+  top: -10px;
+  left: -40px;
+  width: 279px;
+  height: 372px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  z-index: 5;  
+}
+
+.bottomspacer {
+  position: relative;
+  top: 0;
+  left: -40px;
+  width: 100%;
+  height: 110px;
+  margin-top: 70px;
+  border: none;
+  float: left;
+  z-index: 5;  
+}
+
+form {
+  margin-top: 50px;
+  margin-right: 5px;
+}
+
+.flexformitems {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center
+}
+
+input[type="text"] {
+  float: right;
+  padding: 0 10px;
+  width: 480px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+} 
+
+label {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.6em;
+    line-height: 1.8em;
     text-align: left;
-    transform: rotate(-15deg);
-    text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
-    z-index: 1;
-  }
+    padding: 9px 0;
+}
 
-  .kop1 {
-    left: -60px;
-  }
+select {
+  float: right;
+  padding: 0 10px;
+  width: 500px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
 
-  .kop2 {
-    left: -80px;
-  }
+textarea {
+  float: right;
+  padding: 0 10px;
+  width: 480px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
 
-  .kop3 {
-    left: -80px;
-  }
+}
 
-  .kop4 {
-    left: -60px;
-  }
-
-  p {
-    white-space: pre-line;
-  }
-
-  article p {
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    line-height: 1.4em;
-    text-align: left;
-    padding-bottom: 0.7em;
-    padding-right: 60px;
-  }
-
-  .pasfoto img {
-    position: relative;
-    top: -35px;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: right;
-    margin: -50px 25px;
-  }
-
-  .opleiding-werk-1 img {
-    position: relative;
-    top: -50px;
-    left: 40px;
-    width: 250px;
-    height: 250px;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: right;
-    z-index: 10;
-  }
-
-  .opleiding-werk-2 img {
-    position: relative;
-    top: -10px;
-    left: 80px;
-    width: 250px;
-    height: 250px;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: right;
-    z-index: 5;  
-  }
-
-  .foto-3x4-l img {
-    position: relative;
-    top: -10px;
-    left: -40px;
-    width: 279px;
-    height: 372px;
-    margin-right: 17px;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: left;
-    z-index: 5;  
-  }
-
-  .foto-3x4-r img {
-    position: relative;
-    top: -10px;
-    left: -40px;
-    width: 279px;
-    height: 372px;
-    border: solid 8px #FFF;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-    float: right;
-    z-index: 5;  
-  }
-
-  .bottomspacer {
-    position: relative;
-    top: 0;
-    left: -40px;
-    width: 100%;
-    height: 110px;
-    border: none;
-    float: left;
-    z-index: 5;  
-  }
-
-  form {
-    margin-top: 50px;
-    margin-right: 5px;
-  }
-
-  .flexformitems {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center
-  }
-
-  input[type="text"] {
-    float: right;
-    padding: 0 10px;
-    width: 480px;
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    color: #005CCE;
-    border: none;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
-    border-radius: 5px;
-  }
-
-  input[type="radio"] {
-    margin-left: 10px;
-  } 
-
-  label {
-      font-family: 'Mukta', sans-serif;
-      font-size: 1.6em;
-      line-height: 1.8em;
-      text-align: left;
-      padding: 9px 0;
-  }
-
-  select {
-    float: right;
-    padding: 0 10px;
-    width: 500px;
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    color: #005CCE;
-    border: none;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
-    border-radius: 5px;
-  }
-
-  textarea {
-    float: right;
-    padding: 0 10px;
-    width: 480px;
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    color: #005CCE;
-    border: none;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
-    border-radius: 5px;
-
-  }
-
-  input[type="submit"] {
-    padding: 0 5px;
-    width: 200px;
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    background: #005CCE;
-    color: #FFF;
-    border: solid 2px #FFF;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
-    border-radius: 5px;
+input[type="submit"] {
+  padding: 0 5px;
+  width: 200px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  background: #005CCE;
+  color: #FFF;
+  border: solid 2px #FFF;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -387,6 +430,35 @@ option:first-of-type {
     max-width: 900px;
     min-width: 700px;
     margin: 144px auto 0 auto;
+  }
+  
+  .footercontent {
+    min-width: 900px;
+    padding-top: 40px;
+  }
+  
+  .galileo img {
+    width: 207px;
+  }
+  
+  .copyright {
+    font-size: 1.0em;
+    line-height: 1.2em;
+    display: block;
+  }
+
+  .copyright2 {
+    display: none;
+  }
+  
+  .privacy {
+    font-size: 1.0em;
+    line-height: 1.2em;
+    display: block;
+  }
+
+  .privacy2 {
+    display: none;
   }
 
   #fixednavbar {
@@ -462,7 +534,6 @@ option:first-of-type {
     line-height: 1.4em;
     text-align: left;
     padding-bottom: 0.7em;
-    padding-right: 54px;
   }
 
   .opleiding-werk-1 img {
@@ -563,6 +634,33 @@ option:first-of-type {
     margin: 125px auto 0 auto;
   }
 
+  .footercontent {
+    min-width: 760px;
+    padding-top: 40px;
+  }
+  
+  .galileo img {
+    width: 173px;
+  }
+  
+  .copyright {
+    font-size: 0.9em;
+    line-height: 1.1em;
+  }
+
+  .copyright2 {
+    display: none;
+  }
+  
+  .privacy {
+    font-size: 0.9em;
+    line-height: 1.1em;
+  }
+
+  .privacy2 {
+    display: none;
+  }
+
   #fixednavbar {
     height: 75px;
     width: 750px;
@@ -634,7 +732,6 @@ option:first-of-type {
     font-size: 1.25em;
     line-height: 1.3em;
     padding-bottom: 0.7em;
-    padding-right: 45px;
   }
 
   .opleiding-werk-1 img {
@@ -735,6 +832,33 @@ option:first-of-type {
     margin: 120px auto 0 auto;
   }
 
+  .footercontent {
+    min-width: 600px;
+    padding-top: 40px;
+  }
+  
+  .galileo img {
+    width: 173px;
+  }
+  
+  .copyright {
+    font-size: 0.9em;
+    line-height: 1.1em;
+  }
+
+  .copyright2 {
+    display: none;
+  }
+  
+  .privacy {
+    font-size: 0.9em;
+    line-height: 1.1em;
+  }
+
+  .privacy2 {
+    display: none;
+  }
+  
   #fixednavbar {
     height: 60px;
     width: 600px;
@@ -806,7 +930,6 @@ option:first-of-type {
     font-size: 1.2em;
     line-height: 1.3em;
     padding-bottom: 0.7em;
-    padding-right: 45px;
   }
 
   .opleiding-werk-1 img {
@@ -907,6 +1030,35 @@ option:first-of-type {
     margin: 130px auto 0 auto;
   }
 
+  .footercontent {
+    min-width: 390px;
+    padding-top: 40px;
+  }
+  
+  .galileo img {
+    width: 140px;
+  }
+  
+  .copyright {
+    font-size: 0.9em;
+    line-height: 1.1em;
+    display: none;
+  }
+
+  .copyright2 {
+    display: block;
+  }
+  
+  .privacy {
+    font-size: 0.9em;
+    line-height: 1.1em;
+    display: none;
+  }
+
+  .privacy2 {
+    display: block;
+  }
+  
   #fixednavbar {
     height: 60px;
     width: 400px;
