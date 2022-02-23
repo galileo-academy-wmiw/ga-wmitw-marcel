@@ -1,0 +1,488 @@
+/* windsong-regular - latin */
+@font-face {
+  font-family: 'WindSong';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/windsong-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/windsong-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/windsong-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/windsong-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/windsong-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/windsong-v5-latin-regular.svg#WindSong') format('svg'); /* Legacy iOS */
+}
+
+/* mukta-regular - latin */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/mukta-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/mukta-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v12-latin-regular.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.clouds {
+  width: 100%;
+  position: fixed;
+  animation: clouds 120s alternate infinite linear;
+  z-index: -10;
+}
+
+@keyframes clouds {
+  0%   {left: -2080px; top:100px;}
+  100% {left:0px; top:100px;}
+}
+
+.clouds2 {
+  width: 100%;
+  position: fixed;
+  animation: clouds2 90s alternate-reverse infinite linear;
+  z-index: -1;
+}
+
+@keyframes clouds2 {
+  0%   {left: -2080px; top:100px;}
+  100% {left:0px; top:100px;}
+}
+
+.body {
+  background: linear-gradient(#007b9d 0%, #00C9FF 7%, #00C9FF 60%, #FFFFFF 100%);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 150px 350px 250px 100px;
+  grid-template-columns: repeat(20, 1fr);
+  row-gap: 10px;
+  height: 100vh;
+  margin: auto;
+  z-index: 10;
+}
+
+.header {
+  grid-area: 1 / 2 / span 1 / span 19;
+  max-width: 1000px;
+  margin: auto;
+
+  border: solid 1px red;
+}
+
+.section {
+  grid-area: 2 1 span 2 span 12;
+  border: solid 1px red;
+}
+
+.main {
+  grid-area: 2 1 span 2 span 12;
+  border: solid 1px red;
+}
+
+
+
+
+
+/*
+.
+
+
+
+.header {
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: 1 / 1 / 2 / span 12;
+  border: solid 1px red;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+} 
+
+.fixednavbar {
+  height: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+
+.main {
+  grid-area: 3 / 1 / 5 / span 12;
+  border: solid 1px red;
+}
+
+.foto {
+  grid-area: 3 / 8 / 3 / span 5;
+  border: solid 1px red;
+  align-content: flex-end;
+  z-index: 5;
+}
+ 
+
+
+.footer {
+  grid-area: 5 / 1 / 6 / span 12;
+  border: solid 1px red;
+} 
+
+
+
+
+
+
+
+.contact {
+  animation-name: contact;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes contact {
+  0% {
+    background: #00C9FF;
+  }
+  100% {
+    background: #005CCE;
+  }
+}
+
+
+
+
+main {
+  max-width: 50%;
+  min-width: 1000px;
+  margin: 160px auto 0 auto;
+  position: relative;
+}
+
+
+
+
+.footercontent {
+  margin: 0 auto;
+  min-width: 1000px;
+  width: 50%;
+  height: 100%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.galileo img {
+  width: 230px;
+  object-fit: contain;
+  flex: 0 1 auto;
+}
+
+.copyright {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #FFF;
+  text-align: center;
+  flex: 0 1 auto;
+  display: block;
+}
+
+.copyright2 {
+  display: none;
+}
+
+.privacy {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #FFF;
+  text-align: center;
+  flex: 0 1 auto;
+  display: block;
+}
+
+.privacy2 {
+  display: none;
+}
+
+
+
+.logo {
+  width: 100px;
+  left: -20px;
+  float: left;
+  position: relative;
+}
+
+.linkedin {
+  position: relative;
+  width: 40px;
+  top: 45px;
+  margin-left: 30px;
+  float: right;
+}
+
+.e-mail {
+  position: relative;
+  width: 40px;
+  top: 45px;
+  margin-left: 30px;
+  float: right;
+}
+
+.hamburger {
+  position: relative;
+  width: 40px;
+  top: 45px;
+  margin-left: 30px;
+  float: right;
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  width: 160px;
+  top: 45px;
+  margin-left: 30px;
+  float: right;
+  display: none;
+}
+
+.nav {
+  position: relative;
+  float: right;
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  }
+  
+.nav li {
+  font-family: 'Mukta', sans-serif;
+  color: #FFF;
+  font-size: 1.4em;
+  line-height: 40px;
+  height: 40px;
+  width: 120px;
+  float: left;
+  }
+  
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  transition: 0.3s background-color;
+}
+  
+.nav a.active {
+  box-shadow: 0px 8px 5px -5px #FFF;
+}
+
+h1 {
+  position: relative;
+  font-family: 'WindSong', cursive;
+  font-size: 150px;
+  font-weight: 500;
+  color: #005CCE;
+  text-align: left;
+  transform: rotate(-15deg);
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
+  z-index: 1;
+}
+
+.kop1 {
+  left: -60px;
+}
+
+.kop2 {
+  left: -80px;
+}
+
+.kop3 {
+  left: -80px;
+}
+
+.kop4 {
+  left: -60px;
+}
+
+p {
+  white-space: pre-line;
+}
+
+article p {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  text-align: left;
+  padding-bottom: 0.7em;
+}
+
+.pasfoto img {
+  position: relative;
+  top: -35px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  margin: -50px 25px;
+}
+
+.opleiding-werk-1 img {
+  position: relative;
+  top: -50px;
+  left: 40px;
+  width: 250px;
+  height: 250px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  z-index: 2;
+}
+
+.opleiding-werk-2 img {
+  position: relative;
+  top: -10px;
+  left: 80px;
+  width: 250px;
+  height: 250px;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  z-index: 1;  
+}
+
+.fotocontainer {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.foto img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: solid 8px #FFF;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  flex: 0 1 auto;
+}
+
+.bottomspacer {
+  position: relative;
+  top: 0;
+  left: -40px;
+  width: 100%;
+  height: 110px;
+  margin-top: 70px;
+  border: none;
+  float: left;
+  z-index: 5;  
+}
+
+form {
+  margin-top: 50px;
+  margin-right: 5px;
+}
+
+.flexformitems {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center
+}
+
+input[type="text"] {
+  float: right;
+  padding: 0 10px;
+  width: 480px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+} 
+
+label {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.6em;
+    line-height: 1.8em;
+    text-align: left;
+    padding: 9px 0;
+}
+
+select {
+  float: right;
+  padding: 0 10px;
+  width: 500px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+textarea {
+  float: right;
+  padding: 0 10px;
+  width: 480px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  color: #005CCE;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+
+}
+
+input[type="submit"] {
+  padding: 0 5px;
+  width: 200px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  background: #005CCE;
+  color: #FFF;
+  border: solid 2px #FFF;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
