@@ -1,43 +1,186 @@
 <!DOCTYPE html>
   <html lang="nl-NL">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Marcel Hooimeijer's webpage">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Marcel Hooimeijer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Marcel Hooimeijer's webpage">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="Marcel Hooimeijer">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <title>Marcel Hooimeijer</title>
+  
+      <link rel="icon" type="image/png" href="images/favicon16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="images/favicon32.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="images/favicon48.png" sizes="48x48">
+      <link rel="icon" type="image/png" href="images/favicon64.png" sizes="64x64">
+      <link rel="icon" type="image/png" href="images/favicon128.png" sizes="128x128">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  
+      <link rel='stylesheet' href='screen.css'>
+  
+    </head>
 
-    <title>Marcel Hooimeijer</title>
-
-    <link rel="icon" type="image/png" href="images/favicon16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="images/favicon32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon48.png" sizes="48x48">
-    <link rel="icon" type="image/png" href="images/favicon64.png" sizes="64x64">
-    <link rel="icon" type="image/png" href="images/favicon128.png" sizes="128x128">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-
-    <link rel='stylesheet' href='screen.css'>
-
-  </head>
-
-  <body class="body">
-
+  <body>
     <div class="container">
+      <header class="header">
+        <div id="fixednavbar">
+          <div class="logo"><a href="index.html" target="_self"><img src="images/logo.svg" alt="huisstijl logo"></a></div>
+          <div class="hamburger"><a href="index-menu.html" target="_self"><img src="images/hamburger.svg" alt="uitklapmenu"></a></div>
+          <div class="e-mail"><a href="contact.html" target="_self"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
+          <div class="linkedin"><a href="https://www.linkedin.com/in/marcel-h-2b9125a0/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
 
-      <div class="header">header</div>
-      
+          <div class="nav">
+            <ul>
+              <li><span style="box-shadow: 0px 8px 5px -5px #FFF;"><a href="index.html">Over mij</a></span></li>
+              <li><a href="opleiding.html">Opleiding</a></li>
+              <li><a href="werk.html">Werk</a></li>
+              <li><a href="hobbies.html">Hobbies</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
+      <main class="main">
+        <article id="overmij">
+          <h1 class="kop1">Inspired...</h1>
+          <!-- TODO: picture met srcset -->
+          <figure class="pasfoto">
+            <img src="images/pasfoto.jpg" alt="foto van marcel">
+          </figure>
+          
+            <p>Hallo, mijn naam is Marcel en ik ben een creatieveling. Als kind kon ik uren bezig zijn met tekenen en knutselen. Inspiratie haalde ik uit strips, tijdschriften en tv-shows. Een creatieve opleiding was dan ook de logische keuze. Na eerst een decorateurs-opleiding te hebben gevolgd, ben ik uiteindelijk grafische vormgeving gaan studeren.<br/><br/>Na een mooie carrière als grafisch vormgever is het tijd voor een nieuwe uitdaging. En omdat het creatieve bloed nog steeds kruipt waar het niet gaan kan, heb ik gekozen voor  web-/app development. Ik volg daartoe nu een opleiding bij Galileo-academy.
+            </p>
+            <div class="fotocontainer"></div>
+        </article>
+
+        <article id="opleiding">
+          <h1 class="kop2">Educated...</h1>
+          <!-- TODO: picture met srcset -->
+          <figure class="opleiding-werk-1">
+            <img src="images/nimeto-logo.jpg" alt="NIMETO Utrecht logo">
+          </figure>
+          <figure class="opleiding-werk-2">
+            <img src="images/kabk-logo.jpg" alt="kunstacademie Den Haag logo">
+          </figure>
+          
+          <p>Na de MAVO moest ik na gaan denken over een vervolgopleiding; doorstromen naar de HAVO of toch kiezen voor een beroepsopleiding? Ik was altijd wel een “hands-on” type, dus na het doorspitten van folders kwam ik terecht bij het NIMETO in Utrecht; een MBO etaleurs-/decorateursopleiding. Ik ben naar de open dag geweest en was gelijk verkocht. Het 3e jaar was een praktijkjaar. Ik heb in dat jaar bij 2 bedrijven gewerkt: Ter Meulen Rotterdam (warenhuis) op de decorateursafdeling en Arti &#39;70 Leiden (standbouw) op de tekenkamer. Ik heb er veel vaardigheden opgedaan (o.a. technisch tekenen, maquette- en decorbouw en denken in oplossingen).<br/><br/>Na het NIMETO wilde ik graag doorstuderen en heb ik me aangemeld bij de kunstacademie in Den Haag. Ik heb daar grafische vormgeving gestudeerd. De opleiding duurde 5 jaar, waarvan het laatste jaar een praktijkjaar was.<br/><br/>Eén van de vakken die gegeven werden was “ruimtelijke vormgeving”. Ik bleek daar aanleg voor te hebben en omdat de docent tevens directeur van een design-bureau was, heb ik gevraagd of ik daar stage mocht lopen. Dat beviel van beide kanten en al snel kreeg ik een contract aangeboden.
+          </p>
+          <div class="fotocontainer"></div>
+        </article>
+        
+        <article id="werk">
+          <h1 class="kop3">Experienced...</h1>
+          <!-- TODO: picture met srcset -->
+          <figure class="opleiding-werk-1">
+            <img src="images/stadiumdesign2.jpg" alt="stadium design sportlife verpakking">
+          </figure>
+          <figure class="opleiding-werk-2">
+            <img src="images/stadiumdesign.jpg" alt="stadium design andrelon productfoto">
+          </figure>
+
+          <p>M&#39;n eerste echte baan was als junior ontwerper bij Stadium Design (inmiddels opgeheven); een bedrijf dat gespecialiseerd was in het ontwikkelen van verpakkingen (product-design, graphic-design, marketing). Ik heb daar 12 jaar gewerkt en heb in die tijd in alle disciplines gewerkt; werktekenen, doca-werk, dtp, graphic-design en verpakkingsdesign.<br/><br/>Jammer genoeg heb ik op een gegeven moment gezondheidsproblemen (rsi / burnout) ontwikkeld, waardoor ik in de WAO ben terechtgekomen. Omdat het ook mentaal niet goed ging, ben ik onderzocht bij de GGZ. Uit dat onderzoek bleek dat ik Asperger heb (een autismespectrum conditie); dat verklaarde veel.<br/><br/>Na een lange herstelperiode ben ik vrijwilligerswerk gaan doen bij het plaatselijk asiel. Leuk om te doen en ook weer onder de mensen. Via via ben ik toen bij de dierenambulance terechtgekomen, op de administratie. Omdat het bloed kruipt waar het niet gaan kan, heb ik daar op eigen initiatief o.a. de website en een dierregistratieprogramma gemaakt. Na 11 jaar was de motivatie weg en ben ik daar weggegaan.<br/><br/>Maar ja, thuiszitten is ook niks en na een lange zoektocht naar de juiste hulp, heb ik een jobcoach toegewezen gekregen van de gemeente. Na het in kaart brengen van m&#39;n interessegebieden, werd ik gewezen op een andere creatieve richting: web-/app development. Ik had daar zelf nog helemaal niet aan gedacht, maar het is wel iets waar ik m&#39;n creatieve ei helemaal in kwijt kan. M&#39;n jobcoach is vervolgens voor me op zoek gegaan naar een passend opleidingsinstituut (dit in verband met m&#39;n autisme).<br/><br/>Dat is gelukt en ik volg nu een leer-/werktraject bij Galileo-Academy tot web-/app developer. Een nieuwe uitdaging; ik heb er zin in!
+          </p>
+          <div class="fotocontainer">
+            <div class="foto">
+              <img src="images/logodesign.jpg" alt="concepten nieuw logo dierenambulance">
+            </div>
+            <div class="foto">
+              <img src="images/opvangprogramma.jpg" alt="dierregistratieprogramma scherm 1 en 2">
+            </div>
+            <div class="foto">
+              <img src="images/dago-website.jpg" alt="dierenambulance website">
+            </div>
+          </div>
+        </article>
+        
+        <article id="hobbies">
+          <h1 class="kop4">Inquisitive...</h1>
+          <!-- TODO: picture met srcset -->
+          <figure class="opleiding-werk-1">
+            <img src="images/camera.jpg" alt="camera in 3d programma gemaakt">
+          </figure>
+          <figure class="opleiding-werk-2">
+            <img src="images/schilderij.jpg" alt="schilderij van kat">
+          </figure>
+
+          <p>Behalve dat ik graag met m&#39;n werk bezig ben, heb ik ook veel hobbies. Tekenen/ schilderen, modelbouw, houtbewerking, grafische vormgeving, webdesign, you name it… <br>
+          Daarnaast hou ik van lezen, dieren (vooral katten) en nieuwe dingen leren.<br><br>En hoewel ik autisme heb, beperk ik me niet tot één ding. Meestal kies ik iets dat me interesseert, ga er dan lange tijd helemaal in op, totdat het volgende “interessants” zich aandient. Lange tijd was dat grafisch werk. Op dit moment is m&#39;n primaire hobby “houtbewerking”.<br><br>Ik ben altijd al graag met m&#39;n handen bezig geweest en een paar jaar geleden heb ik een houtdraaibank gekocht om me in het houtdraaien te bekwamen. Voor mij een manier om lekker te ontspannen.</p>
+          <div class="fotocontainer">
+            <div class="foto">
+              <img src="images/zandloper.jpg" alt="zandloper met gedraaide zuiltjes">
+            </div>
+            <div class="foto">
+              <img src="images/kat.jpg" alt="kat met hoge rug">
+            </div>
+            <div class="foto">
+              <img src="images/tardis.jpg" alt="doctor who tardis">
+            </div>
+          </div>
+        </article>
+        
+        <article id="contact">
+          <h1 class="kop1">Interested?</h1>
+          <figure class="pasfoto">
+            <img src="images/pasfoto.jpg" alt="foto van marcel">
+          </figure>
+          <p>Leuk dat je m&#39;n website bezocht hebt! Deze website geeft echter maar een kleine impressie van m&#39;n vaardigheden.<br> 
+          Als je meer wilt weten, of suggesties of opmerkingen hebt, vul dan onderstaand formulier in. Ik hoor graag van je.</p><br><br>
+
+          <form action="feedback.html" method="POST">
+            <div class="flexformitems">
+              <label for="naam">Naam: </label>
+              <input type="text" name="naam" id="naam" placeholder="verplicht veld" required>
+            </div>  
+            <div class="flexformitems">
+              <label for="e-mailadres">E-mailadres: </label>
+              <input type="text" name="e-mailadres" id="e-mailadres" placeholder="verplicht veld" required>
+            </div>  
+            <div class="flexformitems">
+              <label for="bedrijfsnaam">Bedrijfsnaam: </label>
+              <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="optioneel" >
+            </div>  
+            <div class="flexformitems">
+              <label for="functie">Functie: </label>
+              <input type="text" name="functie" id="functie" placeholder="optioneel" >
+            </div>  
+            <div class="flexformitems">
+              <label for="watvoorvraag">Waar gaat je berichtje over?</label>
+              <select id="watvoorvraag" name="watvoorvraag" required>
+                <option disabled selected value>-- Maak hier een keuze --</option>         
+                <option value="opmerking">Ik heb een opmerking</option>
+                <option value="suggestie">Ik heb een suggestie</option>
+                <option value="recruiter">Ik representeer een bedrijf</option>
+                <option value="anders">Ik stuur zomaar een berichtje</option>
+              </select>
+            </div>
+            <div>
+              <textarea id="bericht" name="bericht" rows="5" cols="30"></textarea>
+            </div>  
+            <input type="submit" value="Verstuur">
+          </form>
+        </article>        
+      </main>
     </div>
+
+    <footer class="footer">
+      <div class="footercontent">
+        <div class="galileo"><a href="https://galileo-academy.nl/contact/" target="_blank"><img src="images/galileo-logo.png" alt="galileo academy contactpagina"></a></div>
+  
+        <div class="privacy"><a href="https://galileo-academy.nl/privacy-policy/" target="_blank">Privacy policy<br>Galileo Academy</a></div>
+        <div class="privacy privacy2"><a href="https://galileo-academy.nl/privacy-policy/" target="_blank">Privacy<br>policy</a></div>
+  
+        <div class="copyright">Website design en inhoud:<br>© 2022 Marcel Hooimeijer</div> 
+        <div class="copyright copyright2">© 2022<br>M. Hooimeijer</div>
+      </div>
+    </footer>
 
     <div class="clouds">
       <img src="images/wolken.png" alt="achtergrondwolken">
     </div>
-
     <div class="clouds2">
       <img src="images/wolken2.png" alt="meer achtergrondwolken">
-    </div> 
-
+    </div>
   </body>
 
 </html>

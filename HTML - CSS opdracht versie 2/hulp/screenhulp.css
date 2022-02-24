@@ -1,31 +1,3 @@
-/* windsong-regular - latin */
-@font-face {
-  font-family: 'WindSong';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/windsong-v5-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/windsong-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/windsong-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/windsong-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/windsong-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/windsong-v5-latin-regular.svg#WindSong') format('svg'); /* Legacy iOS */
-}
-
-/* mukta-regular - latin */
-@font-face {
-  font-family: 'Mukta';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/mukta-v12-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/mukta-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/mukta-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/mukta-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/mukta-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/mukta-v12-latin-regular.svg#Mukta') format('svg'); /* Legacy iOS */
-}
-
 html, body {
   height: 100%;
   margin: 0;
@@ -44,6 +16,7 @@ a:hover, a:visited, a:link, a:active
   animation: clouds 120s alternate infinite linear;
   z-index: -10;
 }
+
 @keyframes clouds {
   0%   {left: -2080px; top:100px;}
   100% {left:0px; top:100px;}
@@ -55,6 +28,7 @@ a:hover, a:visited, a:link, a:active
   animation: clouds2 90s alternate-reverse infinite linear;
   z-index: -1;
 }
+
 @keyframes clouds2 {
   0%   {left: -2080px; top:100px;}
   100% {left:0px; top:100px;}
@@ -66,6 +40,7 @@ a:hover, a:visited, a:link, a:active
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 @keyframes contact {
   0% {
     background: #00C9FF;
@@ -91,19 +66,15 @@ header {
   z-index: 100;
 }
 
-.main {
+main {
   max-width: 50%;
   min-width: 1000px;
   margin: 160px auto 0 auto;
   position: relative;
 }
 
-/* #overmij, #opleiding, #werk, #hobbies, #contact {
-  height: 100vh;
-  margin-bottom: 15vh;
-} */
 
-.footer {
+footer {
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
   position: fixed;
   bottom: 0;
@@ -272,18 +243,21 @@ h1 {
   left: -60px;
 }
 
+p {
+  white-space: pre-line;
+}
+
 article p {
   font-family: 'Mukta', sans-serif;
   font-size: 1.6em;
   line-height: 1.4em;
   text-align: left;
   padding-bottom: 0.7em;
-  height: 100%;
 }
 
 .pasfoto img {
   position: relative;
-  top: -65px;
+  top: -35px;
   width: 360px;
   height: 360px;
   border-radius: 50%;
@@ -323,9 +297,8 @@ article p {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  align-content: flex-start;
-  max-width: 1000px;
-  margin-bottom: 30vh;
+  align-items: flex-start;
+  align-content: center;
 }
 
 .foto img {
