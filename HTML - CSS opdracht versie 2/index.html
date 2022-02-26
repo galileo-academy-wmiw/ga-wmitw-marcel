@@ -26,9 +26,23 @@
       <header class="header">
         <div id="fixednavbar">
           <div class="logo"><a href="#overmij"><img src="images/logo.svg" alt="huisstijl logo"></a></div>
-          <div class="hamburger"><a href="#overmij"><img src="images/hamburger.svg" alt="uitklapmenu"></a></div>
-          <div class="e-mail"><a href="#contact"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
-          <div class="linkedin"><a href="https://www.linkedin.com/in/marcel-h-2b9125a0/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
+
+          <social-container class="social-container">
+            <div class="klapmenu-blocker"></div>
+            <div class="klapmenu"> 
+              <div class="hamburger">
+                <img src="images/hamburger.svg" alt="uitklapmenu">
+                <img src="images/hamburgercross.svg" alt="uitklapmenu">
+              </div>
+              <br><br><br>
+              <a href="#overmij">Over mij</a><hr class="hr">
+              <a href="#opleiding">Opleiding</a><hr class="hr">
+              <a href="#werk">Werk</a><hr class="hr">
+              <a href="#hobbies">Hobbies</a><br>
+            </div>
+            <div class="e-mail"><a href="#contact"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
+            <div class="linkedin"><a href="https://www.linkedin.com/in/marcel-h-2b9125a0/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
+          </social-container>
 
           <div class="nav">
             <ul>
@@ -128,22 +142,27 @@
           Als je meer wilt weten, of suggesties of opmerkingen hebt, vul dan onderstaand formulier in. Ik hoor graag van je.</p><br><br>
 
           <form action="feedback.html" method="POST">
+
             <div class="flexformitems">
               <label for="naam">Naam: </label>
               <input type="text" name="naam" id="naam" placeholder="verplicht veld" required>
-            </div>  
+            </div>
+    
             <div class="flexformitems">
               <label for="e-mailadres">E-mailadres: </label>
               <input type="text" name="e-mailadres" id="e-mailadres" placeholder="verplicht veld" required>
-            </div>  
+            </div>
+    
             <div class="flexformitems">
               <label for="bedrijfsnaam">Bedrijfsnaam: </label>
               <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="optioneel" >
-            </div>  
+            </div>
+    
             <div class="flexformitems">
               <label for="functie">Functie: </label>
               <input type="text" name="functie" id="functie" placeholder="optioneel" >
-            </div>  
+            </div>
+    
             <div class="flexformitems">
               <label for="watvoorvraag">Waar gaat je berichtje over?</label>
               <select id="watvoorvraag" name="watvoorvraag" required>
@@ -156,8 +175,13 @@
             </div>
             <div>
               <textarea id="bericht" name="bericht" rows="5" cols="30"></textarea>
-            </div>  
+            </div>
+    
             <input type="submit" value="Verstuur">
+            <figure class="bottomspacer">
+              
+            </figure>
+    
           </form>
           <div class="bottomspacer"></div>
         </article>        

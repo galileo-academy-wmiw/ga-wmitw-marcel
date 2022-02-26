@@ -3,27 +3,65 @@
   font-family: 'WindSong';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/windsong-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/windsong-v5-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('./fonts/windsong-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/windsong-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/windsong-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/windsong-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/windsong-v5-latin-regular.svg#WindSong') format('svg'); /* Legacy iOS */
+       url('../fonts/windsong-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/windsong-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/windsong-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/windsong-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/windsong-v5-latin-regular.svg#WindSong') format('svg'); /* Legacy iOS */
 }
-
+/* windsong-500 - latin */
+@font-face {
+  font-family: 'WindSong';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/windsong-v5-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/windsong-v5-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/windsong-v5-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/windsong-v5-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/windsong-v5-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/windsong-v5-latin-500.svg#WindSong') format('svg'); /* Legacy iOS */
+}
 /* mukta-regular - latin */
 @font-face {
   font-family: 'Mukta';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/mukta-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/mukta-v12-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('./fonts/mukta-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/mukta-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/mukta-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/mukta-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/mukta-v12-latin-regular.svg#Mukta') format('svg'); /* Legacy iOS */
+       url('../fonts/mukta-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v12-latin-regular.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+/* mukta-600 - latin */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/mukta-v12-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/mukta-v12-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v12-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v12-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v12-latin-600.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+/* mukta-500 - latin */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/mukta-v12-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/mukta-v12-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v12-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v12-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v12-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v12-latin-500.svg#Mukta') format('svg'); /* Legacy iOS */
 }
 
 html, body {
@@ -40,8 +78,8 @@ a:visited, a:link
 
 a:hover, a:active
 {
-    text-decoration: underline;
-    color: #FFF;
+    text-decoration: none;
+    color: #005CCE;
     font-weight: 400;
 }
 
@@ -171,6 +209,15 @@ header {
   position: relative;
 }
 
+.social-container {
+  position: relative;
+  margin-left: 30px;
+  top: 45px;
+  width: 180px;
+  height: 40px;
+  float: right;
+}
+
 .logo {
   width: 100px;
   left: -20px;
@@ -181,35 +228,93 @@ header {
 .linkedin {
   position: relative;
   width: 40px;
-  top: 45px;
-  margin-left: 30px;
+  margin-left: 0;
   float: right;
+  z-index: 10;
 }
 
 .e-mail {
   position: relative;
   width: 40px;
-  top: 45px;
   margin-left: 30px;
+  margin-right: 70px;
   float: right;
+  z-index: 10;
 }
 
 .hamburger {
   position: relative;
   width: 40px;
-  top: 45px;
   margin-left: 30px;
-  float: right;
+  float: right;  
+}
+
+.hamburger img {
+  width: 40px;
+  height: auto;
+}
+
+.klapmenu  img:nth-child(2) {
   display: none;
 }
 
-.hamburger-menu {
-  position: relative;
-  width: 160px;
-  top: 45px;
-  margin-left: 30px;
-  float: right;
+.klapmenu:hover img:nth-child(1) {
   display: none;
+}
+
+.klapmenu:hover img:nth-child(2) {
+  display: block;
+}
+
+.klapmenu {
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 20%, rgba(0,201,255,1) 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  transition: height 0.5s, width 0.5s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.klapmenu:hover, .klapmenu:active {
+  width: 180px;
+  height: 340px;
+  color: white;
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-color: white;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.klapmenu a:hover {
+  text-decoration: none;
+}
+
+.klapmenu-blocker {
+  position: absolute;
+  left: 0;
+  width: 140px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
+  z-index: 5;
+}
+
+.hr {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1.2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: none;
+  background-color: white;
+  height: 2px;
 }
 
 .nav {
@@ -365,7 +470,7 @@ form {
   display: flex; 
   flex-direction: row; 
   justify-content: space-between; 
-  align-items: center
+  align-items: center;
 }
 
 input[type="text"] {
@@ -414,7 +519,8 @@ textarea {
   border: none;
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
   border-radius: 5px;
-
+  resize: none;
+  overflow: auto;
 }
 
 input[type="submit"] {
@@ -599,22 +705,23 @@ option:first-of-type {
   }
 
   input[type="text"] {
-    width: 440px;
+    width: 50%;
     font-size: 1.4em;
   }
 
   label {
-      font-size: 1.4em;
-      line-height: 1.6em;
+    width: 50%;
+    font-size: 1.4em;
+    line-height: 1.6em;
   }
 
   select {
-    width: 458px;
+    width: 50%;
     font-size: 1.4em;
   }
 
   textarea {
-    width: 440px;
+    width: 50%;
     font-size: 1.4em;
   }
 
