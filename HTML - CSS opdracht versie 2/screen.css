@@ -1444,7 +1444,7 @@ select option[value=""] {
 }
 
 /* hamburger-menu in actie */
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 500px) and (orientation: portrait) {
   .main {
     max-width: 80%;
     min-width: 320px;
