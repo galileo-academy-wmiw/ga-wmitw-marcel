@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+  <html lang="nl-NL">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Marcel Hooimeijer's webpage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Marcel Hooimeijer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marcel Hooimeijer</title>
+
+    <link rel="icon" type="image/png" href="images/favicon16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="images/favicon64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="images/favicon128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+    <link rel='stylesheet' href='screen.css'>
+  </head>
+
+  <body onload="document.body.style.opacity='1'">
+    <header class="header">
+      <div id="fixednavbar">
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="huisstijl logo"></a></div>
+
+        <social-container class="social-container">
+          <div class="klapmenu-blocker"></div>
+          <div class="klapmenu"> 
+            <div class="hamburger">
+              <img src="images/hamburger.svg" alt="uitklapmenu">
+              <img src="images/hamburgercross.svg" alt="uitklapmenu">
+            </div>
+            <br><br><br>
+            <a href="overmij.html">Over mij</a><hr class="hr">
+            <a href="opleiding.html">Opleiding</a><hr class="hr">
+            <a href="werk.html">Werk</a><hr class="hr">
+            <a href="hobbies.html">Hobbies</a><br>
+          </div>
+          <div class="e-mail"><a href="contact.html"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
+          <div class="linkedin"><a href="https://www.linkedin.com/in/marcel-h-2b9125a0/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
+        </social-container>
+
+        <div class="nav">
+          <ul>
+            <li><a href="overmij.html">Over mij</a></li>
+            <li><a href="opleiding.html">Opleiding</a></li>
+            <li><a href="werk.html">Werk</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <article>
+        <h1 class="kop1">Interested?</h1>
+        <figure class="pasfoto">
+          <img src="images/pasfoto.jpg" alt="foto van marcel">
+        </figure>
+        <p>Leuk dat je m&#39;n website bezocht hebt! Deze website geeft echter maar een kleine impressie van m&#39;n vaardigheden.<br> 
+        Als je meer wilt weten, of suggesties of opmerkingen hebt, vul dan onderstaand formulier in. Ik hoor graag van je.</p><br><br>
+
+        <form id="feedbackformulier" action="feedback.html" method="GET">
+
+          <div class="flexformitems">
+            <label for="naam">Naam: </label>
+            <input type="text" name="naam" id="naam" placeholder="verplicht veld" >
+            <small class="small"></small>
+          </div>
+  
+          <div class="flexformitems">
+            <label for="emailadres">E-mailadres: </label>
+            <input type="text" name="emailadres" id="emailadres" placeholder="verplicht veld" >
+            <small class="small"></small>
+          </div>
+  
+          <div class="flexformitems">
+            <label for="bedrijfsnaam">Bedrijfsnaam: </label>
+            <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="optioneel" >
+            <small></small>           
+          </div>
+  
+          <div class="flexformitems">
+            <label for="functie">Functie: </label>
+            <input type="text" name="functie" id="functie" placeholder="optioneel" >
+            <small></small>
+          </div>
+  
+          <div class="flexformitems">
+            <label for="watvoorvraag">Waar gaat je berichtje over?</label>
+            <select required id="watvoorvraag" name="watvoorvraag" >
+              <option value="" disabled selected hidden>--Maak hier een keuze--</option>         
+              <option value="opmerking">Ik heb een opmerking</option>
+              <option value="suggestie">Ik heb een suggestie</option>
+              <option value="recruiter">Ik representeer een bedrijf</option>
+              <option value="anders">Ik stuur zomaar een berichtje</option>
+            </select>
+            <small></small>
+          </div>
+          <div>
+            <textarea id="bericht" name="bericht" rows="5" cols="30"></textarea>
+            <small></small>
+          </div>
+  
+          <input type="submit" value="Verstuur">
+          <figure class="bottomspacer">
+            
+          </figure>
+  
+        </form>
+        <div class="bottomspacer"></div>
+      </article>        
+    </main>
+
+    <footer class="footer">
+      <div class="footercontent">
+        <div class="galileo"><a href="https://galileo-academy.nl/contact/" target="_blank"><img src="images/galileo-logo.png" alt="galileo academy contactpagina"></a></div>
+  
+        <div class="privacy"><a href="https://galileo-academy.nl/privacy-policy/" target="_blank">Privacy policy<br>Galileo Academy</a></div>
+        <div class="privacy privacy2"><a href="https://galileo-academy.nl/privacy-policy/" target="_blank">Privacy<br>policy</a></div>
+  
+        <div class="copyright">Website design en inhoud:<br>© 2022 Marcel Hooimeijer</div> 
+        <div class="copyright copyright2">© 2022<br>M. Hooimeijer</div>
+      </div>
+    </footer>
+
+    <div class="clouds">
+      <img src="images/wolken.png" alt="achtergrondwolken">
+    </div>
+    <div class="clouds2">
+      <img src="images/wolken2.png" alt="meer achtergrondwolken">
+    </div>
+
+    <script src="style.js"></script>
+  </body>
+
+</html>
