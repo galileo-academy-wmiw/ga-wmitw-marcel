@@ -208,87 +208,6 @@ header {
 }
 
 
-/* CSS hamburger menu */
-.hamburger {
-  position: relative;
-  width: 40px;
-  margin-left: 30px;
-  float: right; 
-}
-
-.hamburger img {
-  width: 40px;
-  height: auto;
-}
-
-.klapmenu  img:nth-child(2) {
-  display: none;
-}
-
-.klapmenu:hover img:nth-child(1) {
-  display: none;
-}
-
-.klapmenu:hover img:nth-child(2) {
-  display: none;
-}
-
-.klapmenu {
-  position: absolute;
-  width: 120px;
-  height: 40px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 20%, rgba(0,201,255,1) 100%);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  font-weight: 400;
-  text-align: center;
-  color: white;
-  transition: height 0.5s, width 0.5s;
-  animation-fill-mode: forwards;
-  overflow: hidden;
-  z-index: 1;
-  text-decoration: none;
-  display: none;
-}
-
-.klapmenu:hover, .klapmenu:active {
-  width: 120px;
-  height: 340px;
-  color: white;
-  border-width: 0 0 5px 0;
-  border-style: solid;
-  border-color: white;
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.klapmenu a:hover {
-  text-decoration: none;
-  display: none;
-}
-
-.klapmenu-blocker {
-  position: absolute;
-  left: 0;
-  width: 120px;
-  height: 40px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
-  z-index: 5;
-  display: none;
-}
-
-.hr {
-  display: none;
-  margin-top: 1em;
-  margin-bottom: 1.2em;
-  margin-left: 10%;
-  margin-right: 10%;
-  border: none;
-  background-color: white;
-  height: 2px;
-}
-
-
 /* hoofdgedeelte */
 .main {
   max-width: 50%;
@@ -1276,30 +1195,8 @@ select option[value=""] {
     z-index: 10;
   }
 
-  .hamburger {
-    position: relative;
-    width: 30px;
-    margin-left: 22px;
-    float: right;
-  }
   
-  .hamburger img {
-    width: 30px;
-    height: auto;
-  }
-  
-  .klapmenu  img:nth-child(2) {
-    display: none;
-  }
-  
-  .klapmenu:hover img:nth-child(1) {
-    display: none;
-  }
-  
-  .klapmenu:hover img:nth-child(2) {
-    display: block;
-  }
-  
+/* Hamburger menu */  
   .klapmenu {
     position: absolute;
     width: 134px;
@@ -1317,8 +1214,8 @@ select option[value=""] {
     text-decoration: none;
     display: block;
   }
-  
-  .klapmenu:hover, .klapmenu:active {
+
+  .klapmenu-expand {
     width: 134px;
     height: 300px;
     color: white;
@@ -1328,22 +1225,7 @@ select option[value=""] {
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
     display: block;
   }
-  
-  .klapmenu a:hover {
-    text-decoration: none;
-    display: block;
-  }
-  
-  .klapmenu-blocker {
-    position: absolute;
-    left: 0;
-    width: 104px;
-    height: 30px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
-    z-index: 5;
-    display: block;
-  }
-  
+
   .hr {
     display: block;
     margin-top: 0.9em;
@@ -1354,6 +1236,67 @@ select option[value=""] {
     background-color: white;
     height: 2px;
   }
+
+  .menu-btn {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-left: 22px;
+    margin-right: 0;
+    float: right;
+    background-color: #00C9FF;
+    border: 2px solid #fff;
+  }
+
+  .menu-btn_hamburger {
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn_hamburger::before,
+  .menu-btn_hamburger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .3s ease-in-out;
+  }
+
+  .menu-btn_hamburger::before {
+    transform: translate(-10px, -8px);
+  }
+
+  .menu-btn_hamburger::after {
+    transform: translate(-10px, 8px);
+  }
+
+  /* ANIMATION */
+  .menu-btn.open .menu-btn_hamburger {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn_hamburger::before {
+    transform: rotate(45deg) translate(-7px, 7px);
+  }
+
+  .menu-btn.open .menu-btn_hamburger::after {
+    transform: rotate(-45deg) translate(-7px, -7px);
+  }
+
   
   .nav {
     margin-top: 38px;
