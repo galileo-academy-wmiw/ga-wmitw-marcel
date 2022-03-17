@@ -1,3 +1,4 @@
+// Hamburger menu
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 
@@ -21,7 +22,7 @@ function uitKlapMenu() {
   
 
 
-
+// Formulier validatie
 const naamEl = document.querySelector('#naam');
 const emailadresEl = document.querySelector('#emailadres');
 const watvoorvraagEl = document.querySelector('#watvoorvraag');
