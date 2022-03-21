@@ -110,7 +110,6 @@ body {
   background-attachment: fixed;
   animation: fadein 2s;
 }
-
 @keyframes fadein {
   0% {
   opacity:0;
@@ -512,6 +511,7 @@ label {
     line-height: 1.8em;
     text-align: left;
     padding: 9px 0;
+    width: 50%;
 }
 
 input[type="submit"] {
@@ -1304,7 +1304,6 @@ option {
     margin-left: 0;
     float: right;
     z-index: 10;
-    display: none;
   }
   
   .e-mail {
@@ -1315,14 +1314,13 @@ option {
     margin-right: 52px;
     float: right;
     z-index: 10;
-    display: none;
   }
 
 /* || hamburger circle menu */ 
   .circlemenu {
     position: relative;
-    top: 100px;
-    left: -20px;    
+    top: 150px;
+    left: 30px;    
     background: rgba( 0, 201, 255, 1 );
     box-shadow: 0 0 18px 18px rgba( 255, 255, 255, 0.7 );
     border-radius: 100%;
@@ -1338,8 +1336,8 @@ option {
     -o-transform: scale( 0 );
     -ms-transform: scale( 0 );
     transform: scale( 0 );
-    width: 320px;
-    height: 320px;
+    width: 200px;
+    height: 200px;
     line-height: 20px;
     display: block;
   }
@@ -1702,22 +1700,14 @@ option {
   /* || hamburger circle menu */ 
   .circlemenu {
     position: relative;
-    top: 100px;
-    left: 10px;    
-    background: rgba( 0, 201, 255, 1 );
+    top: 180px;
+    left: -20px;    
     box-shadow: 0 0 15px 15px rgba( 255, 255, 255, 0.7 );
-    border-radius: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.0em;
-    font-weight: 400;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    overflow: hidden;
-   
-    
-    width: 260px;
-    height: 260px;
+    padding: 30px;
+    width: 160px;
+    height: 160px;
     line-height: 14px;
 }
 
@@ -1753,13 +1743,13 @@ option {
     font-size: 1.2em;
     line-height: 1.3em;
     top: -100px;
-    padding: 280px 0 0.7em 0;
+    padding: 290px 0 0.7em 0;
   }
 
   .pasfoto img {
     position: relative;
-    top: -25px;
-    left: 32%;
+    top: -18px;
+    left: 25%;
     width: 40%;
     min-width: 180px;
     height: auto;

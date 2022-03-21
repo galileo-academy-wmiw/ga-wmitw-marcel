@@ -29,17 +29,10 @@ menuBtn.addEventListener('click', () => {
   }
 
 
-
-
-
 // Formulier validatie
 const naamEl = document.querySelector('#naam');
 const emailadresEl = document.querySelector('#emailadres');
-const watvoorvraagEl = document.querySelector('#watvoorvraag');
-const berichtEl = document.querySelector('#bericht');
-
 const form = document.querySelector('#feedbackformulier');
-
 
 const checkNaam = () => {
     let valid = false;
@@ -58,7 +51,6 @@ const checkNaam = () => {
     return valid;
 };
 
-
 const checkEmail = () => {
     let valid = false;
     const emailadres = emailadresEl.value.trim();
@@ -73,45 +65,12 @@ const checkEmail = () => {
     return valid;
 };
 
-
-const checkWatVoorVraag = () => {
-    let valid = false;
-    const watvoorvraag = watvoorvraagEl.value.trim();
-    if (!isRequired(watvoorvraag) === '--Maak hier een keuze--') {
-        showFout(watvoorvraagEl, 'Maak een keuze.');
-    } else {
-        showGoed(watvoorvraagEl);
-        valid = true;
-    }
-    return valid;
-};
-
-
-const checkBericht = () => {
-    let valid = false;
-    const min = 1, 
-    max = 20;
-    const bericht = berichtEl.value.trim();
-
-    if (!isBetween(bericht.length, min, max)) {
-        showFout(berichtEl, `Je bericht mag maximaal ${max} tekens bevatten.`);
-    } else {
-        showGoed(berichtEl);
-        valid = true;
-    }
-    return valid;
-};
-
-
 const isEmailValid = (emailadres) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(emailadres);
 };
-
-
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
-
 
 const showFout = (input, message) => {
     
@@ -123,8 +82,6 @@ const showFout = (input, message) => {
     const fout = formField.querySelector('small');
     fout.textContent = message;
 };
-
-
 const showGoed = (input) => {
     
     const formField = input.parentElement;
@@ -142,14 +99,10 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     let isNaamValid = checkNaam(),
-        isEmailValid = checkEmail(),
-        isWatVoorVraagValid = checkWatVoorVraag(),
-        isBerichtValid = checkBericht();
+        isEmailValid = checkEmail();
 
     let isFormValid = isNaamValid &&
-        isEmailValid &&
-        isWatVoorVraagValid &&
-        isBerichtValid;
+        isEmailValid;
 
     if (isFormValid) {
 
@@ -164,13 +117,13 @@ form.addEventListener('input', function (e) {
         case 'emailadres':
             checkEmail();
             break;
-        case 'watvoorvraag':
-            checkWatVoorVraag();
-            break;
-        case 'bericht':
-            checkBericht();
-            break;
     }
 });
 
 
+window.addEventListener("beforeunload", function (e) {
+    let confirmationMessage = '';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
