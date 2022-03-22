@@ -68,29 +68,35 @@
         <p>Leuk dat je m&#39;n website bezocht hebt! Deze website geeft echter maar een kleine impressie van m&#39;n vaardigheden.<br> 
         Als je meer wilt weten, of suggesties of opmerkingen hebt, vul dan onderstaand formulier in. Ik hoor graag van je.</p><br><br>
 
-        <form id="feedbackformulier" action="feedback.html" method="post">
+        <form id="feedbackformulier" action="feedback.html" method="post" novalidate onsubmit="setFormSubmitting()">
 
           <div class="flexformitems">
             <label for="naam">Naam: </label>
-            <input type="text" name="naam" id="naam" placeholder="verplicht veld" >
+            <input type="text" name="naam" id="naam" placeholder="Dit veld is vereist" >
             <small class="small"></small>
           </div>
   
           <div class="flexformitems">
             <label for="emailadres">E-mailadres: </label>
-            <input type="text" name="emailadres" id="emailadres" placeholder="verplicht veld" >
+            <input type="text" name="emailadres" id="emailadres" placeholder="Dit veld is vereist" >
+            <small class="small"></small>
+          </div>
+
+          <div class="flexformitems">
+            <label for="telefoon">Telefoon: </label>
+            <input type="text" name="telefoon" id="telefoon" placeholder="Dit veld is vereist" >
             <small class="small"></small>
           </div>
   
           <div class="flexformitems">
             <label for="bedrijfsnaam">Bedrijfsnaam: </label>
-            <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="optioneel" >
+            <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="Optioneel" >
             <small></small>           
           </div>
   
           <div class="flexformitems">
             <label for="functie">Functie: </label>
-            <input type="text" name="functie" id="functie" placeholder="optioneel" >
+            <input type="text" name="functie" id="functie" placeholder="Optioneel" >
             <small></small>
           </div>
   
@@ -105,12 +111,13 @@
             </select>
             <small></small>
           </div>
-          <div>
-            <textarea id="bericht" name="bericht" rows="5" cols="30"></textarea>
-            <small></small>
+
+          <div class="flexformitems">
+            <div class="fitsubmit"><input type="submit" value="Verstuur"></div>
+            <textarea id="bericht" rows="5" cols="50" oninput="limitChar(this)" maxlength="20"></textarea>
+            <small id="charCounter">Je kunt maximaal 200 tekens invoeren</small>
           </div>
   
-          <input type="submit" value="Verstuur">
           <figure class="bottomspacer">
             
           </figure>

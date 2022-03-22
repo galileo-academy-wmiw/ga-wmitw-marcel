@@ -484,7 +484,7 @@ form {
   display: flex; 
   flex-direction: row; 
   justify-content: flex-end; 
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -506,12 +506,12 @@ input[type="text"], select, textarea {
 }
 
 label {
-    font-family: 'Mukta', sans-serif;
-    font-size: 1.6em;
-    line-height: 1.8em;
-    text-align: left;
-    padding: 9px 0;
-    width: 50%;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.8em;
+  text-align: left;
+  padding: 9px 0;
+  width: 50%;
 }
 
 input[type="submit"] {
@@ -560,6 +560,10 @@ option {
   text-align: left;
   width: 50%;
   margin-bottom: 10px;
+}
+
+.fitsubmit {
+  width: 50%;
 }
 
 /* || footer */
@@ -1477,6 +1481,10 @@ option {
     transform: rotate(-45deg) translate(-7px, -7px);
   }
 
+  .open {
+    border-radius: 100%;
+  }
+
 /* || hoofdgedeelte */
   .main {
     min-width: 480px;
@@ -1589,6 +1597,14 @@ option {
   input[type="submit"] {
     width: 120px;
     font-size: 1.2em;
+  }
+
+  .flexformitems small {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: left;
+    width: 50%;
+    margin-bottom: 10px;
   }
 
 /* || footer */
