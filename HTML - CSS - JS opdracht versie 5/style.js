@@ -33,6 +33,8 @@ menuBtn.addEventListener('click', () => {
 const naamEl = document.querySelector('#naam');
 const emailadresEl = document.querySelector('#emailadres');
 const telefoonEl = document.querySelector('#telefoon');
+const bedrijfsnaamEl = document.querySelector('#bedrijfsnaam');
+const functieEl = document.querySelector('#functie');
 const form = document.querySelector('#feedbackformulier');
 
 const checkNaam = () => {
@@ -73,6 +75,32 @@ const checkTelefoon = () => {
         showFout(telefoonEl, 'Dit is geen geldig telefoonnummer.');
     } else {
         showGoed(telefoonEl);
+        valid = true;
+    }
+    return valid;
+};
+const checkBedrijfsnaam = () => {
+    let valid = false;
+    const bedrijfsnaam = bedrijfsnaamEl.value.trim();
+
+    if (!isRequired(bedrijfsnaam)) {
+        showGoed(bedrijfsnaamEl);
+    } 
+    else {
+        showGoed(bedrijfsnaamEl);
+        valid = true;
+    }
+    return valid;
+};
+const checkFunctie = () => {
+    let valid = false;
+    const functie = functieEl.value.trim();
+
+    if (!isRequired(functie)) {
+        showGoed(functieEl);
+    } 
+    else {
+        showGoed(functieEl);
         valid = true;
     }
     return valid;
@@ -120,12 +148,14 @@ form.addEventListener('submit', function (e) {
         isTelefoonValid = checkTelefoon();
 
     let isFormValid = isNaamValid &&
-        isEmailValid && isTelefoonValid;
+        isEmailValid && 
+        isTelefoonValid;
 
     if (isFormValid) {
-
+        location.href = 'index.html';
     }
 });
+
 form.addEventListener('input', function (e) {
     switch (e.target.id) {
         case 'naam':
@@ -137,9 +167,17 @@ form.addEventListener('input', function (e) {
         case 'telefoon':
             checkTelefoon();
             break;
+        case 'bedrijfsnaam':
+            checkBedrijfsnaam();
+            break;
+        case 'functie':
+            checkFunctie();
+            break;      
     }
 });
 
+
+// Textarea max aantal tekens
 const limitChar = (element) => {
     const maxChar = 200;
     
@@ -157,74 +195,47 @@ const limitChar = (element) => {
 }
 
 
-
-
-/*
-window.addEventListener("beforeunload", function (e) {
-    let confirmationMessage = '';
-
-    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-}); 
-
-const formSubmitting = false;
-const setFormSubmitting = function() { formSubmitting = true; };
-
-window.onload = function() {
-    window.addEventListener("beforeunload", function (e) {
-        if (formSubmitting) {
-            return undefined;
-        }
-
-        var confirmationMessage = 'It looks like you have been editing something. '
-                                + 'If you leave before saving, your changes will be lost.';
-        
-        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-    });
-}; */
-
-
-
-
 // Formulier exit validatie
+let naam = '';
+let emailadres = '';
+let telefoon = '';
 
-// Variables to store the input text
-let fname = '';
-let lname = '';
-let subject = '';
-
-// Functions to update the input text
-updateFname = () => {
-    fname = document
-        .getElementById('fname').value;
+updateNaam = () => {
+    naam = document
+        .getElementById('naam').value;
 }
 
-updateLname = () => {
-    lname = document
-        .getElementById('lname').value;
+updateEmailadres = () => {
+    emailadres = document
+        .getElementById('emailadres').value;
 }
 
-updateSubject = () => {
-    subject = document
-        .getElementById('subject').value;
+updateTelefoon = () => {
+    telefoon = document
+        .getElementById('telefoon').value;
 }
 
-// Event listener for the 
-// 'beforeunload' event
+updateBericht = () => {
+    bericht = document
+        .getElementById('bericht').value;
+}
+
 window.addEventListener('beforeunload', 
                         function (e) {
 
-    // Check if any of the input
-    // fields are filled
-    if (fname !== '' ||
-        lname !== '' ||
-        subject !== '') {
+    if (naam !== '' ||
+        emailadres !== '' ||
+        telefoon !== '' ||
+        bericht !== '') {
 
-        // Cancel the event and
-        // show alert that the unsaved
-        // changes would be lost
         e.preventDefault();
         e.returnValue = '';
     }
 });
+
+// Copyright datum
+function date() {
+    document.getElementById("datum").innerHTML = new Date().getFullYear()
+    document.getElementById("datum2").innerHTML = new Date().getFullYear()
+
+  }
