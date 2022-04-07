@@ -15,7 +15,9 @@ class AppRoot extends StatelessWidget {
           length: 5,
           child: Scaffold(
             appBar: AppBar(title: SvgPicture.asset('assets/images/logo.svg', height: 40, fit: BoxFit.fitHeight,), centerTitle: true ),
-              bottomNavigationBar: TabBar(
+
+
+              bottomNavigationBar: const TabBar(
                 indicatorColor: Colors.indigo,
                 labelColor: Colors.black,
                 tabs: [
@@ -48,11 +50,12 @@ class AppRoot extends StatelessWidget {
 
 
 class AppTree extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -63,9 +66,13 @@ class AppTree extends StatelessWidget {
             )
           ),
           child: Center(
-            child: Text(
-              'Hallo, mijn naam is Marcel en ik ben een creatieveling. Als kind kon ik uren bezig zijn met tekenen en knutselen. Inspiratie haalde ik uit strips, tijdschriften en tv-shows. Een creatieve opleiding was dan ook de logische keuze. Na eerst een decorateurs-opleiding te hebben gevolgd, ben ik uiteindelijk grafische vormgeving gaan studeren. Na een mooie carrière als grafisch vormgever is het tijd voor een nieuwe uitdaging. En omdat het creatieve bloed nog steeds kruipt waar het niet gaan kan, heb ik gekozen voor web-/app development. Ik volg daartoe nu een opleiding bij Galileo-academy.',
-              ),
+            child: Container(
+              margin: const EdgeInsets.all(25.0),
+              child: const Text(
+                'Hallo, mijn naam is Marcel en ik ben een creatieveling. Als kind kon ik uren bezig zijn met tekenen en knutselen. Inspiratie haalde ik uit strips, tijdschriften en tv-shows. Een creatieve opleiding was dan ook de logische keuze. Na eerst een decorateurs-opleiding te hebben gevolgd, ben ik uiteindelijk grafische vormgeving gaan studeren. Na een mooie carrière als grafisch vormgever is het tijd voor een nieuwe uitdaging. En omdat het creatieve bloed nog steeds kruipt waar het niet gaan kan, heb ik gekozen voor web-/app development. Ik volg daartoe nu een opleiding bij Galileo-academy.',
+                ),
+            ),
+
             ),
           ),
         ),
