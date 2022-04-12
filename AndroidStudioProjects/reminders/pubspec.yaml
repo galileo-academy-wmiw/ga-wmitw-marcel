@@ -62,6 +62,7 @@ flutter:
   assets:
     - assets/images/logo.svg
     - assets/images/pasfoto.png
+    - assets/images/wolken.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -95,6 +96,10 @@ flutter:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Thin.ttf
         - asset: assets/fonts/Roboto-ThinItalic.ttf
+    - family: WindSong
+      fonts:
+        - asset: assets/fonts/WindSong-Regular.ttf
+        - asset: assets/fonts/WindSong-Medium.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
