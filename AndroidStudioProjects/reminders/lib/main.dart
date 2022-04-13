@@ -159,7 +159,8 @@ class Home extends StatelessWidget {
                           top: 290,
                           right: 25,
                           bottom: 0,
-                        ),                        child: const Text(
+                        ),
+                        child: const Text(
                           "Hallo, mijn naam is Marcel en ik ben een creatieveling. Als kind kon ik uren bezig zijn met tekenen en knutselen. Inspiratie haalde ik uit strips, tijdschriften en tv-shows. Een creatieve opleiding was dan ook de logische keuze. Na eerst een decorateurs-opleiding te hebben gevolgd, ben ik uiteindelijk grafische vormgeving gaan studeren. \n\nNa een mooie carrière als grafisch vormgever is het tijd voor een nieuwe uitdaging. En omdat het creatieve bloed nog steeds kruipt waar het niet gaan kan, heb ik gekozen voor web-/app development. Ik volg daartoe nu een opleiding bij Galileo-academy.",
                           style: TextStyle(height: 1.3, fontSize: 16),
                         ),
@@ -318,7 +319,6 @@ class Opleiding extends StatelessWidget {
   }
 }
 
-
 class Werk extends StatelessWidget {
   const Werk({Key? key}) : super(key: key);
 
@@ -454,7 +454,7 @@ class Werk extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+    /*        Row(
               children: [
                   Expanded(
                       child: Image.asset('assets/images/logodesign.jpg'),
@@ -466,7 +466,7 @@ class Werk extends StatelessWidget {
                       child: Image.asset('assets/images/dago-website.jpg'),
                     ),
                   ],
-                ),
+                ), */
               ],
             ),
         ),
@@ -474,33 +474,155 @@ class Werk extends StatelessWidget {
   }
 }
 
-
-
 class Hobbies extends StatelessWidget {
   const Hobbies({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xff00C9FF),
-              Color(0xffFFFFFF),
-            ],
-          )),
-          child: Center(
-            child: Container(
-              margin: const EdgeInsets.all(25.0),
-              child: const Text(
-                "Behalve dat ik graag met m'n werk bezig ben, heb ik ook veel hobbies. Tekenen/ schilderen, modelbouw, houtbewerking, grafische vormgeving, webdesign, you name it… Daarnaast hou ik van lezen, dieren (vooral katten) en nieuwe dingen leren.\n\nEn hoewel ik autisme heb, beperk ik me niet tot één ding. Meestal kies ik iets dat me interesseert, ga er dan lange tijd helemaal in op, totdat het volgende “interessants” zich aandient. Lange tijd was dat grafisch werk. Op dit moment is m'n primaire hobby “houtbewerking”.\n\nIk ben altijd al graag met m'n handen bezig geweest en een paar jaar geleden heb ik een houtdraaibank gekocht om me in het houtdraaien te bekwamen. Voor mij een manier om lekker te ontspannen.",
-              ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color(0xff00C9FF),
+                Color(0xffFFFFFF),
+              ]),
+        ),
+        child: ListView(
+          children: <Widget>[
+            const SizedBox(height: 20),
+            Stack(
+              children: [
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child:
+                      Image.asset('assets/images/wolken1.png'),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      height: 150.0,
+                      width: 150.0,
+                      margin: const EdgeInsets.only(
+                        left: 65,
+                        top: 100,
+                        right: 25,
+                        bottom: 0,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white, width: 5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            blurRadius: 7,
+                            offset: Offset(5, 5), // changes position of shadow
+                          ),
+                        ],
+                        image: const DecorationImage(
+                          image: AssetImage('assets/images/kat.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        shape: BoxShape.rectangle,
+                      ),
+                    ),
+                    Container(
+                      height: 150.0,
+                      width: 150.0,
+                      margin: const EdgeInsets.only(
+                        left: 180,
+                        top: 70,
+                        right: 65,
+                        bottom: 0,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white, width: 5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            blurRadius: 7,
+                            offset: Offset(5, 5), // changes position of shadow
+                          ),
+                        ],
+                        image: const DecorationImage(
+                          image: AssetImage('assets/images/camera.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        shape: BoxShape.rectangle,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(
+                        left: 10,
+                        top: 0,
+                        right: 0,
+                        bottom: 0,
+                      ),
+                      child: Transform.rotate(
+                        angle: -math.pi / 12,
+                        child: const Text(
+                          'Inquisitive...',
+                          style: TextStyle(
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(4.0, 4.0),
+                                  blurRadius: 15.0,
+                                  color: Color.fromARGB(160, 0, 0, 0),
+                                ),
+                              ],
+                              height: 1.3,
+                              fontSize: 58,
+                              fontFamily: 'WindSong',
+                              fontWeight: FontWeight.w500,
+                              color: Colors.indigo),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Container(
+                        margin: const EdgeInsets.only(
+                          left: 25,
+                          top: 280,
+                          right: 25,
+                          bottom: 0,
+                        ),
+                        child: const Text(
+                          "Behalve dat ik graag met m'n werk bezig ben, heb ik ook veel hobbies. Tekenen/ schilderen, modelbouw, houtbewerking, grafische vormgeving, webdesign, you name it… Daarnaast hou ik van lezen, dieren (vooral katten) en nieuwe dingen leren.\n\nEn hoewel ik autisme heb, beperk ik me niet tot één ding. Meestal kies ik iets dat me interesseert, ga er dan lange tijd helemaal in op, totdat het volgende “interessants” zich aandient. Lange tijd was dat grafisch werk. Op dit moment is m'n primaire hobby “houtbewerking”.\n\nIk ben altijd al graag met m'n handen bezig geweest en een paar jaar geleden heb ik een houtdraaibank gekocht om me in het houtdraaien te bekwamen. Voor mij een manier om lekker te ontspannen.\n\n\n",
+                          style: TextStyle(height: 1.3, fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ),
+            /*        Row(
+              children: [
+                  Expanded(
+                      child: Image.asset('assets/images/logodesign.jpg'),
+                    ),
+                  Expanded(
+                      child: Image.asset('assets/images/opvangprogramma.jpg'),
+                    ),
+                  Expanded(
+                      child: Image.asset('assets/images/dago-website.jpg'),
+                    ),
+                  ],
+                ), */
+          ],
         ),
       ),
     );
