@@ -13,30 +13,39 @@ class MyApp extends StatelessWidget {
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title)),
-        body: const Center(
-          child: MyStatefulWidget(),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xff00C9FF),
+                  Color(0xffFFFFFF),
+                ]),
+          ),
+          child: const AnimationStatefulWidget(),
         ),
       ),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class AnimationStatefulWidget extends StatefulWidget {
+  const AnimationStatefulWidget({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<AnimationStatefulWidget> createState() => _AnimationStatefulWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget>
+class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 20),
     vsync: this,
   )..repeat(reverse: true);
   late final Animation<Offset> _offsetAnimation = Tween<Offset>(
-    begin: const Offset(-1.5, 0.0),
-    end: const Offset(1.5, 0.0),
+    begin: const Offset(-0.2, 0.0),
+    end: const Offset(0.2, 0.0),
   ).animate(CurvedAnimation(
     parent: _controller,
     curve: Curves.linear,
@@ -52,10 +61,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
   Widget build(BuildContext context) {
     return SlideTransition(
       position: _offsetAnimation,
-      child: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: FlutterLogo(size: 150.0),
-      ),
-    );
+      child: Container(
+        height: double.infinity,
+          child: Center(
+            child: Image.asset('assets/images/wolken1.png'),
+          ),
+        ),
+      );
   }
 }
