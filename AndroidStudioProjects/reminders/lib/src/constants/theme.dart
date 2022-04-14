@@ -6,7 +6,9 @@ ThemeData theme = ThemeData(
   fontFamily: 'Mukta',
   primarySwatch: Colors.red,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-
+  colorScheme: const ColorScheme.light(
+    secondary: Color(0xff123456),
+  ),
   textTheme: const TextTheme(
     // H1
     headline1: TextStyle(
@@ -32,13 +34,14 @@ ThemeData theme = ThemeData(
       letterSpacing: 0.25,
     ),
   ),
-
   appBarTheme: const AppBarTheme(
     backgroundColor: Color(0xff00C9FF),
     foregroundColor: Colors.white,
     elevation: 0,
-
   ),
-
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    backgroundColor: Color(0xff00C9FF),
+    selectedItemColor: Colors.white,
+    unselectedItemColor: Colors.indigo,
+  ),
 );
-
