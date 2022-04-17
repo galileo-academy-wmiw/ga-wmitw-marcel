@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:oefenen2/local_imports.dart';
+import '../../local_imports.dart';
 
 class Layout extends StatelessWidget {
   const Layout({
@@ -20,11 +20,9 @@ class Layout extends StatelessWidget {
           height: 50,
           fit: BoxFit.fitHeight,
         ),
-        leadingWidth: 100,
         centerTitle: true,
       ),
       body: Container(
-        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -34,31 +32,55 @@ class Layout extends StatelessWidget {
               Color(0xffFFFFFF),
             ],
           ),
+          image: DecorationImage(
+              image: AssetImage("assets/images/wolken1.png"),
+              fit: BoxFit.cover),
         ),
         child: ListView(shrinkWrap: true, children: <Widget>[
           Padding(
               padding: const EdgeInsets.only(
-                top: 48.0,
-                bottom: 48.0,
+                top: 30.0,
+                bottom: 30.0,
               ),
               child: child)
         ]),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         onTap: (value) {
           switch (value) {
             case 0:
+              Navigator.pushNamed(context, HomeScreen.routeName);
+              break;
+            case 1:
+              Navigator.pushNamed(context, OpleidingScreen.routeName);
+              break;
+            case 2:
+              Navigator.pushNamed(context, WerkScreen.routeName);
+              break;
+            case 3:
+              Navigator.pushNamed(context, HobbiesScreen.routeName);
+              break;
+            default:
               Navigator.pushNamed(context, HomeScreen.routeName);
           }
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_rounded),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.school_rounded),
             label: 'Opleiding',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business_center_rounded),
+            label: 'Werk',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.build_circle),
+            label: 'Hobbies',
           ),
         ],
       ),

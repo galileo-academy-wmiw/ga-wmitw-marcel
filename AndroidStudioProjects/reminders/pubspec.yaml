@@ -75,6 +75,12 @@ flutter:
     - assets/images/zandloper.jpg
     - assets/images/dago-website.jpg
     - assets/images/camera.jpg
+    - assets/images/mutsjeshuisje.jpg
+    - assets/images/spiegel.jpg
+    - assets/images/tweekatten.jpg
+    - assets/images/walle.jpg
+    - assets/images/wandlampje.jpg
+    - assets/images/jaarverslag.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

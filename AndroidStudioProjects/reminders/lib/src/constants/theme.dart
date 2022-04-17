@@ -17,7 +17,6 @@ ThemeData theme = ThemeData(
       fontWeight: FontWeight.w400, // Standard
       letterSpacing: -1.5,
     ),
-
     // H2
     headline2: TextStyle(
       fontFamily: 'Roboto', // Overrides default font family.
@@ -25,9 +24,7 @@ ThemeData theme = ThemeData(
       fontWeight: FontWeight.w300, // Light
       letterSpacing: -0.5,
     ),
-
-    // Default body, like `<p>` in web. No `fontFamily` property needed
-    // as it is declared by default in `ThemeData()`.
+    // Default body
     bodyText2: TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
@@ -43,5 +40,7 @@ ThemeData theme = ThemeData(
     backgroundColor: Color(0xff00C9FF),
     selectedItemColor: Colors.white,
     unselectedItemColor: Colors.indigo,
+    unselectedLabelStyle: TextStyle(color: Colors.indigo),
+    selectedLabelStyle: TextStyle(color: Colors.white),
   ),
 );

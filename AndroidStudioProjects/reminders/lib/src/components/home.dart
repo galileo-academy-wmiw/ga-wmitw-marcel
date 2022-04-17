@@ -1,6 +1,5 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,14 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Row(
-          children: <Widget>[
-            Expanded(
-              flex: 1,
-              child: Image.asset('assets/images/wolken1.png'),
-            ),
-          ],
-        ),
+        // Foto
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -47,6 +39,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+        // Titel
         Row(
           children: [
             Container(
@@ -78,6 +71,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+        // Bodytekst
         Row(
           children: [
             Flexible(
