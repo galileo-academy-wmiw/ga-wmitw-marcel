@@ -10,6 +10,7 @@ class HobbiesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Hobbies(),
+      currentIndex: 3,
     );
   }
 }

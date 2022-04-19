@@ -10,6 +10,7 @@ class OpleidingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Opleiding(),
+      currentIndex: 1,
     );
   }
 }

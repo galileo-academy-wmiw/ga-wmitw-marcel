@@ -10,6 +10,7 @@ class WerkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Werk(),
+      currentIndex: 2,
     );
   }
 }

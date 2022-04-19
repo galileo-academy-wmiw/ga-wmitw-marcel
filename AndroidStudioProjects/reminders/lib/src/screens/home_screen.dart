@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Home(),
+      currentIndex: 0,
     );
   }
 }

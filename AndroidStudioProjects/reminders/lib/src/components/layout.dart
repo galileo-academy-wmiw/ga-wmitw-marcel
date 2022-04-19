@@ -5,10 +5,12 @@ import '../../local_imports.dart';
 class Layout extends StatelessWidget {
   const Layout({
     required this.child,
+    required this.currentIndex,
     Key? key,
   }) : super(key: key);
 
   final Widget child;
+  final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -45,45 +47,7 @@ class Layout extends StatelessWidget {
               child: child)
         ]),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        onTap: (value) {
-          switch (value) {
-            case 0:
-              Navigator.pushNamed(context, HomeScreen.routeName);
-              break;
-            case 1:
-              Navigator.pushNamed(context, OpleidingScreen.routeName);
-              break;
-            case 2:
-              Navigator.pushNamed(context, WerkScreen.routeName);
-              break;
-            case 3:
-              Navigator.pushNamed(context, HobbiesScreen.routeName);
-              break;
-            default:
-              Navigator.pushNamed(context, HomeScreen.routeName);
-          }
-        },
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school_rounded),
-            label: 'Opleiding',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business_center_rounded),
-            label: 'Werk',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.build_circle),
-            label: 'Hobbies',
-          ),
-        ],
-      ),
+      bottomNavigationBar: NavigationThingy(currentIndex: currentIndex,),
     );
   }
 }
