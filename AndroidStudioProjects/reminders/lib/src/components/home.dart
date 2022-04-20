@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.3),
                     blurRadius: 7,
-                    offset: Offset(5, 5), // changes position of shadow
+                    offset: const Offset(5, 5), // changes position of shadow
                   ),
                 ],
                 image: const DecorationImage(
