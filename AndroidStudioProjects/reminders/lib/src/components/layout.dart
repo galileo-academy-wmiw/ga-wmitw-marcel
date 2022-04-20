@@ -36,18 +36,65 @@ class Layout extends StatelessWidget {
           ),
           image: DecorationImage(
               image: AssetImage("assets/images/wolken1.png"),
-              fit: BoxFit.cover),
+              fit: BoxFit.cover,
+              alignment: Alignment.topCenter,),
         ),
-        child: ListView(shrinkWrap: true, children: <Widget>[
-          Padding(
-              padding: const EdgeInsets.only(
-                top: 30.0,
-                bottom: 30.0,
-              ),
-              child: child)
-        ]),
+        child: Stack(
+          children: [
+            const AnimationStatefulWidget(),
+            ListView(shrinkWrap: true, children: <Widget>[
+              Padding(
+                  padding: const EdgeInsets.only(
+                    top: 30.0,
+                    bottom: 30.0,
+                  ),
+                  child: child)
+            ]),
+          ],
+        ),
       ),
       bottomNavigationBar: NavigationThingy(currentIndex: currentIndex,),
+    );
+  }
+}
+
+class AnimationStatefulWidget extends StatefulWidget {
+  const AnimationStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<AnimationStatefulWidget> createState() => _AnimationStatefulWidgetState();
+}
+
+class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 50),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
+    begin: const Offset(-0.5, 0.0),
+    end: const Offset(0.5, 0.0),
+  ).animate(CurvedAnimation(
+    parent: _controller,
+    curve: Curves.linear,
+  ));
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideTransition(
+      position: _offsetAnimation,
+      child: SizedBox(
+        height: double.infinity,
+        child: Center(
+          child: Image.asset('assets/images/wolken2.png', fit: BoxFit.cover, alignment: Alignment.center,),
+        ),
+      ),
     );
   }
 }

@@ -122,6 +122,7 @@ class Werk extends StatelessWidget {
               right: 12.0,
               bottom: 12.0),
           child: GridView.count(
+            physics: const ScrollPhysics(),
             crossAxisCount: 2,
             childAspectRatio: 0.76,
             children:[

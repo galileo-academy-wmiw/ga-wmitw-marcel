@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../local_imports.dart';
 
 class NavigationThingy extends StatefulWidget {
@@ -38,14 +37,26 @@ class _NavigationThingyState extends State<NavigationThingy> {
               break;
             }
           case 1:
-            Navigator.pushNamed(context, OpleidingScreen.routeName);
-            break;
+            if(_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, OpleidingScreen.routeName);
+              break;
+            }
           case 2:
-            Navigator.pushNamed(context, WerkScreen.routeName);
-            break;
+            if(_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, WerkScreen.routeName);
+              break;
+            }
           case 3:
-            Navigator.pushNamed(context, HobbiesScreen.routeName);
-            break;
+            if(_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, HobbiesScreen.routeName);
+              break;
+            }
           default:
             Navigator.pushNamed(context, HomeScreen.routeName);
         }
