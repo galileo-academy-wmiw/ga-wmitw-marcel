@@ -30,7 +30,7 @@ class Hobbies extends StatelessWidget {
                   ),
                 ],
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/kat.jpg'),
+                  image: AssetImage('assets/images/schilderij.jpg'),
                   fit: BoxFit.fill,
                 ),
                 shape: BoxShape.rectangle,
@@ -194,7 +194,7 @@ class Hobbies extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('assets/images/walle.jpg'),
+                  Image.asset('assets/images/kat.jpg'),
                 ],
               ),
             ),
