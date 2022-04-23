@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_splash_screen: ^1.2.0
   flutter_native_splash: ^2.1.6
   flutter_svg: ^1.0.3
   flutter:
@@ -46,11 +47,11 @@ flutter_icons:
   adaptive_icon_background: "assets/icon/picto.png"
   adaptive_icon_foreground: "assets/icon/picto.png"
 flutter_native_splash:
-  image: "assets/splash/splash.png"
+  # image: "assets/splash/splash.png"
   color: "#00C9FF"
-  android_gravity: fill
-  ios_content_mode: scaleAspectFill
-  web_image_mode: contain
+  # android_gravity: fill
+  # ios_content_mode: scaleAspectFill
+  # web_image_mode: contain
 
 
   flutter_svg: ^1.0.3
@@ -99,6 +100,7 @@ flutter:
     - assets/images/walle.jpg
     - assets/images/wandlampje.jpg
     - assets/images/jaarverslag.jpg
+    - assets/splash/logolos.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
