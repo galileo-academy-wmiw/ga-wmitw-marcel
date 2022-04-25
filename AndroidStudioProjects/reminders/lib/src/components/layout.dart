@@ -42,6 +42,7 @@ class Layout extends StatelessWidget {
         child: Stack(
           children: [
             const AnimationStatefulWidget(),
+            const Animation2StatefulWidget(),
             ListView(shrinkWrap: true, children: <Widget>[
               Padding(
                   padding: const EdgeInsets.only(
@@ -93,6 +94,48 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
         height: double.infinity,
         child: Center(
           child: Image.asset('assets/images/wolken2.png', fit: BoxFit.cover, alignment: Alignment.center,),
+        ),
+      ),
+    );
+  }
+}
+
+
+class Animation2StatefulWidget extends StatefulWidget {
+  const Animation2StatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<Animation2StatefulWidget> createState() => _Animation2StatefulWidgetState();
+}
+
+class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 80),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
+    begin: const Offset(0.6, 0.0),
+    end: const Offset(-0.4, 0.0),
+  ).animate(CurvedAnimation(
+    parent: _controller,
+    curve: Curves.linear,
+  ));
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideTransition(
+      position: _offsetAnimation,
+      child: SizedBox(
+        height: double.infinity,
+        child: Center(
+          child: Image.asset('assets/images/wolken3.png', fit: BoxFit.cover, alignment: Alignment.center,),
         ),
       ),
     );

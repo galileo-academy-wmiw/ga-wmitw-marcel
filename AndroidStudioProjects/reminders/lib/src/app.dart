@@ -10,10 +10,10 @@ class AppRoot extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen (
-        duration: 4000,
-        splash: 'assets/splash/logolos.png',
+        duration: 1000,
+        splash: 'assets/splash/splash.png',
         nextScreen: HomeScreen(),
-        splashTransition: SplashTransition.scaleTransition,
+        splashTransition: SplashTransition.fadeTransition,
         splashIconSize: double.infinity,
         backgroundColor: Color(0xff00C9FF),
       ),
