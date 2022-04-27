@@ -75,21 +75,9 @@ class Werk extends StatelessWidget {
               ),
               child: Transform.rotate(
                 angle: -math.pi / 12,
-                child: const Text(
+                child: Text(
                   'Experienced...',
-                  style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          offset: Offset(4.0, 4.0),
-                          blurRadius: 15.0,
-                          color: Color.fromARGB(160, 0, 0, 0),
-                        ),
-                      ],
-                      height: 1.3,
-                      fontSize: 58,
-                      fontFamily: 'WindSong',
-                      fontWeight: FontWeight.w500,
-                      color: Colors.indigo),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
             ),
@@ -106,9 +94,9 @@ class Werk extends StatelessWidget {
                   right: 25,
                   bottom: 0,
                 ),
-                child: const Text(
+                child: Text(
                   "M'n eerste echte baan was als junior ontwerper bij Stadium Design (inmiddels opgeheven); een bedrijf dat gespecialiseerd was in het ontwikkelen van verpakkingen (product-design, graphic-design, marketing). Ik heb daar 12 jaar gewerkt en heb in die tijd in alle disciplines gewerkt: werktekenen, doka-werk, dtp, graphic-design en verpakkingsdesign.\n\nJammer genoeg heb ik op een gegeven moment gezondheidsproblemen (rsi / burnout) ontwikkeld, waardoor ik in de WAO ben terechtgekomen. Omdat het ook mentaal niet goed ging, ben ik onderzocht bij de GGZ. Uit dat onderzoek bleek dat ik Asperger heb (een autismespectrum conditie); dat verklaarde veel.\n\nNa een lange herstelperiode ben ik vrijwilligerswerk gaan doen bij het plaatselijk asiel. Leuk om te doen en ook weer onder de mensen. Via via ben ik toen bij de dierenambulance terechtgekomen, op de administratie. Omdat het bloed kruipt waar het niet gaan kan, heb ik daar op eigen initiatief o.a. de website en een dierregistratieprogramma gemaakt. Na 11 jaar was de motivatie weg en ben ik daar weggegaan.\n\nMaar ja, thuiszitten is ook niks en na een lange zoektocht naar de juiste hulp, heb ik een jobcoach toegewezen gekregen van de gemeente. Na het in kaart brengen van m'n interessegebieden, werd ik gewezen op een andere creatieve richting: web-/app development. Ik had daar zelf nog helemaal niet aan gedacht, maar het is wel iets waar ik m'n creatieve ei helemaal in kwijt kan. M'n jobcoach is vervolgens voor me op zoek gegaan naar een passend opleidingsinstituut (dit in verband met m'n autisme).\n\nDat is gelukt en ik volg nu een leer-/werktraject bij Galileo-Academy tot web-/app developer. Een nieuwe uitdaging; ik heb er zin in!\n",
-                  style: TextStyle(height: 1.3, fontSize: 16),
+                   style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ),
@@ -118,7 +106,7 @@ class Werk extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
               left: 12.0,
-              top: 1230.0,
+              top: 1210.0,
               right: 12.0,
               bottom: 12.0),
           child: GridView.count(

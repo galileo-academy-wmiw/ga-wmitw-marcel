@@ -51,21 +51,9 @@ class Home extends StatelessWidget {
               ),
               child: Transform.rotate(
                 angle: -math.pi / 12,
-                child: const Text(
+                child: Text(
                   'Inspired...',
-                  style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          offset: Offset(4.0, 4.0),
-                          blurRadius: 15.0,
-                          color: Color.fromARGB(160, 0, 0, 0),
-                        ),
-                      ],
-                      height: 1.3,
-                      fontSize: 68,
-                      fontFamily: 'WindSong',
-                      fontWeight: FontWeight.w500,
-                      color: Colors.indigo),
+                  style: Theme.of(context).textTheme.headline1,
                 ),
               ),
             ),
@@ -82,9 +70,9 @@ class Home extends StatelessWidget {
                   right: 25,
                   bottom: 0,
                 ),
-                child: const Text(
+                child: Text(
                   "Hallo, mijn naam is Marcel en ik ben een creatieveling. Als kind kon ik uren bezig zijn met tekenen en knutselen. Inspiratie haalde ik uit strips, tijdschriften en tv-shows. Een creatieve opleiding was dan ook de logische keuze. Na eerst een decorateurs-opleiding te hebben gevolgd, ben ik uiteindelijk grafische vormgeving gaan studeren. \n\nNa een mooie carrière als grafisch vormgever is het tijd voor een nieuwe uitdaging. En omdat het creatieve bloed nog steeds kruipt waar het niet gaan kan, heb ik gekozen voor web-/app development. Ik volg daartoe nu een opleiding bij Galileo-academy.",
-                  style: TextStyle(height: 1.3, fontSize: 16),
+                   style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const Color myHexColor = Color(0xff123456);
 
 ThemeData theme = ThemeData(
-  fontFamily: 'Mukta',
+
   primarySwatch: Colors.red,
   visualDensity: VisualDensity.adaptivePlatformDensity,
   colorScheme: const ColorScheme.light(
@@ -12,23 +12,41 @@ ThemeData theme = ThemeData(
   textTheme: const TextTheme(
     // H1
     headline1: TextStyle(
-      fontFamily: 'Roboto', // Overrides default font family.
-      fontSize: 96.0,
-      fontWeight: FontWeight.w400, // Standard
-      letterSpacing: -1.5,
+      shadows: [
+        Shadow(
+          offset: Offset(4.0, 4.0),
+          blurRadius: 15.0,
+          color: Color.fromARGB(160, 0, 0, 0),
+        ),
+      ],
+      height: 1.3,
+      fontSize: 68,
+      fontFamily: 'WindSong',
+      fontWeight: FontWeight.w500,
+      color: Colors.indigo,
     ),
     // H2
     headline2: TextStyle(
-      fontFamily: 'Roboto', // Overrides default font family.
-      fontSize: 60.0,
-      fontWeight: FontWeight.w300, // Light
-      letterSpacing: -0.5,
+      shadows: [
+        Shadow(
+          offset: Offset(4.0, 4.0),
+          blurRadius: 15.0,
+          color: Color.fromARGB(160, 0, 0, 0),
+        ),
+      ],
+      height: 1.3,
+      fontSize: 58,
+      fontFamily: 'WindSong',
+      fontWeight: FontWeight.w500,
+      color: Colors.indigo,
     ),
     // Default body
-    bodyText2: TextStyle(
-      fontSize: 14.0,
+    bodyText1: TextStyle(
+      fontFamily: 'Mukta',
+      fontSize: 16.0,
       fontWeight: FontWeight.normal,
-      letterSpacing: 0.25,
+      height: 1.3,
+      color: Colors.black,
     ),
   ),
   appBarTheme: const AppBarTheme(

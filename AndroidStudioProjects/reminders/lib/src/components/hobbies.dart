@@ -75,21 +75,9 @@ class Hobbies extends StatelessWidget {
               ),
               child: Transform.rotate(
                 angle: -math.pi / 12,
-                child: const Text(
+                child: Text(
                   'Inquisitive...',
-                  style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          offset: Offset(4.0, 4.0),
-                          blurRadius: 15.0,
-                          color: Color.fromARGB(160, 0, 0, 0),
-                        ),
-                      ],
-                      height: 1.3,
-                      fontSize: 58,
-                      fontFamily: 'WindSong',
-                      fontWeight: FontWeight.w500,
-                      color: Colors.indigo),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
               ),
             ),
@@ -106,9 +94,9 @@ class Hobbies extends StatelessWidget {
                   right: 25,
                   bottom: 0,
                 ),
-                child: const Text(
+                child: Text(
                   "Behalve dat ik graag met m'n werk bezig ben, heb ik ook veel hobbies. Tekenen/ schilderen, modelbouw, houtbewerking, grafische vormgeving, webdesign, you name it… Daarnaast hou ik van lezen, dieren (vooral katten) en nieuwe dingen leren.\n\nEn hoewel ik autisme heb, beperk ik me niet tot één ding. Meestal kies ik iets dat me interesseert, ga er dan lange tijd helemaal in op, totdat het volgende “interessants” zich aandient. Lange tijd was dat grafisch werk. Op dit moment is m'n primaire hobby “houtbewerking”.\n\nIk ben altijd al graag met m'n handen bezig geweest en een paar jaar geleden heb ik een houtdraaibank gekocht om me in het houtdraaien te bekwamen. Voor mij een manier om lekker te ontspannen.\n",
-                  style: TextStyle(height: 1.3, fontSize: 16),
+                   style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ),
@@ -118,7 +106,7 @@ class Hobbies extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
               left: 12.0,
-              top: 700.0,
+              top: 720.0,
               right: 12.0,
               bottom: 12.0),
           child: GridView.count(
