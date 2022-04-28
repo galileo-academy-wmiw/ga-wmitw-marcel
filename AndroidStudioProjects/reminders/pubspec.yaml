@@ -82,6 +82,8 @@ flutter:
     - assets/images/logo.svg
     - assets/images/pasfoto.jpg
     - assets/images/wolken1.png
+    - assets/images/wolken1b.png
+    - assets/images/wolken1b-dark.png
     - assets/images/wolken2.png
     - assets/images/wolken3.png
     - assets/images/kabk-logo.jpg

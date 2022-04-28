@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:day_night_switcher/day_night_switcher.dart';
 import '../../local_imports.dart';
 
 class Layout extends StatelessWidget {
@@ -23,21 +24,28 @@ class Layout extends StatelessWidget {
           fit: BoxFit.fitHeight,
         ),
         centerTitle: true,
+        // actions: [
+        //   DayNightSwitcherIcon(
+        //     isDarkModeEnabled: isDarkModeEnabled,
+        //     onStateChanged: onStateChanged,
+        //   ),
+        // ],
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xff00C9FF),
-              Color(0xffFFFFFF),
-            ],
-          ),
+        decoration: BoxDecoration(
+          // gradient: LinearGradient(
+          //   begin: Alignment.topCenter,
+          //   end: Alignment.bottomCenter,
+          //   colors: [
+          //     Color(0xff00C9FF),
+          //     Color(0xffFFFFFF),
+          //   ],
+          // ),
           image: DecorationImage(
-              image: AssetImage("assets/images/wolken1.png"),
-              fit: BoxFit.cover,
-              alignment: Alignment.topCenter,),
+            image: AssetImage("assets/images/wolken1b-dark.png"),
+            fit: BoxFit.cover,
+            alignment: Alignment.topCenter,
+          ),
         ),
         child: Stack(
           children: [
@@ -54,7 +62,9 @@ class Layout extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: NavigationThingy(currentIndex: currentIndex,),
+      bottomNavigationBar: NavigationThingy(
+        currentIndex: currentIndex,
+      ),
     );
   }
 }
@@ -63,7 +73,8 @@ class AnimationStatefulWidget extends StatefulWidget {
   const AnimationStatefulWidget({Key? key}) : super(key: key);
 
   @override
-  State<AnimationStatefulWidget> createState() => _AnimationStatefulWidgetState();
+  State<AnimationStatefulWidget> createState() =>
+      _AnimationStatefulWidgetState();
 }
 
 class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
@@ -93,19 +104,23 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
       child: SizedBox(
         height: double.infinity,
         child: Center(
-          child: Image.asset('assets/images/wolken2.png', fit: BoxFit.cover, alignment: Alignment.center,),
+          child: Image.asset(
+            'assets/images/wolken2.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+          ),
         ),
       ),
     );
   }
 }
 
-
 class Animation2StatefulWidget extends StatefulWidget {
   const Animation2StatefulWidget({Key? key}) : super(key: key);
 
   @override
-  State<Animation2StatefulWidget> createState() => _Animation2StatefulWidgetState();
+  State<Animation2StatefulWidget> createState() =>
+      _Animation2StatefulWidgetState();
 }
 
 class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
@@ -135,7 +150,11 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
       child: SizedBox(
         height: double.infinity,
         child: Center(
-          child: Image.asset('assets/images/wolken3.png', fit: BoxFit.cover, alignment: Alignment.center,),
+          child: Image.asset(
+            'assets/images/wolken3.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+          ),
         ),
       ),
     );

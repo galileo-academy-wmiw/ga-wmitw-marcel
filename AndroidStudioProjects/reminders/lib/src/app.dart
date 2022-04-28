@@ -9,7 +9,7 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen (
+      home: AnimatedSplashScreen(
         duration: 1000,
         splash: 'assets/splash/splash.png',
         nextScreen: HomeScreen(),
@@ -17,7 +17,7 @@ class AppRoot extends StatelessWidget {
         splashIconSize: double.infinity,
         backgroundColor: Color(0xff00C9FF),
       ),
-      theme: theme,
+      theme: themedark,
       onGenerateRoute: (RouteSettings routeSettings) {
         return MaterialPageRoute<void>(
             settings: routeSettings,
