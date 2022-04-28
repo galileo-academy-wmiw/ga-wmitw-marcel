@@ -17,7 +17,7 @@ class AppRoot extends StatelessWidget {
         splashIconSize: double.infinity,
         backgroundColor: Color(0xff00C9FF),
       ),
-      theme: themedark,
+      theme: themeLight,
       onGenerateRoute: (RouteSettings routeSettings) {
         return MaterialPageRoute<void>(
             settings: routeSettings,

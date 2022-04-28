@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color myHexColor = Color(0xff123456);
 
-ThemeData themelight = ThemeData(
+ThemeData themeLight = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
   textTheme: const TextTheme(
     // H1
@@ -59,7 +59,7 @@ ThemeData themelight = ThemeData(
   scaffoldBackgroundColor: Color(0xff00C9FF),
 );
 
-ThemeData themedark = ThemeData(
+ThemeData themeDark = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
   textTheme: const TextTheme(
     // H1

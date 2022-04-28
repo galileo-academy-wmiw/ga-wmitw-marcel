@@ -33,14 +33,6 @@ class Layout extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          // gradient: LinearGradient(
-          //   begin: Alignment.topCenter,
-          //   end: Alignment.bottomCenter,
-          //   colors: [
-          //     Color(0xff00C9FF),
-          //     Color(0xffFFFFFF),
-          //   ],
-          // ),
           image: DecorationImage(
             image: AssetImage("assets/images/wolken1b-dark.png"),
             fit: BoxFit.cover,
@@ -105,7 +97,7 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
         height: double.infinity,
         child: Center(
           child: Image.asset(
-            'assets/images/wolken2.png',
+            'assets/images/${isDarkMode ? 'wolken2.png' : 'wolken3.png'}',
             fit: BoxFit.cover,
             alignment: Alignment.center,
           ),
