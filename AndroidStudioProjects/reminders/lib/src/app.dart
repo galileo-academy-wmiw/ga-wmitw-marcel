@@ -2,14 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import '../local_imports.dart';
 
-class AppRoot extends StatelessWidget {
+/// The main widget.
+class AppRoot extends StatefulWidget {
   const AppRoot({Key? key}) : super(key: key);
+  @override
+  State<AppRoot> createState() => _AppRootState();
+}
+
+/// The main widget state.
+class _AppRootState extends State<AppRoot> {
+  /// Whether dark mode is enabled.
+  bool isDarkModeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(
+
+      theme: light,
+      darkTheme: dark,
+
+      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
+
+      home: AnimatedSplashScreen (
         duration: 1000,
         splash: 'assets/splash/splash.png',
         nextScreen: HomeScreen(),
@@ -17,7 +32,6 @@ class AppRoot extends StatelessWidget {
         splashIconSize: double.infinity,
         backgroundColor: Color(0xff00C9FF),
       ),
-      theme: themeLight,
       onGenerateRoute: (RouteSettings routeSettings) {
         return MaterialPageRoute<void>(
             settings: routeSettings,
@@ -37,5 +51,12 @@ class AppRoot extends StatelessWidget {
             });
       },
     );
+  }
+
+  /// Called when the state (day / night) has changed.
+  void onStateChanged(bool isDarkModeEnabled) {
+    setState(() {
+      this.isDarkModeEnabled = isDarkModeEnabled;
+    });
   }
 }

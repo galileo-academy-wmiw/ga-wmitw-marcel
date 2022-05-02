@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color myHexColor = Color(0xff123456);
 
-ThemeData themeLight = ThemeData(
+ThemeData light = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
   textTheme: const TextTheme(
     // H1
@@ -59,9 +59,9 @@ ThemeData themeLight = ThemeData(
   scaffoldBackgroundColor: Color(0xff00C9FF),
 );
 
-ThemeData themeDark = ThemeData(
+ThemeData dark = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
     // H1
     headline1: TextStyle(
       shadows: [
@@ -98,20 +98,21 @@ ThemeData themeDark = ThemeData(
       fontSize: 16.0,
       fontWeight: FontWeight.normal,
       height: 1.3,
-      color: Color(0xfffef5a7),
+      color: Colors.white,
     ),
+    // Outline
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xff00237b),
+    backgroundColor: Color(0xFF101B23),
     foregroundColor: Color(0xfffef5a7),
     elevation: 0,
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: Color(0xff00237b),
+    backgroundColor: Color(0xFF101B23),
     selectedItemColor: Color(0xfffef5a7),
-    unselectedItemColor: Colors.indigo,
-    unselectedLabelStyle: TextStyle(color: Colors.indigo),
+    unselectedItemColor: Colors.grey,
+    unselectedLabelStyle: TextStyle(color: Colors.grey),
     selectedLabelStyle: TextStyle(color: Color(0xfffef5a7)),
   ),
-  scaffoldBackgroundColor: Color(0xff00237b),
+  scaffoldBackgroundColor: Color(0xFF15232E),
 );

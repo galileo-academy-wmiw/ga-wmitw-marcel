@@ -27,6 +27,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  shared_preferences: ^2.0.13
+  async: ^2.9.0
   day_night_switcher: ^0.2.0+1
   animated_splash_screen: ^1.2.0
   flutter_native_splash: ^2.1.6
@@ -85,7 +87,9 @@ flutter:
     - assets/images/wolken1b.png
     - assets/images/wolken1b-dark.png
     - assets/images/wolken2.png
+    - assets/images/wolken2dark.png
     - assets/images/wolken3.png
+    - assets/images/wolken3dark.png
     - assets/images/kabk-logo.jpg
     - assets/images/kat.jpg
     - assets/images/logodesign.jpg
@@ -106,6 +110,8 @@ flutter:
     - assets/images/jaarverslag.jpg
     - assets/splash/logolos.png
     - assets/splash/splash.png
+    - assets/images/stars.png
+    - assets/images/stars2.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
