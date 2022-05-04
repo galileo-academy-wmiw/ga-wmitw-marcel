@@ -7,11 +7,13 @@ class Layout extends StatefulWidget {
   const Layout({
     required this.child,
     required this.currentIndex,
+    required this.darkMode,
     Key? key,
   }) : super(key: key);
 
   final Widget child;
   final int currentIndex;
+  final bool darkMode;
 
   @override
   State<Layout> createState() => _LayoutState();
@@ -19,8 +21,6 @@ class Layout extends StatefulWidget {
 
 // boolean
 class _LayoutState extends State<Layout> {
-  bool isDarkModeEnabled = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class _LayoutState extends State<Layout> {
           Container(
             margin: const EdgeInsets.only(right: 10.0),
             child: DayNightSwitcherIcon(
-              isDarkModeEnabled: isDarkModeEnabled,
+              isDarkModeEnabled: widget.darkMode,
               onStateChanged: onStateChanged,
             ),
           ),
@@ -49,13 +49,17 @@ class _LayoutState extends State<Layout> {
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage(isDarkModeEnabled ? "assets/images/stars2.png" : "assets/images/wolken1b.png"),
+                image: AssetImage(widget.darkMode ? "assets/images/stars2.png" : "assets/images/wolken1b.png"),
                 fit: BoxFit.fill,
               ),
             ),
             ),
-            AnimationStatefulWidget(),
-            Animation2StatefulWidget(),
+            AnimationStatefulWidget(
+              darkMode: widget.darkMode,
+            ),
+            Animation2StatefulWidget(
+              darkMode: widget.darkMode,
+            ),
             ListView(shrinkWrap: true, children: <Widget>[
               Padding(
                   padding: const EdgeInsets.only(
@@ -74,13 +78,18 @@ class _LayoutState extends State<Layout> {
   /// Called when the state (day / night) has changed.
   void onStateChanged(bool isDarkModeEnabled) {
     setState(() {
-      this.isDarkModeEnabled = isDarkModeEnabled;
+      DarkMode().isDarkModeEnabled = isDarkModeEnabled;
     });
   }
 }
 
 class AnimationStatefulWidget extends StatefulWidget {
-  const AnimationStatefulWidget({Key? key}) : super(key: key);
+  const AnimationStatefulWidget({
+    required this.darkMode,
+    Key? key,
+  }) : super(key: key);
+
+  final bool darkMode;
 
   @override
   State<AnimationStatefulWidget> createState() => _AnimationStatefulWidgetState();
@@ -89,7 +98,6 @@ class AnimationStatefulWidget extends StatefulWidget {
 // boolean
 class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
     with SingleTickerProviderStateMixin {
-  bool isDarkModeEnabled = false;
 
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 50),
@@ -120,7 +128,7 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
           decoration: BoxDecoration(
             // color: Color(0xff00C9FF),
             image: DecorationImage(
-              image: AssetImage(isDarkModeEnabled ? "assets/images/wolken2dark.png" : "assets/images/wolken2.png"),
+              image: AssetImage(widget.darkMode ? "assets/images/wolken2dark.png" : "assets/images/wolken2.png"),
               fit: BoxFit.fitWidth,
             ),
           ),
@@ -132,7 +140,12 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
 
 
 class Animation2StatefulWidget extends StatefulWidget {
-  const Animation2StatefulWidget({Key? key}) : super(key: key);
+  const Animation2StatefulWidget({
+    required this.darkMode,
+    Key? key,
+  }) : super(key: key);
+
+  final bool darkMode;
 
   @override
   State<Animation2StatefulWidget> createState() => _Animation2StatefulWidgetState();
@@ -141,7 +154,6 @@ class Animation2StatefulWidget extends StatefulWidget {
 // boolean
 class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
     with SingleTickerProviderStateMixin {
-  bool isDarkModeEnabled = false;
 
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 80),
@@ -173,7 +185,7 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage(isDarkModeEnabled ? "assets/images/wolken3dark.png" : "assets/images/wolken3.png"),
+                image: AssetImage(widget.darkMode ? "assets/images/wolken3dark.png" : "assets/images/wolken3.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),

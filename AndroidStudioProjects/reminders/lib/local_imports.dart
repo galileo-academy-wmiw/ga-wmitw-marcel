@@ -17,3 +17,6 @@ export 'src/components/opleiding.dart';
 export 'src/components/werk.dart';
 export 'src/components/hobbies.dart';
 export 'src/components/navigation.dart';
+
+// Models
+export 'src/models/dark_mode.dart';

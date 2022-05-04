@@ -4,15 +4,19 @@ import '../local_imports.dart';
 
 /// The main widget.
 class AppRoot extends StatefulWidget {
-  const AppRoot({Key? key}) : super(key: key);
+  const AppRoot({
+    required this.darkMode,
+    Key? key
+  }) : super(key: key);
+
+  final bool darkMode;
+
   @override
   State<AppRoot> createState() => _AppRootState();
 }
 
 /// The main widget state.
 class _AppRootState extends State<AppRoot> {
-  /// Whether dark mode is enabled.
-  bool isDarkModeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +26,14 @@ class _AppRootState extends State<AppRoot> {
       theme: light,
       darkTheme: dark,
 
-      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
+      themeMode: widget.darkMode ? ThemeMode.dark : ThemeMode.light,
 
       home: AnimatedSplashScreen (
         duration: 1000,
         splash: 'assets/splash/splash.png',
-        nextScreen: HomeScreen(),
+        nextScreen: HomeScreen(
+          darkMode: widget.darkMode,
+        ),
         splashTransition: SplashTransition.fadeTransition,
         splashIconSize: double.infinity,
         backgroundColor: Color(0xff00C9FF),
@@ -38,25 +44,28 @@ class _AppRootState extends State<AppRoot> {
             builder: (BuildContext context) {
               switch (routeSettings.name) {
                 case HomeScreen.routeName:
-                  return const HomeScreen();
+                  return HomeScreen(
+                    darkMode: widget.darkMode,
+                  );
                 case OpleidingScreen.routeName:
-                  return const OpleidingScreen();
+                  return OpleidingScreen(
+                    darkMode: widget.darkMode,
+                  );
                 case WerkScreen.routeName:
-                  return const WerkScreen();
+                  return WerkScreen(
+                    darkMode: widget.darkMode,
+                  );
                 case HobbiesScreen.routeName:
-                  return const HobbiesScreen();
+                  return HobbiesScreen(
+                    darkMode: widget.darkMode,
+                  );
                 default:
-                  return const HomeScreen();
+                  return HomeScreen(
+                    darkMode: widget.darkMode,
+                  );
               }
-            });
+            },);
       },
     );
-  }
-
-  /// Called when the state (day / night) has changed.
-  void onStateChanged(bool isDarkModeEnabled) {
-    setState(() {
-      this.isDarkModeEnabled = isDarkModeEnabled;
-    });
   }
 }
