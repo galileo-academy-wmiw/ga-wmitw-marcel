@@ -1,4 +1,3 @@
-import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../local_imports.dart';
@@ -19,7 +18,6 @@ class Layout extends StatefulWidget {
 
 // boolean
 class _LayoutState extends State<Layout> {
-  bool isDarkModeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +30,6 @@ class _LayoutState extends State<Layout> {
           fit: BoxFit.fitHeight,
         ),
         centerTitle: true,
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 10.0),
-            child: DayNightSwitcherIcon(
-              isDarkModeEnabled: isDarkModeEnabled,
-              onStateChanged: onStateChanged,
-            ),
-          ),
-        ],
       ),
       body: Container(
         child: Stack(
@@ -49,7 +38,7 @@ class _LayoutState extends State<Layout> {
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage(isDarkModeEnabled ? "assets/images/stars2.png" : "assets/images/wolken1b.png"),
+                image: AssetImage("assets/images/wolken1b.png"),
                 fit: BoxFit.fill,
               ),
             ),
@@ -69,13 +58,6 @@ class _LayoutState extends State<Layout> {
       ),
       bottomNavigationBar: NavigationThingy(currentIndex: widget.currentIndex,),
     );
-  }
-
-  /// Called when the state (day / night) has changed.
-  void onStateChanged(bool isDarkModeEnabled) {
-    setState(() {
-      this.isDarkModeEnabled = isDarkModeEnabled;
-    });
   }
 }
 
@@ -120,7 +102,7 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
           decoration: BoxDecoration(
             // color: Color(0xff00C9FF),
             image: DecorationImage(
-              image: AssetImage(isDarkModeEnabled ? "assets/images/wolken2dark.png" : "assets/images/wolken2.png"),
+              image: AssetImage("assets/images/wolken2.png"),
               fit: BoxFit.fitWidth,
             ),
           ),
@@ -173,7 +155,7 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage(isDarkModeEnabled ? "assets/images/wolken3dark.png" : "assets/images/wolken3.png"),
+                image: AssetImage("assets/images/wolken3.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),

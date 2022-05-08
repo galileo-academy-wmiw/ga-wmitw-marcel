@@ -2,27 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import '../local_imports.dart';
 
-/// The main widget.
 class AppRoot extends StatefulWidget {
   const AppRoot({Key? key}) : super(key: key);
   @override
   State<AppRoot> createState() => _AppRootState();
 }
 
-/// The main widget state.
 class _AppRootState extends State<AppRoot> {
-  /// Whether dark mode is enabled.
-  bool isDarkModeEnabled = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       theme: light,
-      darkTheme: dark,
-
-      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
 
       home: AnimatedSplashScreen (
         duration: 1000,
@@ -51,12 +43,5 @@ class _AppRootState extends State<AppRoot> {
             });
       },
     );
-  }
-
-  /// Called when the state (day / night) has changed.
-  void onStateChanged(bool isDarkModeEnabled) {
-    setState(() {
-      this.isDarkModeEnabled = isDarkModeEnabled;
-    });
   }
 }
