@@ -16,7 +16,6 @@ class Layout extends StatefulWidget {
   State<Layout> createState() => _LayoutState();
 }
 
-// boolean
 class _LayoutState extends State<Layout> {
 
   @override
@@ -30,6 +29,12 @@ class _LayoutState extends State<Layout> {
           fit: BoxFit.fitHeight,
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.brightness_4),
+            onPressed: () => currentTheme.toggleTheme(),
+          )
+        ],
       ),
       body: Container(
         child: Stack(
@@ -40,6 +45,7 @@ class _LayoutState extends State<Layout> {
               image: DecorationImage(
                 image: AssetImage("assets/images/wolken1b.png"),
                 fit: BoxFit.fill,
+                  colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.9), BlendMode.modulate,),
               ),
             ),
             ),
@@ -104,6 +110,7 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
             image: DecorationImage(
               image: AssetImage("assets/images/wolken2.png"),
               fit: BoxFit.fitWidth,
+                colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
             ),
           ),
         ),
@@ -157,6 +164,7 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
               image: DecorationImage(
                 image: AssetImage("assets/images/wolken3.png"),
                 fit: BoxFit.fitWidth,
+                  colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
               ),
             ),
           ),

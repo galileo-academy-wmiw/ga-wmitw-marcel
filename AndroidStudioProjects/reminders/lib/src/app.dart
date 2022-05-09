@@ -9,12 +9,21 @@ class AppRoot extends StatefulWidget {
 }
 
 class _AppRootState extends State<AppRoot> {
+  @override
+  void initState() {
+    super.initState();
+    currentTheme.addListener(() {
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: light,
+      theme: CustomTheme.lightTheme,
+      darkTheme: CustomTheme.darkTheme,
+      themeMode: currentTheme.currentTheme,
 
       home: AnimatedSplashScreen (
         duration: 1000,

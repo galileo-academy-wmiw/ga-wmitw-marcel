@@ -1,5 +1,6 @@
 // Theme
 export 'src/constants/theme.dart';
+export 'src/constants/config.dart';
 
 // App
 export 'src/app.dart';
