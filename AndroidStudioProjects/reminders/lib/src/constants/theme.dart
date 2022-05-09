@@ -71,6 +71,7 @@ class CustomTheme with ChangeNotifier {
         selectedLabelStyle: TextStyle(color: Colors.white),
       ),
       scaffoldBackgroundColor: Color(0xff00C9FF),
+      brightness: Brightness.light,
     );
   }
   static ThemeData get darkTheme { //1
@@ -110,25 +111,26 @@ class CustomTheme with ChangeNotifier {
         bodyText1: TextStyle(
           fontFamily: 'Mukta',
           fontSize: 16.0,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           height: 1.3,
           color: Color(0xfffef5a7),
         ),
         // Outline
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: Color(0xFF0F2047),
+        backgroundColor: Color(0xFF09132A),
         foregroundColor: Color(0xfffef5a7),
         elevation: 0,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Color(0xFF0F2047),
+        backgroundColor: Color(0xFF09132A),
         selectedItemColor: Color(0xfffef5a7),
         unselectedItemColor: Colors.grey,
         unselectedLabelStyle: TextStyle(color: Colors.grey),
         selectedLabelStyle: TextStyle(color: Color(0xfffef5a7)),
       ),
-      scaffoldBackgroundColor: Color(0xFF0F2047),
+      scaffoldBackgroundColor: Color(0xFF0C1937),
+      brightness: Brightness.dark,
     );
   }
 }

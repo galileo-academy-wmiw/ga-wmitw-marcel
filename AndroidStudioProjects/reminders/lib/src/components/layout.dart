@@ -43,9 +43,9 @@ class _LayoutState extends State<Layout> {
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage("assets/images/wolken1b.png"),
+                image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/stars.png" : "assets/images/wolken1b.png"),
                 fit: BoxFit.fill,
-                  colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.9), BlendMode.modulate,),
+                  // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.9), BlendMode.modulate,),
               ),
             ),
             ),
@@ -108,9 +108,9 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
           decoration: BoxDecoration(
             // color: Color(0xff00C9FF),
             image: DecorationImage(
-              image: AssetImage("assets/images/wolken2.png"),
+              image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/wolken2dark.png" : "assets/images/wolken2.png"),
               fit: BoxFit.fitWidth,
-                colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
+                // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
             ),
           ),
         ),
@@ -162,9 +162,9 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage("assets/images/wolken3.png"),
+                image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/wolken3dark.png" : "assets/images/wolken3.png"),
                 fit: BoxFit.fitWidth,
-                  colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
+                  // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
               ),
             ),
           ),
