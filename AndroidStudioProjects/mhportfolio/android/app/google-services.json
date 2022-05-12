@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1040328829293",
+    "project_id": "mhportfolio-cd6a0",
+    "storage_bucket": "mhportfolio-cd6a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040328829293:android:d0a7066b0340fe4c73d264",
+        "android_client_info": {
+          "package_name": "nl.marcelhooimeijer.mhportfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040328829293-u5e6oddfkgh8np9komdi4b2f5i1ltc9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsA3kED4n19V8zgJEU2VUP71x4204WQfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040328829293-u5e6oddfkgh8np9komdi4b2f5i1ltc9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
