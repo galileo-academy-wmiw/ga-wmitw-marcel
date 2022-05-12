@@ -1,6 +1,8 @@
 // Theme
 export 'src/constants/theme.dart';
 export 'src/constants/config.dart';
+export 'src/constants/inputfields.dart';
+export 'src/constants/widgets.dart';
 
 // App
 export 'src/app.dart';
