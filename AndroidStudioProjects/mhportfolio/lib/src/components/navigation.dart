@@ -30,31 +30,59 @@ class _NavigationThingyState extends State<NavigationThingy> {
       onTap: (value) {
         switch (value) {
           case 0:
-            if(_currentIndex == value) {
+            if (_currentIndex == value) {
               break;
             } else {
               Navigator.pushNamed(context, HomeScreen.routeName);
               break;
             }
           case 1:
-            if(_currentIndex == value) {
+            if (_currentIndex == value) {
               break;
             } else {
               Navigator.pushNamed(context, OpleidingScreen.routeName);
               break;
             }
           case 2:
-            if(_currentIndex == value) {
+            if (_currentIndex == value) {
               break;
             } else {
               Navigator.pushNamed(context, WerkScreen.routeName);
               break;
             }
           case 3:
-            if(_currentIndex == value) {
+            if (_currentIndex == value) {
               break;
             } else {
               Navigator.pushNamed(context, HobbiesScreen.routeName);
+              break;
+            }
+          case 4:
+            if (_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, ChatScreen.routeName);
+              break;
+            }
+          case 5:
+            if (_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, AuthScreen.routeName);
+              break;
+            }
+          case 6:
+            if (_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, LoginScreen.routeName);
+              break;
+            }
+          case 7:
+            if (_currentIndex == value) {
+              break;
+            } else {
+              Navigator.pushNamed(context, SignUpScreen.routeName);
               break;
             }
           default:
@@ -81,6 +109,10 @@ class _NavigationThingyState extends State<NavigationThingy> {
         BottomNavigationBarItem(
           icon: Icon(Icons.build_circle),
           label: 'Hobbies',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.chat_rounded),
+          label: 'Chat',
         ),
       ],
     );
