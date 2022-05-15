@@ -61,14 +61,14 @@ class _NavigationThingyState extends State<NavigationThingy> {
             if (_currentIndex == value) {
               break;
             } else {
-              Navigator.pushNamed(context, ChatScreen.routeName);
+              Navigator.pushNamed(context, AuthScreen.routeName);
               break;
             }
           case 5:
             if (_currentIndex == value) {
               break;
             } else {
-              Navigator.pushNamed(context, AuthScreen.routeName);
+              Navigator.pushNamed(context, ChatScreen.routeName);
               break;
             }
           case 6:
@@ -112,7 +112,19 @@ class _NavigationThingyState extends State<NavigationThingy> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.chat_rounded),
+          label: 'Auth',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.chat_rounded),
           label: 'Chat',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.chat_rounded),
+          label: 'Log in',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.chat_rounded),
+          label: 'Sign up',
         ),
       ],
     );

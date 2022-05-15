@@ -24,7 +24,8 @@ class _AppRootState extends State<AppRoot> {
       theme: CustomTheme.lightTheme,
       darkTheme: CustomTheme.darkTheme,
       themeMode: currentTheme.currentTheme,
-      home: AnimatedSplashScreen(
+
+      home: AnimatedSplashScreen (
         duration: 1000,
         splash: 'assets/splash/splash.png',
         nextScreen: HomeScreen(),
@@ -45,12 +46,10 @@ class _AppRootState extends State<AppRoot> {
                   return const WerkScreen();
                 case HobbiesScreen.routeName:
                   return const HobbiesScreen();
-                case SignUpScreen.routeName:
-                  return const SignUpScreen();
+                case SignupScreen.routeName:
+                  return const SignupScreen();
                 case LoginScreen.routeName:
                   return const LoginScreen();
-                case ChatScreen.routeName:
-                  return const ChatScreen();
                 default:
                   return const HomeScreen();
               }

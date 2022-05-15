@@ -10,7 +10,7 @@ class AuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Auth(),
-      currentIndex: 5,
+      currentIndex: 4,
     );
   }
 }

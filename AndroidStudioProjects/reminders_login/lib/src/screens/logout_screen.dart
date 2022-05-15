@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../local_imports.dart';
 
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({Key? key}) : super(key: key);
+class LogoutScreen extends StatelessWidget {
+  const LogoutScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/chat';
+  static const routeName = '/logout';
 
   @override
   Widget build(BuildContext context) {
     return const Layout(
-      child: Chat(),
+      child: Logout(),
       currentIndex: 6,
     );
   }

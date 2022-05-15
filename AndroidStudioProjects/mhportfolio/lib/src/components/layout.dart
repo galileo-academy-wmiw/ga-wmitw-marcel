@@ -21,6 +21,7 @@ class _LayoutState extends State<Layout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: SvgPicture.asset(

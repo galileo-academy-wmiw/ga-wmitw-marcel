@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../local_imports.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({Key? key}) : super(key: key);
 
   static const routeName = '/signup';
 
   @override
   Widget build(BuildContext context) {
     return const Layout(
-      child: SignUp(),
+      child: Signup(),
       currentIndex: 4,
     );
   }

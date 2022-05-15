@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import '../local_imports.dart';
 
+
 class AppRoot extends StatefulWidget {
   const AppRoot({Key? key}) : super(key: key);
   @override

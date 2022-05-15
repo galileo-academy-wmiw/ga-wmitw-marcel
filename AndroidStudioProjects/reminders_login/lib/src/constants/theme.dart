@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 const Color myHexColor = Color(0xff123456);
 
 class CustomTheme with ChangeNotifier {
-  static bool _isDarkTheme = false;
+  static bool _isDarkTheme = true;
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   void toggleTheme() {
