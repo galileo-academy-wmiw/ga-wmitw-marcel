@@ -3,7 +3,6 @@ import 'dart:math' as math;
 import '../../local_imports.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -78,25 +77,37 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.fromLTRB(20, 280, 20, 0),
               child: Column(
                 children: <Widget>[
-                  reusableTextField("Vul je naam in", Icons.person_outline, false,
-                      _emailTextController),
+                  reusableTextField(
+                      labelText: "Vul je naam in",
+                      icon: Icons.person_outline,
+                      isPasswordType: false,
+                      controller: _emailTextController,
+                      validator: (String? value) {
+                        if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value!)) {
+                          return "Dit is geen geldig emailadres!";
+                        }
+                      }),
                   const SizedBox(
                     height: 20,
                   ),
-                  reusableTextField("Vul je wachtwoord in", Icons.lock_outline, true,
-                      _passwordTextController),
+                  reusableTextField(
+                      labelText: "Vul je wachtwoord in",
+                      icon: Icons.lock_outline,
+                      isPasswordType: true,
+                      controller: _passwordTextController),
                   const SizedBox(
                     height: 10,
                   ),
-
                   firebaseUIButton(context, "Inloggen", () {
                     FirebaseAuth.instance
                         .signInWithEmailAndPassword(
-                        email: _emailTextController.text,
-                        password: _passwordTextController.text)
+                            email: _emailTextController.text,
+                            password: _passwordTextController.text)
                         .then((value) {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ChatScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChatScreen()));
                     }).onError((error, stackTrace) {
                       print("Error ${error.toString()}");
                     });
@@ -110,6 +121,7 @@ class _LoginState extends State<Login> {
       ],
     );
   }
+
   Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -129,4 +141,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-

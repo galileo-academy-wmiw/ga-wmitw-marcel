@@ -114,18 +114,18 @@ class _NavigationThingyState extends State<NavigationThingy> {
           icon: Icon(Icons.chat_rounded),
           label: 'Auth',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.chat_rounded),
-          label: 'Chat',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.chat_rounded),
-          label: 'Log in',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.chat_rounded),
-          label: 'Sign up',
-        ),
+        // BottomNavigationBarItem(
+        //   icon: Icon(Icons.chat_rounded),
+        //   label: 'Chat',
+        // ),
+        // BottomNavigationBarItem(
+        //   icon: Icon(Icons.chat_rounded),
+        //   label: 'Log in',
+        // ),
+        // BottomNavigationBarItem(
+        //   icon: Icon(Icons.chat_rounded),
+        //   label: 'Sign up',
+        // ),
       ],
     );
   }

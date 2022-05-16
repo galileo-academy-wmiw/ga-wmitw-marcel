@@ -10,7 +10,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Chat(),
-      currentIndex: 5,
+      bottomNavigation: false,
     );
   }
 }

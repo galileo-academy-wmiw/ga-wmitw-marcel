@@ -10,7 +10,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: SignUp(),
-      currentIndex: 7,
+      bottomNavigation: false,
     );
   }
 }

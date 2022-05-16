@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Layout(
       child: Login(),
-      currentIndex: 6,
+      bottomNavigation: false,
     );
   }
 }

@@ -5,23 +5,24 @@ import '../../local_imports.dart';
 class Layout extends StatefulWidget {
   const Layout({
     required this.child,
-    required this.currentIndex,
+    this.currentIndex,
+    this.bottomNavigation = true,
     Key? key,
   }) : super(key: key);
 
   final Widget child;
-  final int currentIndex;
+  final int? currentIndex;
+  final bool bottomNavigation;
 
   @override
   State<Layout> createState() => _LayoutState();
 }
 
 class _LayoutState extends State<Layout> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset : false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: SvgPicture.asset(
@@ -41,14 +42,17 @@ class _LayoutState extends State<Layout> {
         child: Stack(
           children: [
             Container(
-            decoration: BoxDecoration(
-              // color: Color(0xff00C9FF),
-              image: DecorationImage(
-                image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/stars.png" : "assets/images/wolken1b.png"),
-                fit: BoxFit.fill,
+              decoration: BoxDecoration(
+                // color: Color(0xff00C9FF),
+                image: DecorationImage(
+                  image: AssetImage(
+                      Theme.of(context).brightness == Brightness.dark
+                          ? "assets/images/stars.png"
+                          : "assets/images/wolken1b.png"),
+                  fit: BoxFit.fill,
                   // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.9), BlendMode.modulate,),
+                ),
               ),
-            ),
             ),
             AnimationStatefulWidget(),
             Animation2StatefulWidget(),
@@ -63,7 +67,11 @@ class _LayoutState extends State<Layout> {
           ],
         ),
       ),
-      bottomNavigationBar: NavigationThingy(currentIndex: widget.currentIndex,),
+      bottomNavigationBar: widget.bottomNavigation
+          ? NavigationThingy(
+              currentIndex: widget.currentIndex!,
+            )
+          : null,
     );
   }
 }
@@ -72,7 +80,8 @@ class AnimationStatefulWidget extends StatefulWidget {
   const AnimationStatefulWidget({Key? key}) : super(key: key);
 
   @override
-  State<AnimationStatefulWidget> createState() => _AnimationStatefulWidgetState();
+  State<AnimationStatefulWidget> createState() =>
+      _AnimationStatefulWidgetState();
 }
 
 // boolean
@@ -104,14 +113,15 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
       position: _offsetAnimation,
       child: SizedBox(
         height: double.infinity,
-        child:
-          Container(
+        child: Container(
           decoration: BoxDecoration(
             // color: Color(0xff00C9FF),
             image: DecorationImage(
-              image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/wolken2dark.png" : "assets/images/wolken2.png"),
+              image: AssetImage(Theme.of(context).brightness == Brightness.dark
+                  ? "assets/images/wolken2dark.png"
+                  : "assets/images/wolken2.png"),
               fit: BoxFit.fitWidth,
-                // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
+              // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
             ),
           ),
         ),
@@ -120,12 +130,12 @@ class _AnimationStatefulWidgetState extends State<AnimationStatefulWidget>
   }
 }
 
-
 class Animation2StatefulWidget extends StatefulWidget {
   const Animation2StatefulWidget({Key? key}) : super(key: key);
 
   @override
-  State<Animation2StatefulWidget> createState() => _Animation2StatefulWidgetState();
+  State<Animation2StatefulWidget> createState() =>
+      _Animation2StatefulWidgetState();
 }
 
 // boolean
@@ -158,14 +168,16 @@ class _Animation2StatefulWidgetState extends State<Animation2StatefulWidget>
       child: SizedBox(
         height: double.infinity,
         child: Center(
-          child:
-            Container(
+          child: Container(
             decoration: BoxDecoration(
               // color: Color(0xff00C9FF),
               image: DecorationImage(
-                image: AssetImage(Theme.of(context).brightness == Brightness.dark ? "assets/images/wolken3dark.png" : "assets/images/wolken3.png"),
+                image: AssetImage(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? "assets/images/wolken3dark.png"
+                        : "assets/images/wolken3.png"),
                 fit: BoxFit.fitWidth,
-                  // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
+                // colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.modulate,),
               ),
             ),
           ),

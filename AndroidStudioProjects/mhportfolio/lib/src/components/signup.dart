@@ -11,9 +11,41 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  late AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+
+  Future<void> validate() async {
+    if (formKey.currentState!.validate()) {
+      try {
+        FirebaseAuth.instance
+            .createUserWithEmailAndPassword(
+          email: _emailTextController.text,
+          password: _passwordTextController.text,
+        )
+            .then((value) {
+          print("Created New Account for ${value.user!.email}");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ChatScreen(),
+            ),
+          );
+        }).onError((error, stackTrace) {
+          print("Error ${error.toString()}");
+        });
+      } on FirebaseException catch (e) {
+        print(e.code);
+      }
+    } else {
+      setState(() {
+        autovalidateMode = AutovalidateMode.always;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,38 +109,61 @@ class _SignUpState extends State<SignUp> {
           child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.fromLTRB(20, 280, 20, 0),
-              child: Column(
-                children: <Widget>[
-                  reusableTextField("Geef een naam op", Icons.person_outline, false,
-                      _userNameTextController),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  reusableTextField("Geef een emailadres op", Icons.person_outline, false,
-                      _emailTextController),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  reusableTextField("Geef een wachtwoord op", Icons.lock_outline, true,
-                      _passwordTextController),
-                  const SizedBox(
-                    height: 10,
-                  ),
-
-                  firebaseUIButton2(context, "Aanmelden", () {
-                    FirebaseAuth.instance
-                        .createUserWithEmailAndPassword(
-                        email: _emailTextController.text,
-                        password: _passwordTextController.text)
-                        .then((value) {
-                      print("Created New Account");
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ChatScreen()));
-                    }).onError((error, stackTrace) {
-                      print("Error ${error.toString()}");
-                    });
-                  }),
-                ],
+              child: Form(
+                key: formKey,
+                autovalidateMode: autovalidateMode,
+                child: Column(
+                  children: <Widget>[
+                    reusableTextField(
+                        labelText: "Geef een naam op",
+                        icon: Icons.person_outline,
+                        isPasswordType: false,
+                        controller: _userNameTextController,
+                        validator: (String? value) {
+                          if (value!.isEmpty) {
+                            return 'Mag niet leeg zijn';
+                          }
+                        }),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    reusableTextField(
+                        labelText: "Geef een emailadres op",
+                        icon: Icons.person_outline,
+                        isPasswordType: false,
+                        controller: _emailTextController,
+                        validator: (String? value) {
+                          if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value!)) {
+                            return "Dit is geen geldig emailadres!";
+                          }
+                        }),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    reusableTextField(
+                        labelText: "Geef een wachtwoord op",
+                        icon: Icons.lock_outline,
+                        isPasswordType: true,
+                        controller: _passwordTextController,
+                        validator: (String? value) {
+                          if (!RegExp(
+                                  r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$')
+                              .hasMatch(value!)) {
+                            return "Je wachtwoord moet minimaal 8 karakters bevatten";
+                          }
+                        }),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    firebaseUIButton2(
+                      context: context,
+                      title: "Aanmelden",
+                      onTap: () {
+                        validate();
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -117,4 +172,3 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
-
