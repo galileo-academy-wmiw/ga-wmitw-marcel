@@ -43,7 +43,7 @@ Container firebaseUIButton(BuildContext context, String title, Function onTap) {
     decoration: BoxDecoration(borderRadius: BorderRadius.circular(90)),
     child: ElevatedButton(
       onPressed: () {
-        Navigator.of(context).pushNamed('/login');
+        onTap();
       },
       style: ElevatedButton.styleFrom(
           padding: EdgeInsets.zero,
@@ -69,6 +69,7 @@ Container firebaseUIButton(BuildContext context, String title, Function onTap) {
     ),
   );
 }
+
 
 Container firebaseUIButton2({
   required BuildContext context,

@@ -11,8 +11,18 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _emailTextController = TextEditingController();
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -81,7 +91,7 @@ class _LoginState extends State<Login> {
                       labelText: "Vul je naam in",
                       icon: Icons.person_outline,
                       isPasswordType: false,
-                      controller: _emailTextController,
+                      controller: emailController,
                       validator: (String? value) {
                         if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value!)) {
                           return "Dit is geen geldig emailadres!";
@@ -94,15 +104,15 @@ class _LoginState extends State<Login> {
                       labelText: "Vul je wachtwoord in",
                       icon: Icons.lock_outline,
                       isPasswordType: true,
-                      controller: _passwordTextController),
+                      controller: passwordController),
                   const SizedBox(
                     height: 10,
                   ),
                   firebaseUIButton(context, "Inloggen", () {
                     FirebaseAuth.instance
                         .signInWithEmailAndPassword(
-                            email: _emailTextController.text,
-                            password: _passwordTextController.text)
+                            email: emailController.text,
+                            password: passwordController.text)
                         .then((value) {
                       Navigator.push(
                           context,
@@ -121,22 +131,23 @@ class _LoginState extends State<Login> {
       ],
     );
   }
-
   Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Heb je nog geen account?",
-            style: TextStyle(color: Colors.indigo)),
+        Text(
+          "Heb je nog geen account? ",
+          style: Theme.of(context).textTheme.bodyText2,
+        ),
         GestureDetector(
           onTap: () {
             Navigator.of(context).pushNamed('/signup');
           },
-          child: const Text(
-            " Meld je aan",
-            style: TextStyle(color: Colors.indigo, fontWeight: FontWeight.bold),
+          child: Text(
+            "Meld je aan",
+            style: Theme.of(context).textTheme.bodyText2?.copyWith(fontWeight: FontWeight.bold),
           ),
-        )
+        ),
       ],
     );
   }

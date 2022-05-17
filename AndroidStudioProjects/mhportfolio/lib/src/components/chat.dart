@@ -33,7 +33,7 @@ class Chat extends StatelessWidget {
         ),
         // Knoppen
         Container(
-          padding: EdgeInsets.fromLTRB(20, 280, 20, 0),
+          padding: EdgeInsets.fromLTRB(20, 438, 20, 0),
           child: Center(
             child: ElevatedButton(
               onPressed: () {

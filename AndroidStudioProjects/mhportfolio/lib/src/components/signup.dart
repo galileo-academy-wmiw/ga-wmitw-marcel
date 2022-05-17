@@ -121,7 +121,7 @@ class _SignUpState extends State<SignUp> {
                         controller: _userNameTextController,
                         validator: (String? value) {
                           if (value!.isEmpty) {
-                            return 'Mag niet leeg zijn';
+                            return 'Je hebt nog niks ingevuld';
                           }
                         }),
                     const SizedBox(
@@ -162,12 +162,32 @@ class _SignUpState extends State<SignUp> {
                         validate();
                       },
                     ),
+                    signOutOption()
                   ],
                 ),
               ),
             ),
           ),
         ),
+      ],
+    );
+  }
+  Row signOutOption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("Ik heb al een account en wil ",
+          style: Theme.of(context).textTheme.bodyText2,
+        ),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed('/login');
+          },
+          child: Text(
+            "inloggen",
+            style: Theme.of(context).textTheme.bodyText2?.copyWith(fontWeight: FontWeight.bold),
+          ),
+        )
       ],
     );
   }

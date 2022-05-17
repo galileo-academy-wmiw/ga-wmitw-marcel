@@ -25,10 +25,15 @@ class _LayoutState extends State<Layout> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: SvgPicture.asset(
-          'assets/images/logo.svg',
-          height: 50,
-          fit: BoxFit.fitHeight,
+        title: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed('/home');
+          },
+          child: SvgPicture.asset(
+            'assets/images/logo.svg',
+            height: 50,
+            fit: BoxFit.fitHeight,
+          ),
         ),
         centerTitle: true,
         actions: [

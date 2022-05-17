@@ -53,6 +53,14 @@ class CustomTheme with ChangeNotifier {
           height: 1.3,
           color: Colors.black,
         ),
+        // inlogtext
+        bodyText2: TextStyle(
+          fontFamily: 'Mukta',
+          fontSize: 16.0,
+          fontWeight: FontWeight.normal,
+          height: 1.3,
+          color: Colors.indigo,
+        ),
       ),
       appBarTheme: const AppBarTheme(
         backgroundColor: Color(0xff00C9FF),
@@ -112,6 +120,14 @@ class CustomTheme with ChangeNotifier {
           fontWeight: FontWeight.normal,
           height: 1.3,
           color: Color(0xfffef5a7),
+        ),
+        // inlogtext
+        bodyText2: TextStyle(
+          fontFamily: 'Mukta',
+          fontSize: 16.0,
+          fontWeight: FontWeight.normal,
+          height: 1.3,
+          color: Color(0xffffffff),
         ),
         // Outline
       ),
