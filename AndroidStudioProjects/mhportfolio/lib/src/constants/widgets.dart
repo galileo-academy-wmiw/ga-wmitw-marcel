@@ -35,7 +35,11 @@ TextFormField reusableTextField({
   );
 }
 
-Container firebaseUIButton(BuildContext context, String title, Function onTap) {
+Container firebaseUIButton({
+  required BuildContext context,
+  required String title,
+  required Function() onTap,
+}) {
   return Container(
     width: MediaQuery.of(context).size.width,
     height: 50,
@@ -69,7 +73,6 @@ Container firebaseUIButton(BuildContext context, String title, Function onTap) {
     ),
   );
 }
-
 
 Container firebaseUIButton2({
   required BuildContext context,

@@ -11,16 +11,32 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  late AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-
-    super.dispose();
+  Future<void> validate() async {
+    if (formKey.currentState!.validate()) {
+      try {
+        FirebaseAuth.instance
+            .signInWithEmailAndPassword(
+                email: emailController.text, password: passwordController.text)
+            .then((value) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ChatScreen()));
+        }).onError((error, stackTrace) {
+          print("Error ${error.toString()}");
+        });
+      } on FirebaseException catch (e) {
+        print(e.code);
+      }
+    } else {
+      setState(() {
+        autovalidateMode = AutovalidateMode.always;
+      });
+    }
   }
 
   @override
@@ -85,45 +101,47 @@ class _LoginState extends State<Login> {
           child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.fromLTRB(20, 280, 20, 0),
-              child: Column(
-                children: <Widget>[
-                  reusableTextField(
-                      labelText: "Vul je naam in",
-                      icon: Icons.person_outline,
-                      isPasswordType: false,
-                      controller: emailController,
-                      validator: (String? value) {
-                        if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value!)) {
-                          return "Dit is geen geldig emailadres!";
-                        }
-                      }),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  reusableTextField(
-                      labelText: "Vul je wachtwoord in",
-                      icon: Icons.lock_outline,
-                      isPasswordType: true,
-                      controller: passwordController),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  firebaseUIButton(context, "Inloggen", () {
-                    FirebaseAuth.instance
-                        .signInWithEmailAndPassword(
-                            email: emailController.text,
-                            password: passwordController.text)
-                        .then((value) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ChatScreen()));
-                    }).onError((error, stackTrace) {
-                      print("Error ${error.toString()}");
-                    });
-                  }),
-                  signUpOption()
-                ],
+              child: Form(
+                key: formKey,
+                autovalidateMode: autovalidateMode,
+                child: Column(
+                  children: <Widget>[
+                    reusableTextField(
+                        labelText: "Vul je naam in",
+                        icon: Icons.person_outline,
+                        isPasswordType: false,
+                        controller: emailController,
+                        validator: (String? value) {
+                          if (value!.isEmpty) {
+                            return 'Je hebt nog niks ingevuld';
+                          }
+                        }),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    reusableTextField(
+                        labelText: "Vul je wachtwoord in",
+                        icon: Icons.lock_outline,
+                        isPasswordType: true,
+                        controller: passwordController,
+                        validator: (String? value) {
+                          if (value!.isEmpty) {
+                            return 'Je hebt nog niks ingevuld';
+                          }
+                        }),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    firebaseUIButton(
+                      context: context,
+                      title: "Inloggen",
+                      onTap: () {
+                        validate();
+                      },
+                    ),
+                    signUpOption()
+                  ],
+                ),
               ),
             ),
           ),
@@ -131,6 +149,7 @@ class _LoginState extends State<Login> {
       ],
     );
   }
+
   Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -145,7 +164,10 @@ class _LoginState extends State<Login> {
           },
           child: Text(
             "Meld je aan",
-            style: Theme.of(context).textTheme.bodyText2?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2
+                ?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
       ],
