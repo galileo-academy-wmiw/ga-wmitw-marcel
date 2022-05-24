@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'dart:math' as math;
 import '../../local_imports.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:io';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -17,6 +19,20 @@ class _SignUpState extends State<SignUp> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+
+  // Avatar imagepicker
+  XFile? imgXFile;
+  final ImagePicker imagePicker = ImagePicker();
+
+  getImageFromGallery() async
+  {
+    imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      imgXFile;
+    });
+  }
+
 
   Future<void> validate() async {
     if (formKey.currentState!.validate()) {
@@ -51,69 +67,61 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Foto
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 150.0,
-              width: 150.0,
-              margin: const EdgeInsets.only(
-                left: 25,
-                top: 85,
-                right: 25,
-                bottom: 0,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 4),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 7,
-                    offset: const Offset(5, 5), // changes position of shadow
-                  ),
-                ],
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/pasfoto.jpg'),
-                  fit: BoxFit.fill,
-                ),
-                shape: BoxShape.circle,
-              ),
-            ),
-          ],
-        ),
-        // Titel
-        Row(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(
-                left: 50,
-                top: 0,
-                right: 0,
-                bottom: 0,
-              ),
-              child: Transform.rotate(
-                angle: -math.pi / 12,
-                child: Text(
-                  'Sign up...',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
-            ),
-          ],
-        ),
+
         // Firebase
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 280, 20, 0),
+              padding: EdgeInsets.fromLTRB(20, 85, 20, 0),
               child: Form(
                 key: formKey,
                 autovalidateMode: autovalidateMode,
                 child: Column(
                   children: <Widget>[
+                    GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        getImageFromGallery();
+                      },
+                      child: Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.5),
+                                blurRadius: 10,
+                                offset: const Offset(5, 5), // changes position of shadow
+                              ),
+                            ],
+                            shape: BoxShape.circle,
+                          ),
+                          child: CircleAvatar(
+                            radius: 80,
+                            backgroundColor: Colors.white,
+                              child: CircleAvatar(
+                              radius: 75,
+                              backgroundColor: Colors.blueGrey,
+                              backgroundImage: imgXFile == null
+                                ? null
+                                : FileImage(
+                                  File(imgXFile!.path)
+                                ),
+                                  child: imgXFile == null
+                                  ? Icon(
+                                  Icons.add_photo_alternate,
+                                  color: Colors.white,
+                                  size: MediaQuery.of(context).size.width * 0.15,
+                                  ) : null,
+                              ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     reusableTextField(
                         labelText: "Geef een naam op",
                         icon: Icons.person_outline,
@@ -168,6 +176,27 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
           ),
+        ),
+
+        // Titel
+        Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(
+                left: 50,
+                top: 0,
+                right: 0,
+                bottom: 0,
+              ),
+              child: Transform.rotate(
+                angle: -math.pi / 12,
+                child: Text(
+                  'Sign up...',
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );
