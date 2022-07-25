@@ -114,76 +114,116 @@ class Hobbies extends StatelessWidget {
             crossAxisCount: 2,
             childAspectRatio: 0.76,
           children:[
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 7,
-                    offset: const Offset(5, 5), // changes position of shadow
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HobbieDetail1();
+                }));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Hero(
+                  tag:'hobbieDetail1',
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/tardis.jpg'),
+                    ],
                   ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/tardis.jpg'),
-                ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 7,
-                    offset: const Offset(5, 5), // changes position of shadow
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HobbieDetail2();
+                }));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Hero(
+                  tag: 'hobbieDetail2',
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/zandloper.jpg'),
+                    ],
                   ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/zandloper.jpg'),
-                ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 7,
-                    offset: const Offset(5, 5), // changes position of shadow
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HobbieDetail3();
+                }));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Hero(
+                  tag: 'hobbieDetail3',
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/wandlampje.jpg'),
+                    ],
                   ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/wandlampje.jpg'),
-                ],
+                ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 7,
-                    offset: const Offset(5, 5), // changes position of shadow
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const HobbieDetail4();
+                }));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Hero(
+                  tag: 'hobbieDetail4',
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/kat.jpg'),
+                    ],
                   ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset('assets/images/kat.jpg'),
-                ],
+                ),
               ),
             ),
           ],
@@ -197,3 +237,142 @@ class Hobbies extends StatelessWidget {
     );
   }
 }
+
+class HobbieDetail1 extends StatelessWidget {
+  const HobbieDetail1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+              child: Image.asset('assets/images/tardis.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class HobbieDetail2 extends StatelessWidget {
+  const HobbieDetail2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/zandloper.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class HobbieDetail3 extends StatelessWidget {
+  const HobbieDetail3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/wandlampje.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class HobbieDetail4 extends StatelessWidget {
+  const HobbieDetail4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/kat.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+

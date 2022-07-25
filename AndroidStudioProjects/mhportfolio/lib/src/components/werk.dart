@@ -114,76 +114,107 @@ class Werk extends StatelessWidget {
             crossAxisCount: 2,
             childAspectRatio: 0.76,
             children:[
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      blurRadius: 7,
-                      offset: const Offset(5, 5), // changes position of shadow
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const WerkDetail1();
+                  }));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 7,
+                        offset: const Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Hero(
+                    tag: 'werkDetail1',
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset('assets/images/logodesign.jpg'),
+                      ],
                     ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset('assets/images/logodesign.jpg'),
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      blurRadius: 7,
-                      offset: const Offset(5, 5), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset('assets/images/opvangprogramma.jpg'),
-                  ],
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      blurRadius: 7,
-                      offset: const Offset(5, 5), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset('assets/images/dago-website.jpg'),
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const WerkDetail2();
+                  }));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 7,
+                        offset: const Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/opvangprogramma.jpg'),
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      blurRadius: 7,
-                      offset: const Offset(5, 5), // changes position of shadow
-                    ),
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const WerkDetail3();
+                  }));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 7,
+                        offset: const Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/dago-website.jpg'),
+                    ],
+                  ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset('assets/images/jaarverslag.jpg'),
-                  ],
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const WerkDetail4();
+                  }));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 7,
+                        offset: const Offset(5, 5), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/jaarverslag.jpg'),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -194,6 +225,143 @@ class Werk extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class WerkDetail1 extends StatelessWidget {
+  const WerkDetail1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/logodesign.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class WerkDetail2 extends StatelessWidget {
+  const WerkDetail2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/opvangprogramma.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class WerkDetail3 extends StatelessWidget {
+  const WerkDetail3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/dago-website.jpg'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class WerkDetail4 extends StatelessWidget {
+  const WerkDetail4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(
+            left: 24.0,
+            top: 70.0,
+            right: 24.0,
+            bottom: 24.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 7,
+                  offset: const Offset(5, 5), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Image.asset('assets/images/jaarverslag.jpg'),
+          ),
+        ),
+      ),
     );
   }
 }
