@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Werk extends StatelessWidget {
   const Werk({Key? key}) : super(key: key);
@@ -235,131 +236,214 @@ class WerkDetail1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: SvgPicture.asset(
+          'assets/images/logo.svg',
+          height: 50,
+          fit: BoxFit.fitHeight,
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(
             left: 24.0,
-            top: 70.0,
+            top: 12.0,
             right: 24.0,
             bottom: 24.0),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 5),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 7,
-                  offset: const Offset(5, 5), // changes position of shadow
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
                 ),
-              ],
+                child: Image.asset('assets/images/logodesign.jpg'),
+              ),
             ),
-            child: Image.asset('assets/images/logodesign.jpg'),
-          ),
+            Container(
+              margin: const EdgeInsets.all(16.0),
+              child: Text(
+                "Dierenambulance Gouda en omstreken heeft in 2012 haar naam veranderd in Centrum voor Dierenhulpverlening. Daarvoor was het nodig de complete huisstijl te vernieuwen, te beginnen bij het logo. Ik heb meerdere voorstellen gemaakt, uiteindelijk is het logo rechtsonder gekozen.",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
 class WerkDetail2 extends StatelessWidget {
   const WerkDetail2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: SvgPicture.asset(
+          'assets/images/logo.svg',
+          height: 50,
+          fit: BoxFit.fitHeight,
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(
             left: 24.0,
-            top: 70.0,
+            top: 12.0,
             right: 24.0,
             bottom: 24.0),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 5),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 7,
-                  offset: const Offset(5, 5), // changes position of shadow
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
                 ),
-              ],
+                child: Image.asset('assets/images/opvangprogramma.jpg'),
+              ),
             ),
-            child: Image.asset('assets/images/opvangprogramma.jpg'),
-          ),
+            Container(
+              margin: const EdgeInsets.all(16.0),
+              child: Text(
+                "De (vogel)opvang van het Centrum voor Dierenhulpverlening registreert behandelde dieren. Deze registratie wordt gerapporteerd aan de gemeentes in het doelgebied; op basis hiervan wordt subsidie verleend. Dit gebeurde voorheen altijd op papier. Ik heb met het programma Filemaker een digitale versie gemaakt.",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
 class WerkDetail3 extends StatelessWidget {
   const WerkDetail3({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: SvgPicture.asset(
+          'assets/images/logo.svg',
+          height: 50,
+          fit: BoxFit.fitHeight,
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(
             left: 24.0,
-            top: 70.0,
+            top: 12.0,
             right: 24.0,
             bottom: 24.0),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 5),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 7,
-                  offset: const Offset(5, 5), // changes position of shadow
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
                 ),
-              ],
+                child: Image.asset('assets/images/dago-website.jpg'),
+              ),
             ),
-            child: Image.asset('assets/images/dago-website.jpg'),
-          ),
+            Container(
+              margin: const EdgeInsets.all(16.0),
+              child: Text(
+                "Nadat het nieuwe logo klaar was, ben ik gestaag aan de gang gegaan met het vernieuwen van de gehele huisstijl. De website is van de grond af opnieuw opgezet; HTML 5, responsive en met een intranet.",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
 class WerkDetail4 extends StatelessWidget {
   const WerkDetail4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: SvgPicture.asset(
+          'assets/images/logo.svg',
+          height: 50,
+          fit: BoxFit.fitHeight,
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(
             left: 24.0,
-            top: 70.0,
+            top: 12.0,
             right: 24.0,
             bottom: 24.0),
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 5),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 7,
-                  offset: const Offset(5, 5), // changes position of shadow
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 7,
+                      offset: const Offset(5, 5), // changes position of shadow
+                    ),
+                  ],
                 ),
-              ],
+                child: Image.asset('assets/images/jaarverslag.jpg'),
+              ),
             ),
-            child: Image.asset('assets/images/jaarverslag.jpg'),
-          ),
+            Container(
+              margin: const EdgeInsets.all(16.0),
+              child: Text(
+                "Voor het verkrijgen van de ANBI status is het onder anderen noodzakelijk een jaarverslag online te hebben staan. Voor het jaarverslag heb ik een nieuwe opzet gemaakt waarbij voor de cover een sjabloon gebruikt wordt. Zo hoeven alleen de foto's en het jaartal gewijzigd te worden",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+          ],
         ),
       ),
     );
