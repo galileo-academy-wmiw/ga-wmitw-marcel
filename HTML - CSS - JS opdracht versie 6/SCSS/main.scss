@@ -1,0 +1,885 @@
+  // fonts - windsong - mukta
+   @font-face {
+    font-family: 'WindSong';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/windsong-v5-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/windsong-v5-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/windsong-v5-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/windsong-v5-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/windsong-v5-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/windsong-v5-latin-500.svg#WindSong') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/mukta-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/mukta-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/mukta-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/mukta-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/mukta-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/mukta-v12-latin-regular.svg#Mukta') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/mukta-v12-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/mukta-v12-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/mukta-v12-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/mukta-v12-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/mukta-v12-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/mukta-v12-latin-500.svg#Mukta') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/mukta-v12-latin-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/mukta-v12-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/mukta-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/mukta-v12-latin-600.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/mukta-v12-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/mukta-v12-latin-600.svg#Mukta') format('svg'); /* Legacy iOS */
+  }
+  
+  // font family
+  $primary-font-family: 'Mukta';
+  $secundary-font-family: 'WindSong';
+
+  // color variables
+  $color-white: #FFFFFF;
+  $color-lightblue: #00C9FF;
+  $color-darkblue: #005CCE;
+  $form-lightred: pink;
+  $form-red: red;
+  $form-darkred: darkred;
+  $form-lightgreen: lightgreen;
+  $form-green: green;
+  $form-grey: #b3b3b3;
+
+  $background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
+  $header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
+  $footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
+  
+  // media query sizes
+  $xs: 320px; //max
+  $sm: 500px; // max
+  $md: 768px; //max
+  $lg: 1024px; //max
+  $xlg: 1200px; //max
+  $ulg: 1500px; //max
+
+  // algemeen
+  html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: $background-gradient;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadein 2s;
+  }
+  @keyframes fadein {
+    0% {
+    opacity:0;
+    }
+    100% {
+    opacity:1;
+    }
+   }
+
+   .main {
+    max-width: 50%;
+    min-width: 1000px;
+    margin: 160px auto 0 auto;
+    position: relative;
+
+    @media (max-width: $xs) {
+      max-width: 90%;
+      min-width: 180px;
+      margin: 100px auto 0 auto;
+    }
+    @media (max-width: $sm) {
+      max-width: 80%;
+      min-width: 320px;
+      margin: 130px auto 0 auto;
+    }
+    @media (max-width: $md) {
+      min-width: 480px;
+      margin: 130px auto 0 auto;
+    }
+    @media (max-width: $lg) {
+      min-width: 600px;
+      margin: 96px auto 0 auto;
+    }
+    @media (max-width: $xlg) {
+      min-width: 760px;
+      margin: 120px auto 0 auto;
+    }
+    @media (max-width: $ulg) {
+      min-width: 900px;
+    margin: 144px auto 0 auto;
+    }
+  }
+
+  // wolken animatie
+  .clouds {
+    width: 100%;
+    position: fixed;
+    animation: clouds 120s alternate infinite linear;
+    z-index: -10;
+  }
+  @keyframes clouds {
+    0%   {left: -2080px; top:100px;}
+    100% {left:0px; top:100px;}
+  }
+
+  .clouds2 {
+    width: 100%;
+    position: fixed;
+    animation: clouds2 90s alternate-reverse infinite linear;
+    z-index: -1;
+  }
+  @keyframes clouds2 {
+    0%   {left: -2080px; top:100px;}
+    100% {left:0px; top:100px;}
+  }
+
+  // logo en social media
+  header {
+    background: $header-gradient;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 10px;
+    z-index: 100;
+
+    @media (max-width: $xs) {
+      height: 60px;
+    }
+    @media (max-width: $sm) {
+      height: 75px;
+    }
+    @media (max-width: $ulg) {
+      height: 90px;
+    }
+  }
+
+  #fixednavbar {
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: $xs) {
+      height: 50px;
+      width: 90%;
+    }
+    @media (max-width: $sm) {
+      height: 60px;
+      width: 320px;
+    }
+    @media (max-width: $md) {
+      width: 480px;
+    }
+    @media (max-width: $lg) {
+      width: 600px;
+    }
+    @media (max-width: $xlg) {
+      height: 75px;
+      width: 750px;
+    }
+    @media (max-width: $ulg) {
+      height: 90px;
+      width: 900px;
+    }
+  }
+
+  .logo {
+    width: 100px;
+    left: -20px;
+    float: left;
+    position: relative;
+
+    @media (max-width: $xs) {
+      width: 50px;
+      left: 0;
+    }
+    @media (max-width: $sm) {
+      width: 70px;
+      left: -14px;
+    }
+    @media (max-width: $xlg) {
+      width: 75px;
+      left: -15px;
+    }
+    @media (max-width: $ulg) {
+      width: 90px;
+      left: -18px;
+    }
+  }
+
+  .social-container {
+    position: relative;
+    margin-left: 30px;
+    top: 45px;
+    width: 110px;
+    height: 40px;
+    float: right;
+
+    @media (max-width: $xs) {
+      margin-right: 5%;
+      top: 18px;
+      width: 120px;
+      height: 30px;
+    }
+    @media (max-width: $sm) {
+      margin-left: 30px;
+      top: 33px;
+      width: 134px;
+      height: 30px;
+    }
+    @media (max-width: $lg) {
+      top: 45px;
+      width: 110px;
+      height: 40px;
+    }
+    @media (max-width: $xlg) {
+      top: 34px;
+      width: 82px;
+      height: 30px;
+    }
+    @media (max-width: $ulg) {
+      top: 41px;
+      width: 99px;
+      height: 36px;
+    }
+  }
+  
+  .linkedin {
+    position: relative;
+    width: 40px;
+    margin-left: 0;
+    float: right;
+    z-index: 10;
+
+    @media (max-width: $xs) {
+      width: 30px;
+      top: 0;
+    }
+    @media (max-width: $lg) {
+      top: -10px;
+      margin-left: 22px;
+    }
+    @media (max-width: $xlg) {
+      margin-left: 0;
+    }
+    @media (max-width: $ulg) {
+      width: 36px;
+    }
+  }
+  
+  .e-mail {
+    position: relative;
+    width: 40px;
+    margin-left: 30px;
+    margin-right: 0;
+    float: right;
+    z-index: 10;
+
+    @media (max-width: $xs) {
+      width: 30px;
+      top: 0;
+      margin-left: 15px;
+      margin-right: 45px;
+    }
+    @media (max-width: $sm) {
+      margin-left: 22px;
+    }
+    @media (max-width: $md) {
+      margin-right: 52px;
+    }
+    @media (max-width: $lg) {
+      top: -10px;
+    }
+    @media (max-width: $ulg) {
+      width: 36px;
+      margin-left: 27px;
+    }
+  }
+
+  // headings 
+  h1 {
+    position: relative;
+    font-family: $secundary-font-family, cursive;
+    font-size: clamp(45px, 135px, 150px);
+    font-weight: 500;
+    color: $color-darkblue;
+    text-align: left;
+    transform: rotate(-15deg);
+    text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
+    z-index: 1;
+
+    @media (max-width: $xs) {
+      font-size: 45px;
+    }
+    @media (max-width: $sm) {
+      font-size: 55px;
+    }
+    @media (max-width: $md) {
+      font-size: 70px;
+    }
+    @media (max-width: $lg) {
+      font-size: 90px;
+    }
+    @media (max-width: $xlg) {
+      font-size: 113px;
+    }
+    @media (max-width: $ulg) {
+      font-size: 135px;
+    }
+  };
+
+  .kop1 {
+    left: -60px;
+
+    @media (max-width: $xs) {
+      left: -6px;
+    }
+    @media (max-width: $sm) {
+      left: -16px;
+    }
+    @media (max-width: $md) {
+      left: -24px;
+    }
+    @media (max-width: $lg) {
+    
+    }
+    @media (max-width: $xlg) {
+    
+    }
+    @media (max-width: $ulg) {
+    
+    }
+  }
+  
+  .kop2 {
+    left: -80px;
+
+    @media (max-width: $xs) {
+      left: -12px;
+    }
+    @media (max-width: $sm) {
+      left: -32px;
+    }
+    @media (max-width: $md) {
+      left: -36px;
+    }
+    @media (max-width: $lg) {
+    
+    }
+    @media (max-width: $xlg) {
+    
+    }
+    @media (max-width: $ulg) {
+    
+    }
+  }
+  
+  article p {
+    font-family: $primary-font-family;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    text-align: left;
+    padding-bottom: 0.7em;
+    height: 100%;
+
+    @media (max-width: $xs) {
+      position: relative;
+      font-size: 1.0em;
+      line-height: 1.2em;
+      top: -80px;
+      padding: 240px 0 0.7em 0;
+    }
+    @media (max-width: $sm) {
+      font-size: 1.2em;
+      line-height: 1.3em;
+      top: -100px;
+      padding: 290px 0 0.7em 0;
+    }
+    @media (max-width: $md) {
+      font-size: 1.3em;
+      line-height: 1.4em;
+      top: -80px;
+      padding: 240px 0 0.7em 0;
+    }
+    @media (max-width: $lg) {
+      font-size: 1.2em;
+      line-height: 1.3em;
+      padding-bottom: 0.7em;
+    }
+    @media (max-width: $xlg) {
+      font-size: 1.25em;
+      line-height: 1.3em;
+    }
+    @media (max-width: $ulg) {
+      font-size: 1.45em;
+      line-height: 1.4em;
+    }
+  }
+
+  a:visited, a:link {
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 400;
+  }
+  
+  a:hover, a:active {
+    text-decoration: none;
+    color: $color-darkblue;
+    font-weight: 400;
+  }
+
+  // navigation
+  .nav {
+    position: relative;
+    float: right;
+    margin-top: 50px;
+    z-index: 100;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+    @media (max-width: $sm) {
+      margin-top: 38px;
+    }
+    @media (max-width: $md) {
+    
+    }
+    @media (max-width: $lg) {
+    
+    }
+    @media (max-width: $xlg) {
+    
+    }
+    @media (max-width: $ulg) {
+    
+    }
+  }
+  
+  .nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    }
+    
+  .nav li {
+    font-family: 'Mukta', sans-serif;
+    color: #FFF;
+    font-size: 1.4em;
+    line-height: 40px;
+    height: 40px;
+    width: 120px;
+    float: left;
+    }
+
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    display: inline;
+    transition: 0.3s background-color;
+  }
+    
+  .nav a:active {
+    box-shadow: 0px 8px 5px -5px #FFF;
+  }
+  
+  .nav .current {
+    box-shadow: 0px 8px 5px -5px #FFF;
+  }
+
+  // hamburger circle menu
+  .circlemenu {
+    position: relative;
+    top: 100px;
+    left: -20px;    
+    background: rgba( 0, 201, 255, 1 );
+    border-radius: 100%;
+    font-family: $primary-font-family;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    color: $color-white;
+    padding: 40px;
+    overflow: hidden;
+    -webkit-transform: scale( 0 );
+    -moz-transform: scale( 0 );
+    -o-transform: scale( 0 );
+    -ms-transform: scale( 0 );
+    transform: scale( 0 );
+    width: 320px;
+    height: 320px;
+    line-height: 20px;
+    display: none;
+  }
+
+  .circlemenu,.menulinks {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .circlemenu-expand {
+    -webkit-transform: scale( 1 );
+    -moz-transform: scale( 1 );
+    -o-transform: scale( 1 );
+    -ms-transform: scale( 1 );
+    transform: scale( 1 );
+    vertical-align: middle;
+  }
+
+  .circlemenu-expand .menulinks {
+    opacity: 1;
+  }
+
+  .menulinks {
+    opacity: 0;
+  }
+
+  // hamburger menu 
+  .klapmenu {
+    position: absolute;
+    width: 134px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 20%, rgba(0,201,255,1) 100%);
+    font-family: $primary-font-family;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    color: $color-white;
+    transition: height 0.5s, width 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    display: none;
+  }
+
+  .klapmenu-expand {
+    width: 134px;
+    height: 300px;
+    color: $color-white;
+    border-width: 0 0 5px 0;
+    border-style: solid;
+    border-color: $color-white;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .hr {
+    display: none;
+    margin: 0.9em 10% 1.1em 10%;
+    border: none;
+    background-color: $color-white;
+    height: 2px;
+  }
+
+  .menu-btn {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-left: 22px;
+    margin-right: 0;
+    float: right;
+    background-color: $color-lightblue;
+    border: 2px solid $color-white;
+  }
+
+  .menu-btn_hamburger {
+    width: 20px;
+    height: 3px;
+    background: $color-white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn_hamburger::before,
+  .menu-btn_hamburger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: $color-white;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+  }
+
+  .menu-btn_hamburger::before {
+    transform: translate(-10px, -8px);
+  }
+
+  .menu-btn_hamburger::after {
+    transform: translate(-10px, 8px);
+  }
+
+  // hamburger menu animation
+  .menu-btn.open .menu-btn_hamburger {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn_hamburger::before {
+    transform: rotate(45deg) translate(-7px, 7px);
+  }
+
+  .menu-btn.open .menu-btn_hamburger::after {
+    transform: rotate(-45deg) translate(-7px, -7px);
+  }
+
+  // images
+  .pasfoto img {
+    position: relative;
+    top: -65px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: solid 8px #FFF;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    float: right;
+    margin: -50px 25px;
+  }
+  
+  .fotocontainer-1 {
+    width: 100%;
+    position: relative;
+    top: -20px;
+  }
+  
+  .opleiding-werk-hobbies-1 img {
+    position: relative;
+    top: -50px;
+    left: 40px;
+    width: 250px;
+    height: 250px;
+    border: solid 8px $color-white;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    float: right;
+    z-index: 2;
+  }
+  
+  .opleiding-werk-hobbies-2 img {
+    position: relative;
+    top: -10px;
+    left: 80px;
+    width: 250px;
+    height: 250px;
+    border: solid 8px $color-white;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    float: right;
+    z-index: 1;  
+  }
+  
+  .fotocontainer-2 {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    max-width: 1000px;
+    margin-bottom: 30vh;
+  }
+  
+  .foto img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border: solid 8px $color-white;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    flex: 0 1 auto;
+  }
+
+  // footer
+  .footer {
+    background: $footer-gradient;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    z-index: 10;
+  }
+  
+  .footercontent {
+    margin: 0 auto;
+    min-width: 1000px;
+    width: 50%;
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .galileo img {
+    width: 230px;
+    object-fit: contain;
+    flex: 0 1 auto;
+  }
+  
+  .copyright {
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: $color-white;
+    text-align: center;
+    flex: 0 1 auto;
+    display: block;
+  }
+  
+  .copyright2 {
+    display: none;
+  }
+  
+  .privacy {
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: $color-white;
+    text-align: center;
+    flex: 0 1 auto;
+    display: block;
+  }
+  
+  .privacy2 {
+    display: none;
+  }
+
+  .bottomspacer {
+    position: relative;
+    top: 0;
+    left: -40px;
+    width: 100%;
+    height: 5vh;
+    margin-top: 70px;
+    border: none;
+    float: left;
+    z-index: 5;  
+  }
+
+// contactformulier
+form {
+  margin-top: 50px;
+  margin-right: 5px;
+}
+
+.flexformitems {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-end; 
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+input[type="text"], select, textarea {
+  float: right;
+  padding: 0 10px;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: $primary-font-family;
+  font-size: 1.6em;
+  color: $color-darkblue;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  resize: none;
+  overflow: auto;
+}
+
+label {
+  font-family: $primary-font-family;
+  font-size: 1.6em;
+  line-height: 1.8em;
+  text-align: left;
+  padding: 9px 0;
+  width: 50%;
+}
+
+input[type="submit"] {
+  padding: 0 5px;
+  width: 200px;
+  font-family: $primary-font-family;
+  font-size: 1.6em;
+  background: $color-darkblue;
+  color: $color-white;
+  border: solid 2px $color-white;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+select:required:invalid {
+  color: $form-grey;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: $color-darkblue;
+}
+
+::placeholder {
+  color: $form-grey;
+}
+
+.flexformitems.fout input {
+  border: 2px solid $form-red;
+  background-color: $form-lightred;
+  color: $form-darkred;
+}
+
+.flexformitems.goed input {
+  border: 2px solid $form-green;
+  background-color: $form-lightgreen;
+  color: $color-darkblue;
+}
+
+.flexformitems small {
+  color: $form-red;
+  font-family: $primary-font-family;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.fitsubmit {
+  width: 50%;
+}

@@ -1,0 +1,19 @@
+
+@media (max-width: $xs) {
+
+}
+@media (max-width: $sm) {
+
+}
+@media (max-width: $md) {
+
+}
+@media (max-width: $lg) {
+
+}
+@media (max-width: $xlg) {
+
+}
+@media (max-width: $ulg) {
+
+}
