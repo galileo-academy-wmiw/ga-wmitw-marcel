@@ -239,3 +239,4 @@ function date() {
     document.getElementById("datum2").innerHTML = new Date().getFullYear()
 
   }
+
