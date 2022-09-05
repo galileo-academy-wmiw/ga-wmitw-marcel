@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Inter-Custom';
+    src: url(/fonts/Inter-VariableFont.ttf) format('truetype');
+}
+
+// font family
+$primary-font-family: 'Inter-Custom', sans-serif;
+
+// color variables
+$primary-color: #004C3C;
+$secondary-color: #F9F5F2;
+$secondary-dark-color: #F4EBE1;
+
+$attention-color: #F34721;
+$attention-color-hover: #C94122;
+
+$main-font-color: #1E1E20;
+$white-color: #fff;
+$copyright-color: #7CA097;
+
+// Media query sizes
+$xs: 375px;
+$sm: 767px;
+$md-strt: 768px;
+$md: 1024px;
+$lg: 1200px;
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body, html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: $primary-font-family;
+}
+
+// headings
+h1, h2, h3, h4 {
+    color: $primary-color;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-left: -4px !important;
+    font-size: 80px; 
+    line-height: 1.05;
+
+    @media (max-width: $md) {
+        margin-left: -1px !important;
+        font-size: 40px; 
+        line-height: 1.05;
+    }
+}
+
+h2 {
+    font-size: 60px; 
+    line-height: 1.1;
+
+    @media (max-width: $md) {
+        font-size: 35px; 
+        line-height: 1.1;
+    }
+}
+
+h3 {
+    font-size: 40px; 
+    line-height: 1.1;
+
+    @media (max-width: $md) {
+        font-size: 25px; 
+        line-height: 1.1;
+    }
+}
+h4 {
+    font-size: 25px; 
+    line-height: 1.05;
+
+    @media (max-width: $md) {
+        font-size: 22px; 
+        line-height: 1.05;
+    }
+
+}
+
+.footer-heading {
+    font-size: 30px; 
+    line-height: 1.05; 
+    color: $white-color; 
+    margin: 0px 0px 32px 0px;
+
+    @media (max-width: $md) {
+        font-size: 20px;
+    }
+
+}
+
+// paragraphs
+p {font-size: 15px; line-height: 1.6;}
+.p-large {
+    font-size: 20px; line-height: 1.6;
+
+    @media (max-width: $md) {
+        font-size: 15px;
+    }
+}
+.p-tiny {font-size: 12px; line-height: 2;}
+
+// font-weights
+.thin { font-weight: 200; }
+.regular { font-weight: 400; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+
+// lists
+li {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.no-inline-padding {
+    padding-inline-start: 0;
+}
+
+// read more
+.read-more-dots {
+    text-decoration: none;
+}
+
+// Imports
+@import 'scss/components/buttons.scss';
+@import 'scss/components/header.scss';
+@import 'scss/components/footer.scss';

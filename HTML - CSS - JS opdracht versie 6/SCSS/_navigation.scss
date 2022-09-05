@@ -1,0 +1,154 @@
+// logo en social media icons
+header {
+    background: $header-gradient;
+    height: 65px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    padding-top: 10px;
+    z-index: 100;
+
+    @media (min-width: $lg-min) and (max-width: $lg-max) {
+      height: 75px;
+    }
+    @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+      height: 90px;
+    }
+    @media (min-width: $ulg-min) {
+      height: 100px;
+    }
+  }
+
+#navbar-container {
+  position: relative;
+  width: 75vw;
+  left: -8px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+      width: 80vw;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+      width: 75vw;
+  }
+  @media (min-width: $ulg-min) {
+      width: 70vw;
+      max-width: 1000px;
+  }
+}
+  
+.logo {
+  position: relative;
+  width: 65px;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    width: 70px;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    width: 75px;
+  }
+  @media (min-width: $ulg-min) {
+    width: 80px;
+  }
+}
+
+.social-container {
+  position: relative;
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    width: 75px;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    width: 75px;
+  }
+  @media (min-width: $ulg-min) {
+    width: 90px;
+    margin-top: -10px;
+  }
+}
+
+.linkedin {
+  position: relative;
+  width: 30px;
+
+  @media (min-width: $ulg-min) {
+    width: 36px;
+  }
+}
+
+.e-mail {
+  position: relative;
+  width: 30px;
+
+  @media (min-width: $ulg-min) {
+    width: 36px;
+  }
+}
+
+// navigation
+.nav {
+  position: relative;
+  float: right;
+  z-index: 100;
+  display: none;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+      display: block;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    display: block;
+  }
+  @media (min-width: $ulg-min) {
+    display: block;
+  }
+}
+
+.nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+  
+.nav li {
+  font-family: $primary-font-family;
+  color: $color-white;
+  font-size: 0.9rem;
+  height: 30px;
+  width: 85px;
+  margin: 0 10px;
+  float: left;
+
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    font-size: 1.0rem;
+    margin: 0 15px;
+  }
+  @media (min-width: $ulg-min) {
+    font-size: 1.1rem;
+    height: 40px;
+    margin: 0 20px;
+  }
+}
+
+.nav a {
+  text-decoration: none;
+  color: $color-white;
+  display: inline;
+  transition: 0.3s background-color;
+}
+  
+.nav a:active {
+  box-shadow: 0px 8px 5px -5px $color-white;
+}
+
+.nav .current {
+  box-shadow: 0px 8px 5px -5px $color-white;
+}

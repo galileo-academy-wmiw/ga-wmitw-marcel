@@ -1,0 +1,57 @@
+// cloud animation
+.clouds {
+  width: 100%;
+  position: fixed;
+  animation: clouds 60s alternate infinite linear;
+  z-index: -10;
+}
+
+.clouds2 {
+  width: 100%;
+  position: fixed;
+  animation: clouds2 45s alternate-reverse infinite linear;
+  z-index: -1;
+}
+
+// keyframes
+  @keyframes clouds {
+    0%   {left: -832px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
+  @keyframes clouds2 {
+    0%   {left: -832px; top:30px;}
+    100% {left:0px; top:30px;}
+  }
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    @keyframes clouds {
+        0%   {left: -1248px; top:30px;}
+        100% {left:0px; top:30px;}
+      }
+    @keyframes clouds2 {
+    0%   {left: -1248px; top:30px;}
+    100% {left:0px; top:30px;}
+    }
+  }
+
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    @keyframes clouds {
+        0%   {left: -1560px; top:60px;}
+        100% {left:0px; top:60px;}
+      }
+      @keyframes clouds2 {
+        0%   {left: -1560px; top:60px;}
+        100% {left:0px; top:60px;}
+      }  
+  }
+
+  @media (min-width: $ulg-min) {
+    @keyframes clouds {
+        0%   {left: -1872px; top:80px;}
+        100% {left:0px; top:80px;}
+      }
+      @keyframes clouds2 {
+        0%   {left: -1872px; top:80px;}
+        100% {left:0px; top:80px;}
+      }
+  }

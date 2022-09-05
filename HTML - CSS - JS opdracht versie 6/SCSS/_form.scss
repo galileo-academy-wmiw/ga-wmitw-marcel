@@ -1,0 +1,150 @@
+// contactformulier
+form {
+  margin-top: -30px;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    margin-top: 30px;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    margin-top: 95px;
+  }
+  @media (min-width: $ulg-min) {
+    margin-top: 160px;
+  }
+}
+
+.flexformitems {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-end; 
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+input[type="text"], select, textarea {
+  float: right;
+  padding: 0 10px;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: $primary-font-family;
+  font-size: 0.95rem;
+  color: $color-darkblue;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  resize: none;
+  overflow: auto;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    font-size: 1.0rem;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    font-size: 1.1rem;
+  }
+  @media (min-width: $ulg-min) {
+    font-size: 1.2rem;
+  }
+}
+
+label {
+  font-family: $primary-font-family;
+  font-size: 0.95rem;
+  line-height: 1.25rem;
+  text-align: left;
+  padding: 4px 0;
+  width: 50%;
+  
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    font-size: 1.0rem;
+    line-height: 1.35rem;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  @media (min-width: $ulg-min) {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+
+input[type="submit"] {
+  padding: 0 5px;
+  width: 120px;
+  font-family: $primary-font-family;
+  font-size: 0.95rem;
+  background: $color-darkblue;
+  color: $color-white;
+  border: solid 2px $color-white;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    width: 135px;
+    font-size: 1.0rem;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    width: 150px;
+    font-size: 1.1rem;
+  }
+  @media (min-width: $ulg-min) {
+    width: 165px;
+    font-size: 1.2rem;
+  }
+}
+
+select:required:invalid {
+  color: $form-grey;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: $color-darkblue;
+}
+
+::placeholder {
+  color: $form-grey;
+}
+
+.flexformitems.fout input {
+  border: 2px solid $form-red;
+  background-color: $form-lightred;
+  color: $form-darkred;
+}
+
+.flexformitems.goed input {
+  border: 2px solid $form-green;
+  background-color: $form-lightgreen;
+  color: $color-darkblue;
+}
+
+.flexformitems small {
+  color: $form-red;
+  font-family: $primary-font-family;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  width: 50%;
+  margin: 10px 0 0 0;
+
+  @media (min-width: $lg-min) and (max-width: $lg-max) {
+    font-size: 0.8rem;
+    line-height: 1.0rem;
+  }
+  @media (min-width: $xlg-min) and (max-width: $xlg-max) {
+    font-size: 0.85rem;
+    line-height: 1.05rem;
+  }
+  @media (min-width: $ulg-min) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+}
+
+.fitsubmit {
+  width: 50%;
+}

@@ -83,7 +83,7 @@ a:hover, a:active {
 } /* V */
 
 .clouds {
-  width: 100%;
+  width: 40%;
   position: fixed;
   animation: clouds 120s alternate infinite linear;
   z-index: -10;
@@ -94,7 +94,7 @@ a:hover, a:active {
 } /* V */
 
 .clouds2 {
-  width: 100%;
+  width: 40%;
   position: fixed;
   animation: clouds2 90s alternate-reverse infinite linear;
   z-index: -1;
@@ -627,7 +627,6 @@ option {
 
 
 
-/* ulg */
 @media only screen and (max-width: 1500px) {
   /* || basis */
   .clouds {
@@ -844,7 +843,7 @@ option {
   }
 }
 
-/* xlg */
+/* ulg */
 @media only screen and (max-width: 1200px) {
   /* || basis */
   .clouds {
@@ -1041,7 +1040,7 @@ option {
   }
 }
 
-/* lg */
+/* xlg */
 @media only screen and (max-width: 1024px) {
   /* || basis */
   .clouds {
@@ -1246,7 +1245,7 @@ option {
   }
 }
 
-/* md */
+/* lg */
 /* vanaf hier hamburger-menu */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   /* || basis */
@@ -1641,7 +1640,7 @@ option {
   }
 }
 
-/* sm */
+/* md */
 @media only screen and (max-width: 500px) and (orientation: portrait) {
 /* || basis */
   .clouds {
@@ -1879,7 +1878,7 @@ option {
   }
 }
 
- /* xs */
+ /* default */
 @media only screen and (min-width: 200px) and (max-width: 320px) and (orientation: portrait) {
 /* || basis */
   .clouds {

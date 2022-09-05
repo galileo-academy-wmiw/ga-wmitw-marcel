@@ -22,31 +22,8 @@
 
   <body>
     <header class="header">
-      <div id="fixednavbar">
+      <div id="navbar-container">
         <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="huisstijl logo"></a></div>
-
-        <social-container class="social-container">
-          <div class="klapmenu" id="klapmenu" onclick="fadeOut(); circleMenu()"> 
-            <div class="menu-btn">
-              <div class="menu-btn_hamburger"></div>
-            </div>
-          <br><br><br>
-            <a href="index.html" target="_self">Over mij</a><hr class="hr">
-            <a href="opleiding.html" target="_self">Opleiding</a><hr class="hr">
-            <a href="werk.html" target="_self">Werk</a><hr class="hr">
-            <a href="hobbies.html" target="_self">Hobbies</a><br>
-          </div>
-          <div class="e-mail"><a href="contact.html"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
-          <div class="linkedin"><a href="https://www.linkedin.com/in/marcelhooimeijer/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
-        </social-container>
-
-        <div class="circlemenu" id="circlemenu">
-          <span><a href="index.html" target="_self">Over mij</a><hr class="hr"></span>
-          <span><a href="opleiding.html" target="_self">Opleiding</a><hr class="hr"></span>
-          <span><a href="werk.html" target="_self">Werk</a><hr class="hr"></span>
-          <span><a href="hobbies.html" target="_self">Hobbies</a></span>
-          <span></span>
-        </div>
 
         <div class="nav">
           <ul>
@@ -56,13 +33,36 @@
             <li><a href="hobbies.html" target="_self">Hobbies</a></li>
           </ul>
         </div>
+
+        <social-container class="social-container">
+          <div class="e-mail"><a href="contact.html"><img src="images/e-mail2.svg" alt="neem contact op"></a></div>
+          <div class="linkedin"><a href="https://www.linkedin.com/in/marcelhooimeijer/" target="_blank"><img src="images/linkedin.svg" alt="linked in"></a></div>
+          <div class="klapmenu" id="klapmenu" onclick="circleMenu(); fadeOut()"> 
+            <div class="menu-btn">
+              <div class="menu-btn_hamburger"></div>
+            </div>
+          <br><br><br>
+            <a href="index.html" target="_self">Over mij</a><hr class="hr">
+            <a href="opleiding.html" target="_self">Opleiding</a><hr class="hr">
+            <a href="werk.html" target="_self">Werk</a><hr class="hr">
+            <a href="hobbies.html" target="_self">Hobbies</a><br>
+          </div>
+        </social-container>
+
+
+      </div>
+      <div class="circlemenu" id="circlemenu">
+        <span><a href="index.html" target="_self">Over mij</a><hr class="hr"></span>
+        <span><a href="opleiding.html" target="_self">Opleiding</a><hr class="hr"></span>
+        <span><a href="werk.html" target="_self">Werk</a><hr class="hr"></span>
+        <span><a href="hobbies.html" target="_self">Hobbies</a></span>
+        <span></span>
       </div>
     </header>
 
     <main class="main" id="main">
-       <article>
-        <h1 class="kop3">Experienced...</h1>
-        
+      <h1 class="kop2">Experienced...</h1>
+      <article>        
         <div class="fotocontainer-1">
           <figure class="opleiding-werk-hobbies-1">
             <img src="images/stadiumdesign2.jpg" srcset="images/stadiumdesign2-1x.jpg 1x, images/stadiumdesign2-2x.jpg 2x" alt="stadium design sportlife verpakking">
@@ -71,8 +71,10 @@
             <img src="images/stadiumdesign.jpg" srcset="images/stadiumdesign-1x.jpg 1x, images/stadiumdesign-2x.jpg 2x" alt="stadium design andrelon productfoto">
           </figure>
         </div>
+
         <p>M&#39;n eerste echte baan was als junior ontwerper bij Stadium Design (inmiddels opgeheven); een bedrijf dat gespecialiseerd was in het ontwikkelen van verpakkingen (product-design, graphic-design, marketing). Ik heb daar 12 jaar gewerkt en heb in die tijd in alle disciplines gewerkt: werktekenen, doka-werk, dtp, graphic-design en verpakkingsdesign.<br/><br/>Jammer genoeg heb ik op een gegeven moment gezondheidsproblemen (rsi / burnout) ontwikkeld, waardoor ik in de WAO ben terechtgekomen. Omdat het ook mentaal niet goed ging, ben ik onderzocht bij de GGZ. Uit dat onderzoek bleek dat ik Asperger heb (een autismespectrum conditie); dat verklaarde veel.<br/><br/>Na een lange herstelperiode ben ik vrijwilligerswerk gaan doen bij het plaatselijk asiel. Leuk om te doen en ook weer onder de mensen. Via via ben ik toen bij de dierenambulance terechtgekomen, op de administratie. Omdat het bloed kruipt waar het niet gaan kan, heb ik daar op eigen initiatief o.a. de website en een dierregistratieprogramma gemaakt. Na 11 jaar was de motivatie weg en ben ik daar weggegaan.<br/><br/>Maar ja, thuiszitten is ook niks en na een lange zoektocht naar de juiste hulp, heb ik een jobcoach toegewezen gekregen van de gemeente. Na het in kaart brengen van m&#39;n interessegebieden, werd ik gewezen op een andere creatieve richting: web-/app development. Ik had daar zelf nog helemaal niet aan gedacht, maar het is wel iets waar ik m&#39;n creatieve ei helemaal in kwijt kan. M&#39;n jobcoach is vervolgens voor me op zoek gegaan naar een passend opleidingsinstituut (dit in verband met m&#39;n autisme).<br/><br/>Dat is gelukt en ik volg nu een leer-/werktraject bij Galileo-Academy tot web-/app developer. Een nieuwe uitdaging; ik heb er zin in!
         </p>
+
         <div class="fotocontainer-2">
           <div class="foto">
             <img src="images/logodesign.jpg" alt="concepten nieuw logo dierenambulance">
