@@ -4,7 +4,7 @@
     width: 30px;
     height: 30px;
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-hamburger);
     transition: height 0.5s, width 0.5s;
     animation-fill-mode: forwards;
     overflow: hidden;
@@ -38,7 +38,7 @@
     display: block;
     margin: 0.9em 10% 1.1em 10%;
     border: none;
-    background-color: var(--color-white);
+    background-color: var(--color-hamburger);
     height: 2px;
   }
 
@@ -52,7 +52,7 @@
     height: 26px;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-hamburger);
 
     @media (min-width: $ulg-min) {
       width: 36px;
@@ -63,7 +63,7 @@
   .menu-btn_hamburger {
     width: 20px;
     height: 3px;
-    background: var(--color-white);
+    background: var(--color-hamburger);
     border-radius: 5px;
     transition: all .5s ease-in-out;
   }
@@ -74,7 +74,7 @@
     position: absolute;
     width: 20px;
     height: 3px;
-    background: var(--color-white);
+    background: var(--color-hamburger);
     border-radius: 5px;
     transition: all .3s ease-in-out;
   }
@@ -100,7 +100,7 @@
     font-weight: 400;
     line-height: 0.8rem;
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-hamburger);
     padding: 30px;
     overflow: hidden;
     -webkit-transform: scale( 0 );

@@ -167,13 +167,13 @@ p {
 
 a:visited, a:link {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-footertekst);
   font-weight: 400;
 }
 
 a:hover, a:active {
-  text-decoration: none;
-  color: var(--color-darkblue);
+  text-decoration: underline;
+  color: var(--color-footertekst);
   font-weight: 400;
 }
 
@@ -240,7 +240,7 @@ a:hover, a:active {
   font-weight: 400;
   font-size: 0.7rem;
   line-height: 0.95rem;
-  color: var(--color-white);
+  color: var(--color-footertekst);
   text-align: center;
   flex: 0 1 auto;
   display: none;
@@ -291,7 +291,7 @@ a:hover, a:active {
   font-weight: 400;
   font-size: 0.7rem;
   line-height: 0.95rem;
-  color: var(--color-white);
+  color: var(--color-footertekst);
   text-align: center;
   flex: 0 1 auto;
   display: none;
@@ -320,6 +320,7 @@ a:hover, a:active {
 
 .privacy2 {
   display: block;
+  color: var(--color-footertekst);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .privacy2 {
@@ -530,7 +531,7 @@ option {
   width: 30px;
   height: 30px;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-hamburger);
   transition: height 0.5s, width 0.5s;
   animation-fill-mode: forwards;
   overflow: hidden;
@@ -569,7 +570,7 @@ option {
   display: block;
   margin: 0.9em 10% 1.1em 10%;
   border: none;
-  background-color: var(--color-white);
+  background-color: var(--color-hamburger);
   height: 2px;
 }
 
@@ -583,7 +584,7 @@ option {
   height: 26px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-hamburger);
 }
 @media (min-width: 1201px) {
   .menu-btn {
@@ -595,7 +596,7 @@ option {
 .menu-btn_hamburger {
   width: 20px;
   height: 3px;
-  background: var(--color-white);
+  background: var(--color-hamburger);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -606,7 +607,7 @@ option {
   position: absolute;
   width: 20px;
   height: 3px;
-  background: var(--color-white);
+  background: var(--color-hamburger);
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -631,7 +632,7 @@ option {
   font-weight: 400;
   line-height: 0.8rem;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-hamburger);
   padding: 30px;
   overflow: hidden;
   -webkit-transform: scale(0);
@@ -694,7 +695,7 @@ option {
   height: 180px;
   shape-outside: circle(50%);
   border-radius: 50%;
-  border: solid 4px var(--color-white);
+  border: solid 4px var(--color-fotokader);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -703,7 +704,7 @@ option {
     margin: 0 0 0 20px;
     width: 220px;
     height: 220px;
-    border: solid 5px var(--color-white);
+    border: solid 5px var(--color-fotokader);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
@@ -713,7 +714,7 @@ option {
     margin: 0 0 0 30px;
     width: 260px;
     height: 260px;
-    border: solid 6px var(--color-white);
+    border: solid 6px var(--color-fotokader);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -723,7 +724,7 @@ option {
     margin: 0 0 0 35px;
     width: 320px;
     height: 320px;
-    border: solid 7px var(--color-white);
+    border: solid 7px var(--color-fotokader);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -766,7 +767,7 @@ option {
   left: 145px;
   width: 150px;
   height: 150px;
-  border: solid 4px var(--color-white);
+  border: solid 4px var(--color-fotokader);
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -775,7 +776,7 @@ option {
     left: 160px;
     width: 165px;
     height: 165px;
-    border: solid 5px var(--color-white);
+    border: solid 5px var(--color-fotokader);
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -783,7 +784,7 @@ option {
     left: 170px;
     width: 180px;
     height: 180px;
-    border: solid 6px var(--color-white);
+    border: solid 6px var(--color-fotokader);
   }
 }
 @media (min-width: 1201px) {
@@ -791,7 +792,7 @@ option {
     left: 185px;
     width: 200px;
     height: 200px;
-    border: solid 7px var(--color-white);
+    border: solid 7px var(--color-fotokader);
   }
 }
 
@@ -801,7 +802,7 @@ option {
   left: 0;
   width: 150px;
   height: 150px;
-  border: solid 4px var(--color-white);
+  border: solid 4px var(--color-fotokader);
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -809,7 +810,7 @@ option {
   .opleiding-werk-hobbies-2 img {
     width: 165px;
     height: 165px;
-    border: solid 5px var(--color-white);
+    border: solid 5px var(--color-fotokader);
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -817,7 +818,7 @@ option {
     top: 25px;
     width: 180px;
     height: 180px;
-    border: solid 6px var(--color-white);
+    border: solid 6px var(--color-fotokader);
   }
 }
 @media (min-width: 1201px) {
@@ -825,7 +826,7 @@ option {
     top: 30px;
     width: 200px;
     height: 200px;
-    border: solid 7px var(--color-white);
+    border: solid 7px var(--color-fotokader);
   }
 }
 
@@ -862,7 +863,7 @@ option {
   max-width: 320px;
   height: auto;
   object-fit: contain;
-  border: solid 7px var(--color-white);
+  border: solid 7px var(--color-fotokader);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
   flex: 0 1 auto;
 }
@@ -1072,17 +1073,17 @@ header {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .social-container {
-    width: 125px;
+    width: 120px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   .social-container {
-    width: 125px;
+    width: 120px;
   }
 }
 @media (min-width: 1201px) {
   .social-container {
-    width: 162px;
+    width: 144px;
     margin-top: -10px;
   }
 }
@@ -1116,13 +1117,13 @@ header {
 .switch {
   position: relative;
   background: var(--btn-img-themes) center center no-repeat;
-  width: 45px;
+  width: 30px;
   height: 30px;
   border: none;
 }
 @media (min-width: 1201px) {
   .switch {
-    width: 54px;
+    width: 36px;
     height: 36px;
   }
 }
@@ -1201,7 +1202,10 @@ header {
   --color-lightblue: #00C9FF;
   --color-darkblue: #005CCE;
   --color-koptekst: #005CCE;
-  --color-bodytekst: black;
+  --color-bodytekst: #000000;
+  --color-footertekst: #FFFFFF;
+  --color-fotokader: #FFFFFF;
+  --color-hamburger: #FFFFFF;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
@@ -1227,6 +1231,9 @@ header {
   --color-darkblue: #09132A;
   --color-koptekst: #fef5a7;
   --color-bodytekst: #fef5a7;
+  --color-footertekst: #FFFFFF;
+  --color-fotokader: #FFFFFF;
+  --color-hamburger: #FFFFFF;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
@@ -1238,9 +1245,9 @@ header {
   --footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(14,29,65,1) 50%, rgba(14,29,65,1) 100%);
   --bg-img-clouds: url("../images/wolken-50.png") transparent;
   --bg-img-clouds2: url("../images/wolken2-50.png");
-  --hdr-img-logo: url("../images/logo2.svg");
-  --hdr-img-email: url("../images/e-mail2.svg");
-  --hdr-img-linkedin: url("../images/linkedin2.svg");
+  --hdr-img-logo: url("../images/logo.svg");
+  --hdr-img-email: url("../images/e-mail.svg");
+  --hdr-img-linkedin: url("../images/linkedin.svg");
   --btn-img-themes: url("../images/theme-sun.svg");
 }
 

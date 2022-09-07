@@ -69,13 +69,13 @@ header {
   justify-content: space-between;
 
   @media (min-width: $lg-min) and (max-width: $lg-max) {
-    width: 125px;
+    width: 120px;
   }
   @media (min-width: $xlg-min) and (max-width: $xlg-max) {
-    width: 125px;
+    width: 120px;
   }
   @media (min-width: $ulg-min) {
-    width: 162px;
+    width: 144px;
     margin-top: -10px;
   }
 }
@@ -107,12 +107,12 @@ header {
 .switch {
   position: relative;
   background: var(--btn-img-themes) center center no-repeat;
-  width: 45px;
+  width: 30px;
   height: 30px;
   border: none;
 
   @media (min-width: $ulg-min) {
-    width: 54px;
+    width: 36px;
     height: 36px;
   }
 }

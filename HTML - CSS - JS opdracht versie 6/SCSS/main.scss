@@ -206,13 +206,13 @@
 
   a:visited, a:link {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-footertekst);
     font-weight: 400;
   }
   
   a:hover, a:active {
-    text-decoration: none;
-    color: var(--color-darkblue);
+    text-decoration: underline;
+    color: var(--color-footertekst);
     font-weight: 400;
   }
 
@@ -270,7 +270,7 @@
     font-weight: 400;
     font-size: 0.7rem;
     line-height: 0.95rem;
-    color: var(--color-white);
+    color: var(--color-footertekst);
     text-align: center;
     flex: 0 1 auto;
     display: none;
@@ -311,7 +311,7 @@
     font-weight: 400;
     font-size: 0.7rem;
     line-height: 0.95rem;
-    color: var(--color-white);
+    color: var(--color-footertekst);
     text-align: center;
     flex: 0 1 auto;
     display: none;
@@ -335,6 +335,7 @@
   
   .privacy2 {
     display: block;
+    color: var(--color-footertekst);
 
     @media (min-width: $lg-min) and (max-width: $lg-max) {
       display: none;

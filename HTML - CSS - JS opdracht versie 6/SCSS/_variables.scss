@@ -10,7 +10,10 @@
   --color-lightblue: #00C9FF;
   --color-darkblue: #005CCE;
   --color-koptekst: #005CCE;
-  --color-bodytekst: black;
+  --color-bodytekst: #000000;
+  --color-footertekst: #FFFFFF;
+  --color-fotokader: #FFFFFF;
+  --color-hamburger: #FFFFFF;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
@@ -43,6 +46,9 @@
   --color-darkblue: #09132A;
   --color-koptekst: #fef5a7;
   --color-bodytekst: #fef5a7;
+  --color-footertekst: #FFFFFF;
+  --color-fotokader: #FFFFFF;
+  --color-hamburger: #FFFFFF;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
@@ -58,8 +64,8 @@
   // images
   --bg-img-clouds: url('../images/wolken-50.png') transparent;
   --bg-img-clouds2: url('../images/wolken2-50.png');
-  --hdr-img-logo: url('../images/logo2.svg');
-  --hdr-img-email: url('../images/e-mail2.svg');
-  --hdr-img-linkedin: url('../images/linkedin2.svg');
+  --hdr-img-logo: url('../images/logo.svg');
+  --hdr-img-email: url('../images/e-mail.svg');
+  --hdr-img-linkedin: url('../images/linkedin.svg');
   --btn-img-themes: url('../images/theme-sun.svg');
 }

@@ -7,7 +7,7 @@
     height: 180px;
     shape-outside: circle(50%);
     border-radius: 50%;
-    border: solid 4px var(--color-white);
+    border: solid 4px var(--color-fotokader);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
 
     @media (min-width: $lg-min) and (max-width: $lg-max) {
@@ -15,7 +15,7 @@
       margin: 0 0 0 20px;
       width: 220px;
       height: 220px;
-      border: solid 5px var(--color-white);
+      border: solid 5px var(--color-fotokader);
       box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
     }
     @media (min-width: $xlg-min) and (max-width: $xlg-max) {
@@ -23,7 +23,7 @@
       margin: 0 0 0 30px;
       width: 260px;
       height: 260px;
-      border: solid 6px var(--color-white);
+      border: solid 6px var(--color-fotokader);
       box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
     }
     @media (min-width: $ulg-min) {
@@ -31,7 +31,7 @@
       margin: 0 0 0 35px;
       width: 320px;
       height: 320px;
-      border: solid 7px var(--color-white);
+      border: solid 7px var(--color-fotokader);
       box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
     }
   }
@@ -69,7 +69,7 @@
     left: 145px;
     width: 150px;
     height: 150px;
-    border: solid 4px var(--color-white);
+    border: solid 4px var(--color-fotokader);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
     z-index: 2;
 
@@ -77,19 +77,19 @@
       left: 160px;
       width: 165px;
       height: 165px;
-      border: solid 5px var(--color-white);
+      border: solid 5px var(--color-fotokader);
     }
     @media (min-width: $xlg-min) and (max-width: $xlg-max) {
       left: 170px;
       width: 180px;
       height: 180px;
-      border: solid 6px var(--color-white);
+      border: solid 6px var(--color-fotokader);
     }
     @media (min-width: $ulg-min) {
       left: 185px;
       width: 200px;
       height: 200px;
-      border: solid 7px var(--color-white);
+      border: solid 7px var(--color-fotokader);
     }
   }
   
@@ -99,26 +99,26 @@
     left: 0;
     width: 150px;
     height: 150px;
-    border: solid 4px var(--color-white);
+    border: solid 4px var(--color-fotokader);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
     z-index: 1; 
     
     @media (min-width: $lg-min) and (max-width: $lg-max) {
       width: 165px;
       height: 165px;
-      border: solid 5px var(--color-white);
+      border: solid 5px var(--color-fotokader);
     }
     @media (min-width: $xlg-min) and (max-width: $xlg-max) {
       top: 25px;
       width: 180px;
       height: 180px;
-      border: solid 6px var(--color-white);
+      border: solid 6px var(--color-fotokader);
     }
     @media (min-width: $ulg-min) {
       top: 30px;
       width: 200px;
       height: 200px;
-      border: solid 7px var(--color-white);
+      border: solid 7px var(--color-fotokader);
     }
   }
   
@@ -151,7 +151,7 @@
     max-width: 320px;
     height: auto;
     object-fit: contain;
-    border: solid 7px var(--color-white);
+    border: solid 7px var(--color-fotokader);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
     flex: 0 1 auto;
 
