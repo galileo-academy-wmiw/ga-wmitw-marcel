@@ -28,9 +28,9 @@ input[type="text"], select, textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: $primary-font-family;
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
-  color: $color-darkblue;
+  color: var(--color-darkblue);
   border: none;
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
   border-radius: 5px;
@@ -49,7 +49,7 @@ input[type="text"], select, textarea {
 }
 
 label {
-  font-family: $primary-font-family;
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
   line-height: 1.25rem;
   text-align: left;
@@ -73,11 +73,11 @@ label {
 input[type="submit"] {
   padding: 0 5px;
   width: 120px;
-  font-family: $primary-font-family;
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
-  background: $color-darkblue;
-  color: $color-white;
-  border: solid 2px $color-white;
+  background: var(--color-darkblue);
+  color: var(--color-white);
+  border: solid 2px --color-white;
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.1);
   border-radius: 5px;
 
@@ -96,34 +96,34 @@ input[type="submit"] {
 }
 
 select:required:invalid {
-  color: $form-grey;
+  color: var(--form-grey);
 }
 option[value=""][disabled] {
   display: none;
 }
 option {
-  color: $color-darkblue;
+  color: var(--color-darkblue);
 }
 
 ::placeholder {
-  color: $form-grey;
+  color: var(--form-grey);
 }
 
 .flexformitems.fout input {
-  border: 2px solid $form-red;
-  background-color: $form-lightred;
-  color: $form-darkred;
+  border: 2px solid var(--form-red);
+  background-color: var(--form-lightred);
+  color: var(--form-darkred);
 }
 
 .flexformitems.goed input {
-  border: 2px solid $form-green;
-  background-color: $form-lightgreen;
-  color: $color-darkblue;
+  border: 2px solid var(--form-green);
+  background-color: var(--form-lightgreen);
+  color: var(--color-darkblue);
 }
 
 .flexformitems small {
-  color: $form-red;
-  font-family: $primary-font-family;
+  color: var(--form-red);
+  font-family: var(--primary-font-family);
   font-size: 0.7rem;
   line-height: 0.9rem;
   font-weight: 600;

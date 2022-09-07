@@ -1,6 +1,6 @@
 // logo en social media icons
 header {
-    background: $header-gradient;
+    background: var(--header-gradient);
     height: 65px;
     width: 100vw;
     position: fixed;
@@ -43,53 +43,77 @@ header {
   
 .logo {
   position: relative;
+  background: var(--hdr-img-logo);
   width: 65px;
+  height: 65px;
 
   @media (min-width: $lg-min) and (max-width: $lg-max) {
     width: 70px;
+    height: 70px;
   }
   @media (min-width: $xlg-min) and (max-width: $xlg-max) {
     width: 75px;
+    height: 75px;
   }
   @media (min-width: $ulg-min) {
     width: 80px;
+    height: 80px;
   }
 }
 
 .social-container {
   position: relative;
-  width: 120px;
+  width: 165px;
   height: 30px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: $lg-min) and (max-width: $lg-max) {
-    width: 75px;
+    width: 125px;
   }
   @media (min-width: $xlg-min) and (max-width: $xlg-max) {
-    width: 75px;
+    width: 125px;
   }
   @media (min-width: $ulg-min) {
-    width: 90px;
+    width: 162px;
     margin-top: -10px;
   }
 }
 
 .linkedin {
   position: relative;
+  background: var(--hdr-img-linkedin);
   width: 30px;
+  height: 30px;
 
   @media (min-width: $ulg-min) {
     width: 36px;
+    height: 36px;
   }
 }
 
 .e-mail {
   position: relative;
+  background: var(--hdr-img-email);
   width: 30px;
+  height: 30px;
 
   @media (min-width: $ulg-min) {
     width: 36px;
+    height: 36px;
+  }
+}
+
+.switch {
+  position: relative;
+  background: var(--btn-img-themes) center center no-repeat;
+  width: 45px;
+  height: 30px;
+  border: none;
+
+  @media (min-width: $ulg-min) {
+    width: 54px;
+    height: 36px;
   }
 }
 
@@ -119,8 +143,8 @@ header {
 }
   
 .nav li {
-  font-family: $primary-font-family;
-  color: $color-white;
+  font-family: var(--primary-font-family);
+  color: var(--color-white);
   font-size: 0.9rem;
   height: 30px;
   width: 85px;
@@ -140,17 +164,17 @@ header {
 
 .nav a {
   text-decoration: none;
-  color: $color-white;
+  color: var(--color-white);
   display: inline;
   transition: 0.3s background-color;
 }
   
 .nav a:active {
-  box-shadow: 0px 8px 5px -5px $color-white;
+  box-shadow: 0px 8px 5px -5px var(--color-white);
 }
 
 .nav .current {
-  box-shadow: 0px 8px 5px -5px $color-white;
+  box-shadow: 0px 8px 5px -5px var(--color-white);
 }
 
 

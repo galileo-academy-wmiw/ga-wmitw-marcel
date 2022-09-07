@@ -34,7 +34,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
+  background: var(--background-gradient);
   background-repeat: no-repeat;
   background-attachment: fixed;
   animation: fadein 2s;
@@ -75,10 +75,10 @@ body {
 
 h1 {
   position: absolute;
-  font-family: "WindSong", cursive;
+  font-family: var(--secundary-font-family), cursive;
   font-size: 3.5rem;
   font-weight: 500;
-  color: #005CCE;
+  color: var(--color-koptekst);
   text-align: left;
   transform: rotate(-15deg);
   text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
@@ -137,10 +137,11 @@ article {
 
 p {
   position: relative;
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
   line-height: 1.25rem;
   text-align: left;
+  color: var(--color-bodytekst);
   padding-bottom: 0.55rem;
   height: 100%;
 }
@@ -166,18 +167,18 @@ p {
 
 a:visited, a:link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--color-white);
   font-weight: 400;
 }
 
 a:hover, a:active {
   text-decoration: none;
-  color: #005CCE;
+  color: var(--color-darkblue);
   font-weight: 400;
 }
 
 .footer {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 201, 255) 50%, rgb(0, 201, 255) 100%);
+  background: var(--footer-gradient);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -235,11 +236,11 @@ a:hover, a:active {
 }
 
 .copyright {
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 0.7rem;
   line-height: 0.95rem;
-  color: #FFFFFF;
+  color: var(--color-white);
   text-align: center;
   flex: 0 1 auto;
   display: none;
@@ -286,11 +287,11 @@ a:hover, a:active {
 }
 
 .privacy {
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 0.7rem;
   line-height: 0.95rem;
-  color: #FFFFFF;
+  color: var(--color-white);
   text-align: center;
   flex: 0 1 auto;
   display: none;
@@ -381,9 +382,9 @@ input[type=text], select, textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
-  color: #005CCE;
+  color: var(--color-darkblue);
   border: none;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -407,7 +408,7 @@ input[type=text], select, textarea {
 }
 
 label {
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
   line-height: 1.25rem;
   text-align: left;
@@ -436,11 +437,11 @@ label {
 input[type=submit] {
   padding: 0 5px;
   width: 120px;
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-size: 0.95rem;
-  background: #005CCE;
-  color: #FFFFFF;
-  border: solid 2px #FFFFFF;
+  background: var(--color-darkblue);
+  color: var(--color-white);
+  border: solid 2px --color-white;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
@@ -464,7 +465,7 @@ input[type=submit] {
 }
 
 select:required:invalid {
-  color: #b3b3b3;
+  color: var(--form-grey);
 }
 
 option[value=""][disabled] {
@@ -472,28 +473,28 @@ option[value=""][disabled] {
 }
 
 option {
-  color: #005CCE;
+  color: var(--color-darkblue);
 }
 
 ::placeholder {
-  color: #b3b3b3;
+  color: var(--form-grey);
 }
 
 .flexformitems.fout input {
-  border: 2px solid red;
-  background-color: pink;
-  color: darkred;
+  border: 2px solid var(--form-red);
+  background-color: var(--form-lightred);
+  color: var(--form-darkred);
 }
 
 .flexformitems.goed input {
-  border: 2px solid green;
-  background-color: lightgreen;
-  color: #005CCE;
+  border: 2px solid var(--form-green);
+  background-color: var(--form-lightgreen);
+  color: var(--color-darkblue);
 }
 
 .flexformitems small {
-  color: red;
-  font-family: "Mukta";
+  color: var(--form-red);
+  font-family: var(--primary-font-family);
   font-size: 0.7rem;
   line-height: 0.9rem;
   font-weight: 600;
@@ -529,7 +530,7 @@ option {
   width: 30px;
   height: 30px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--color-white);
   transition: height 0.5s, width 0.5s;
   animation-fill-mode: forwards;
   overflow: hidden;
@@ -568,7 +569,7 @@ option {
   display: block;
   margin: 0.9em 10% 1.1em 10%;
   border: none;
-  background-color: #FFFFFF;
+  background-color: var(--color-white);
   height: 2px;
 }
 
@@ -582,7 +583,7 @@ option {
   height: 26px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--color-white);
 }
 @media (min-width: 1201px) {
   .menu-btn {
@@ -594,7 +595,7 @@ option {
 .menu-btn_hamburger {
   width: 20px;
   height: 3px;
-  background: #FFFFFF;
+  background: var(--color-white);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -605,7 +606,7 @@ option {
   position: absolute;
   width: 20px;
   height: 3px;
-  background: #FFFFFF;
+  background: var(--color-white);
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -622,15 +623,15 @@ option {
   position: relative;
   top: 80px;
   margin: 0 calc(55% - 100px) 0 calc(45% - 100px);
-  background: #00C9FF;
+  background: var(--color-lightblue);
   box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.7);
   border-radius: 100%;
-  font-family: "Mukta";
+  font-family: var(--primary-font-family);
   font-size: 1rem;
   font-weight: 400;
   line-height: 0.8rem;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--color-white);
   padding: 30px;
   overflow: hidden;
   -webkit-transform: scale(0);
@@ -693,7 +694,7 @@ option {
   height: 180px;
   shape-outside: circle(50%);
   border-radius: 50%;
-  border: solid 4px #FFFFFF;
+  border: solid 4px var(--color-white);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -702,7 +703,7 @@ option {
     margin: 0 0 0 20px;
     width: 220px;
     height: 220px;
-    border: solid 5px #FFFFFF;
+    border: solid 5px var(--color-white);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
@@ -712,7 +713,7 @@ option {
     margin: 0 0 0 30px;
     width: 260px;
     height: 260px;
-    border: solid 6px #FFFFFF;
+    border: solid 6px var(--color-white);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -722,7 +723,7 @@ option {
     margin: 0 0 0 35px;
     width: 320px;
     height: 320px;
-    border: solid 7px #FFFFFF;
+    border: solid 7px var(--color-white);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -765,7 +766,7 @@ option {
   left: 145px;
   width: 150px;
   height: 150px;
-  border: solid 4px #FFFFFF;
+  border: solid 4px var(--color-white);
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -774,7 +775,7 @@ option {
     left: 160px;
     width: 165px;
     height: 165px;
-    border: solid 5px #FFFFFF;
+    border: solid 5px var(--color-white);
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -782,7 +783,7 @@ option {
     left: 170px;
     width: 180px;
     height: 180px;
-    border: solid 6px #FFFFFF;
+    border: solid 6px var(--color-white);
   }
 }
 @media (min-width: 1201px) {
@@ -790,7 +791,7 @@ option {
     left: 185px;
     width: 200px;
     height: 200px;
-    border: solid 7px #FFFFFF;
+    border: solid 7px var(--color-white);
   }
 }
 
@@ -800,7 +801,7 @@ option {
   left: 0;
   width: 150px;
   height: 150px;
-  border: solid 4px #FFFFFF;
+  border: solid 4px var(--color-white);
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -808,7 +809,7 @@ option {
   .opleiding-werk-hobbies-2 img {
     width: 165px;
     height: 165px;
-    border: solid 5px #FFFFFF;
+    border: solid 5px var(--color-white);
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -816,7 +817,7 @@ option {
     top: 25px;
     width: 180px;
     height: 180px;
-    border: solid 6px #FFFFFF;
+    border: solid 6px var(--color-white);
   }
 }
 @media (min-width: 1201px) {
@@ -824,7 +825,7 @@ option {
     top: 30px;
     width: 200px;
     height: 200px;
-    border: solid 7px #FFFFFF;
+    border: solid 7px var(--color-white);
   }
 }
 
@@ -861,7 +862,7 @@ option {
   max-width: 320px;
   height: auto;
   object-fit: contain;
-  border: solid 7px #FFFFFF;
+  border: solid 7px var(--color-white);
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
   flex: 0 1 auto;
 }
@@ -882,14 +883,18 @@ option {
 }
 
 .clouds {
-  width: 100%;
+  background: var(--bg-img-clouds);
+  width: 4000px;
+  height: 1084px;
   position: fixed;
   animation: clouds 60s alternate infinite linear;
   z-index: -10;
 }
 
 .clouds2 {
-  width: 100%;
+  background-image: var(--bg-img-clouds2);
+  width: 4000px;
+  height: 1084px;
   position: fixed;
   animation: clouds2 45s alternate-reverse infinite linear;
   z-index: -1;
@@ -982,7 +987,7 @@ option {
   }
 }
 header {
-  background: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
+  background: var(--header-gradient);
   height: 65px;
   width: 100vw;
   position: fixed;
@@ -1035,65 +1040,90 @@ header {
 
 .logo {
   position: relative;
+  background: var(--hdr-img-logo);
   width: 65px;
+  height: 65px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .logo {
     width: 70px;
+    height: 70px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   .logo {
     width: 75px;
+    height: 75px;
   }
 }
 @media (min-width: 1201px) {
   .logo {
     width: 80px;
+    height: 80px;
   }
 }
 
 .social-container {
   position: relative;
-  width: 120px;
+  width: 165px;
   height: 30px;
   display: flex;
   justify-content: space-between;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .social-container {
-    width: 75px;
+    width: 125px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   .social-container {
-    width: 75px;
+    width: 125px;
   }
 }
 @media (min-width: 1201px) {
   .social-container {
-    width: 90px;
+    width: 162px;
     margin-top: -10px;
   }
 }
 
 .linkedin {
   position: relative;
+  background: var(--hdr-img-linkedin);
   width: 30px;
+  height: 30px;
 }
 @media (min-width: 1201px) {
   .linkedin {
     width: 36px;
+    height: 36px;
   }
 }
 
 .e-mail {
   position: relative;
+  background: var(--hdr-img-email);
   width: 30px;
+  height: 30px;
 }
 @media (min-width: 1201px) {
   .e-mail {
     width: 36px;
+    height: 36px;
+  }
+}
+
+.switch {
+  position: relative;
+  background: var(--btn-img-themes) center center no-repeat;
+  width: 45px;
+  height: 30px;
+  border: none;
+}
+@media (min-width: 1201px) {
+  .switch {
+    width: 54px;
+    height: 36px;
   }
 }
 
@@ -1127,8 +1157,8 @@ header {
 }
 
 .nav li {
-  font-family: "Mukta";
-  color: #FFFFFF;
+  font-family: var(--primary-font-family);
+  color: var(--color-white);
   font-size: 0.9rem;
   height: 30px;
   width: 85px;
@@ -1151,23 +1181,27 @@ header {
 
 .nav a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--color-white);
   display: inline;
   transition: 0.3s background-color;
 }
 
 .nav a:active {
-  box-shadow: 0px 8px 5px -5px #FFFFFF;
+  box-shadow: 0px 8px 5px -5px var(--color-white);
 }
 
 .nav .current {
-  box-shadow: 0px 8px 5px -5px #FFFFFF;
+  box-shadow: 0px 8px 5px -5px var(--color-white);
 }
 
-:root.light {
+.theme-light {
+  --primary-font-family: "Mukta";
+  --secundary-font-family: "WindSong";
   --color-white: #FFFFFF;
   --color-lightblue: #00C9FF;
   --color-darkblue: #005CCE;
+  --color-koptekst: #005CCE;
+  --color-bodytekst: black;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
@@ -1176,22 +1210,38 @@ header {
   --form-grey: #b3b3b3;
   --background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
   --header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
-  --footer-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 201, 255) 50%, rgb(0, 201, 255) 100%);
+  --footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
+  --bg-img-clouds: url("../images/wolken.png");
+  --bg-img-clouds2: url("../images/wolken2.png");
+  --hdr-img-logo: url("../images/logo.svg");
+  --hdr-img-email: url("../images/e-mail.svg");
+  --hdr-img-linkedin: url("../images/linkedin.svg");
+  --btn-img-themes: url("../images/theme-moon.svg");
 }
 
-:root.dark {
-  --color-white: #FFFFFF;
-  --color-lightblue: #0c2666;
-  --color-darkblue: #060629;
+.theme-dark {
+  --primary-font-family: "Mukta";
+  --secundary-font-family: "WindSong";
+  --color-white: #fef5a7;
+  --color-lightblue: #0e1d41;
+  --color-darkblue: #09132A;
+  --color-koptekst: #fef5a7;
+  --color-bodytekst: #fef5a7;
   --form-lightred: pink;
   --form-red: red;
   --form-darkred: darkred;
   --form-lightgreen: lightgreen;
   --form-green: green;
   --form-grey: #b3b3b3;
-  --background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
-  --header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
-  --footer-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 201, 255) 50%, rgb(0, 201, 255) 100%);
+  --background-gradient: linear-gradient(#09132A 15%, #0e1d41 100%);
+  --header-gradient: linear-gradient(#0e1d41 0%, #0e1d41 60%, #0e1d41 10 0%, rgba(255, 255, 255, 0) 100%);
+  --footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(14,29,65,1) 50%, rgba(14,29,65,1) 100%);
+  --bg-img-clouds: url("../images/wolken-50.png") transparent;
+  --bg-img-clouds2: url("../images/wolken2-50.png");
+  --hdr-img-logo: url("../images/logo2.svg");
+  --hdr-img-email: url("../images/e-mail2.svg");
+  --hdr-img-linkedin: url("../images/linkedin2.svg");
+  --btn-img-themes: url("../images/theme-sun.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

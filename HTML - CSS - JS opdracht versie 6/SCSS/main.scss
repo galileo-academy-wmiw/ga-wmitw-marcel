@@ -51,24 +51,28 @@
          url('./fonts/mukta-v12-latin-600.svg#Mukta') format('svg'); /* Legacy iOS */
   }
   
-  // font family
-  $primary-font-family: 'Mukta';
-  $secundary-font-family: 'WindSong';
+  // // font family
+  // $primary-font-family: 'Mukta';
+  // $secundary-font-family: 'WindSong';
 
-  // color variables
-  $color-white: #FFFFFF;
-  $color-lightblue: #00C9FF;
-  $color-darkblue: #005CCE;
-  $form-lightred: pink;
-  $form-red: red;
-  $form-darkred: darkred;
-  $form-lightgreen: lightgreen;
-  $form-green: green;
-  $form-grey: #b3b3b3;
+  // // color variables
+  // $color-white: #FFFFFF;
+  // $color-lightblue: #00C9FF;
+  // $color-darkblue: #005CCE;
+  // $form-lightred: pink;
+  // $form-red: red;
+  // $form-darkred: darkred;
+  // $form-lightgreen: lightgreen;
+  // $form-green: green;
+  // $form-grey: #b3b3b3;
 
-  $background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
-  $header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
-  $footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
+  // $background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
+  // $header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
+  // $footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
+  
+  // $bg-img-clouds: url('../images/wolken.png');
+  // $bg-img-clouds2: url('../images/wolken2.png');
+  
   
   // media query sizes
   $md-min: 481px;
@@ -88,7 +92,7 @@
   }
 
   body {
-    background: $background-gradient;
+    background: var(--background-gradient);
     background-repeat: no-repeat;
     background-attachment: fixed;
     animation: fadein 2s;
@@ -125,10 +129,10 @@
   // headings 
   h1 {
     position: absolute;
-    font-family: $secundary-font-family, cursive;
+    font-family: var(--secundary-font-family), cursive;
     font-size: 3.5rem;
     font-weight: 500;
-    color: $color-darkblue;
+    color: var(--color-koptekst);
     text-align: left;
     transform: rotate(-15deg);
     text-shadow: rgba(0, 0, 0, 0.5) 3px 5px 10px;
@@ -177,10 +181,11 @@
 
   p {
     position: relative;
-    font-family: $primary-font-family;
+    font-family: var(--primary-font-family);
     font-size: 0.95rem;
     line-height: 1.25rem;
     text-align: left;
+    color: var(--color-bodytekst);
     padding-bottom: 0.55rem;
     height: 100%;
 
@@ -201,19 +206,19 @@
 
   a:visited, a:link {
     text-decoration: none;
-    color: $color-white;
+    color: var(--color-white);
     font-weight: 400;
   }
   
   a:hover, a:active {
     text-decoration: none;
-    color: $color-darkblue;
+    color: var(--color-darkblue);
     font-weight: 400;
   }
 
   // footer
   .footer {
-    background: $footer-gradient;
+    background: var(--footer-gradient);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -261,11 +266,11 @@
   }
   
   .copyright {
-    font-family: $primary-font-family;
+    font-family: var(--primary-font-family);
     font-weight: 400;
     font-size: 0.7rem;
     line-height: 0.95rem;
-    color: $color-white;
+    color: var(--color-white);
     text-align: center;
     flex: 0 1 auto;
     display: none;
@@ -302,11 +307,11 @@
   }
   
   .privacy {
-    font-family: $primary-font-family;
+    font-family: var(--primary-font-family);
     font-weight: 400;
     font-size: 0.7rem;
     line-height: 0.95rem;
-    color: $color-white;
+    color: var(--color-white);
     text-align: center;
     flex: 0 1 auto;
     display: none;
@@ -363,6 +368,5 @@
 @import 'images.scss';
 @import 'keyframes.scss';
 @import 'navigation.scss';
-@import 'themes.scss';
-
+@import 'variables.scss'
 

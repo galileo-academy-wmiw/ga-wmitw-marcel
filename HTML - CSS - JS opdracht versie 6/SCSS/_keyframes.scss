@@ -1,13 +1,17 @@
 // cloud animation
 .clouds {
-  width: 100%;
+  background: var(--bg-img-clouds);
+  width: 4000px;
+  height: 1084px;
   position: fixed;
   animation: clouds 60s alternate infinite linear;
   z-index: -10;
 }
 
 .clouds2 {
-  width: 100%;
+  background-image: var(--bg-img-clouds2);
+  width: 4000px;
+  height: 1084px;  
   position: fixed;
   animation: clouds2 45s alternate-reverse infinite linear;
   z-index: -1;

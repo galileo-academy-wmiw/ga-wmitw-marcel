@@ -1,49 +1,65 @@
+// theme variables
 
-$--color-white: --color-white;
-$--color-lightblue: --color-lightblue;
-$--color-darkblue: --color-darkblue;
-$--form-lightred: --form-lightred;
-$--form-red: --form-red;
-$--form-darkred: --form-darkred;
-$--form-lightgreen: --form-lightgreen;
-$--form-green: --form-green;
-$--form-grey: --form-grey;
+.theme-light {
+  // font family
+  --primary-font-family: 'Mukta';
+  --secundary-font-family: 'WindSong';
 
-$--background-gradient: --background-gradient;
-$--header-gradient: --header-gradient;
-$--footer-gradient: --footer-gradient;
+  // colors
+  --color-white: #FFFFFF;
+  --color-lightblue: #00C9FF;
+  --color-darkblue: #005CCE;
+  --color-koptekst: #005CCE;
+  --color-bodytekst: black;
+  --form-lightred: pink;
+  --form-red: red;
+  --form-darkred: darkred;
+  --form-lightgreen: lightgreen;
+  --form-green: green;
+  --form-grey: #b3b3b3;
 
-
-$theme-map-light: (
-  $--color-white: #FFFFFF,
-  $--color-lightblue: #00C9FF,
-  $--color-darkblue: #005CCE,
-  $--form-lightred: pink,
-  $--form-red: red,
-  $--form-darkred: darkred,
-  $--form-lightgreen: lightgreen,
-  $--form-green: green,
-  $--form-grey: #b3b3b3,
-
-  $--background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%),
-  $--header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%),
-  $--footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%),
+  // gradients
+  --background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
+  --header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
+  --footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
   
-);
+  // images
+  --bg-img-clouds: url('../images/wolken.png');
+  --bg-img-clouds2: url('../images/wolken2.png');
+  --hdr-img-logo: url('../images/logo.svg');
+  --hdr-img-email: url('../images/e-mail.svg');
+  --hdr-img-linkedin: url('../images/linkedin.svg');
+  --btn-img-themes: url('../images/theme-moon.svg');
+}
 
-$theme-map-dark: (
-    $--color-white: #FFFFFF,
-    $--color-lightblue: #0c2666,
-    $--color-darkblue: #060629,
-    $--form-lightred: pink,
-    $--form-red: red,
-    $--form-darkred: darkred,
-    $--form-lightgreen: lightgreen,
-    $--form-green: green,
-    $--form-grey: #b3b3b3,
+.theme-dark {
+  // font family
+  --primary-font-family: 'Mukta';
+  --secundary-font-family: 'WindSong';
+
+  // colors
+  --color-white: #fef5a7;
+  --color-lightblue: #0e1d41;
+  --color-darkblue: #09132A;
+  --color-koptekst: #fef5a7;
+  --color-bodytekst: #fef5a7;
+  --form-lightred: pink;
+  --form-red: red;
+  --form-darkred: darkred;
+  --form-lightgreen: lightgreen;
+  --form-green: green;
+  --form-grey: #b3b3b3;
+
+  // gradients
+  --background-gradient: linear-gradient(#09132A 15%, #0e1d41 100%);
+  --header-gradient: linear-gradient(#0e1d41 0%, #0e1d41 60%, #0e1d41 10 0%, rgba(255, 255, 255, 0) 100%);
+  --footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(14,29,65,1) 50%, rgba(14,29,65,1) 100%);
   
-    $--background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%),
-    $--header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%),
-    $--footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%),
-    
-);
+  // images
+  --bg-img-clouds: url('../images/wolken-50.png') transparent;
+  --bg-img-clouds2: url('../images/wolken2-50.png');
+  --hdr-img-logo: url('../images/logo2.svg');
+  --hdr-img-email: url('../images/e-mail2.svg');
+  --hdr-img-linkedin: url('../images/linkedin2.svg');
+  --btn-img-themes: url('../images/theme-sun.svg');
+}
