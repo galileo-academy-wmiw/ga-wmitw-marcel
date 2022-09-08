@@ -20,10 +20,10 @@
     <link rel='stylesheet' href='CSS/style.css'>
   </head>
 
-  <body>
+  <body onload="getTheme();">
     <header class="header">
       <div id="navbar-container">
-        <div class="logo"><a href="index.html"></a></div>
+        <a href="index.html"><div class="logo"></div></a>
 
         <div class="nav">
           <ul>
@@ -35,9 +35,9 @@
         </div>
 
         <social-container class="social-container">
-          <div class="e-mail"><a href="contact.html"></a></div>
-          <div class="linkedin"><a href="https://www.linkedin.com/in/marcelhooimeijer/" target="_blank"></a></div>
-          <div><button class="switch" onclick="toggleTheme()"></button></div>
+          <a href="contact.html"><div class="e-mail"></div></a>
+          <a href="https://www.linkedin.com/in/marcelhooimeijer/" target="_blank"><div class="linkedin"></div></a>
+          <div><button id="switch" class="switch" onclick="toggleTheme()"></button></div>
           <div class="klapmenu" id="klapmenu" onclick="circleMenu(); fadeOut()"> 
             <div class="menu-btn">
               <div class="menu-btn_hamburger"></div>
@@ -90,12 +90,8 @@
       </div>
     </footer>
 
-    <div class="clouds">
-      <!-- <img src="images/wolken.png" alt="achtergrondwolken"> -->
-    </div>
-    <div class="clouds2">
-      <!-- <img src="images/wolken2.png" alt="meer achtergrondwolken"> -->
-    </div>
+    <div class="clouds"></div>
+    <div class="clouds2"></div>
 
     <script src="style.js"></script>
     <script type="text/javascript">date();</script>

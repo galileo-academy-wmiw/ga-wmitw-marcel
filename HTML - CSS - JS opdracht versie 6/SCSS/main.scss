@@ -51,28 +51,6 @@
          url('./fonts/mukta-v12-latin-600.svg#Mukta') format('svg'); /* Legacy iOS */
   }
   
-  // // font family
-  // $primary-font-family: 'Mukta';
-  // $secundary-font-family: 'WindSong';
-
-  // // color variables
-  // $color-white: #FFFFFF;
-  // $color-lightblue: #00C9FF;
-  // $color-darkblue: #005CCE;
-  // $form-lightred: pink;
-  // $form-red: red;
-  // $form-darkred: darkred;
-  // $form-lightgreen: lightgreen;
-  // $form-green: green;
-  // $form-grey: #b3b3b3;
-
-  // $background-gradient: linear-gradient(#00C9FF 15%, #FFFFFF 100%);
-  // $header-gradient: linear-gradient(#007b9d 0%, #00C9FF 60%, #00C9FF 90%, rgba(255, 255, 255, 0) 100%);
-  // $footer-gradient: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,201,255,1) 50%, rgba(0,201,255,1) 100%);
-  
-  // $bg-img-clouds: url('../images/wolken.png');
-  // $bg-img-clouds2: url('../images/wolken2.png');
-  
   
   // media query sizes
   $md-min: 481px;
@@ -369,5 +347,5 @@
 @import 'images.scss';
 @import 'keyframes.scss';
 @import 'navigation.scss';
-@import 'variables.scss'
+@import 'themes.scss'
 
