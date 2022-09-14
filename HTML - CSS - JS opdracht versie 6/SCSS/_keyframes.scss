@@ -1,7 +1,6 @@
 // cloud animation
 .clouds {
   background: var(--bg-img-clouds);
-  opacity: 0.7;
   width: 4000px;
   height: 1084px;
   position: fixed;
@@ -11,7 +10,6 @@
 
 .clouds2 {
   background-image: var(--bg-img-clouds2);
-  opacity: 0.5;
   width: 4000px;
   height: 1084px;  
   position: fixed;
